@@ -24,6 +24,7 @@ body{
   user-select: none;
   -webkit-user-select: none;
   font-size: 14px;
+  line-height: 1.5;
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
   color: #7e848c;
 }

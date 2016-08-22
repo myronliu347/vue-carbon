@@ -1,12 +1,15 @@
 <template>
-  <div class="muse-toast" :style="{'z-index': zIndex}" :class="{'center': center || loading}" transition="fade">
-    <preloader :size="36" v-if="loading" color="#FFF"></preloader>
-    <div class="text">{{text}}</div>
+  <div class="toast" :style="{'z-index': zIndex}" :class="{'toast-center': center || loading}" transition="fade">
+    <circular :size="36" v-if="loading" color="#FFF"></circular>
+    <icon v-if="icon && !loading" :value="icon" :size="36"></icon>
+    <div class="toast-text">{{text}}</div>
   </div>
 </template>
 
 <script>
 import {getZIndex} from '../utils'
+import icon from '../icon/icon'
+import circular from '../circular'
 export default {
   data () {
     return {
@@ -25,7 +28,15 @@ export default {
     loading: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: ''
     }
+  },
+  components: {
+    icon,
+    circular
   }
 }
 </script>
@@ -48,10 +59,10 @@ export default {
     display: block;
     text-align: center;
   }
-  &.center{
+  &.toast-center {
     top: 50%;
     bottom: auto;
-    .transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
   }
 }
 </style>

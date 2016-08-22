@@ -6,6 +6,13 @@ import badge from './views/badge'
 import button from './views/button'
 import overlay from './views/overlay'
 import circular from './views/circular'
+import toast from './views/toast'
+
+// css
+import headerBar from './views/headerBar'
+import grid from './views/grid'
+import contentBlock from './views/contentBlock'
+import listView from './views/listView'
 export default function (router) {
   router.map({
     '/': {
@@ -31,6 +38,26 @@ export default function (router) {
     '/circular': {
       name: 'circular',
       component: circular
+    },
+    '/toast': {
+      name: 'toast',
+      component: toast
+    },
+    '/headerBar': {
+      name: 'headerBar',
+      component: headerBar
+    },
+    '/grid': {
+      name: 'grid',
+      component: grid
+    },
+    '/contentBlock': {
+      name: 'contentBlock',
+      component: contentBlock
+    },
+    '/listView': {
+      name: 'listView',
+      component: listView
     }
   })
 }

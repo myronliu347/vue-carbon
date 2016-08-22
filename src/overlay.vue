@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" :style="{'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
+  <div class="overlay" @touchmove="prevent" :style="{'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
 </template>
 <script>
 import {getZIndex} from './utils'
@@ -13,6 +13,12 @@ export default {
   data () {
     return {
       zIndex: getZIndex()
+    }
+  },
+  methods: {
+    prevent (event) {
+      event.preventDefault()
+      event.stopPropagation()
     }
   }
 }

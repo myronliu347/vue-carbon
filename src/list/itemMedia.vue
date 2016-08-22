@@ -11,5 +11,16 @@
   + .item-content{
     padding-left: 16px;
   }
+  img {
+    max-width: 40px;
+    border-radius: 50%;
+  }
+}
+.item-cell .item-media {
+  padding-top: 0;
+  padding-bottom: 0;
+  + .item-title {
+    padding-left: 16px;
+  }
 }
 </style>
