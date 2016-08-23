@@ -13,6 +13,7 @@ import headerBar from './views/headerBar'
 import grid from './views/grid'
 import contentBlock from './views/contentBlock'
 import listView from './views/listView'
+import card from './views/card'
 export default function (router) {
   router.map({
     '/': {
@@ -58,6 +59,10 @@ export default function (router) {
     '/listView': {
       name: 'listView',
       component: listView
+    },
+    '/card': {
+      name: 'card',
+      component: card
     }
   })
 }

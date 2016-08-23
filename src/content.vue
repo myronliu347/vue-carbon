@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="css">
+<style lang="less">
 @import "./utils/normalize.css";
 *,
 *::before,

@@ -19,7 +19,7 @@
 * [X] navBar
 * [] tabBar
 * [X] listView
-* [] card
+* [X] card
 * [X] grid
 * [X] content-block
 
@@ -34,12 +34,13 @@
 
 ## forms
 
-* [] text
+* [] itemInput
+* [] textField
+* [] textArea
 * [] select
 * [] check
 * [] range
 * [] switch
-* [] itemInput
 * [] date
 
 ## others

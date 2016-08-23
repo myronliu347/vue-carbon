@@ -30,6 +30,17 @@ import itemSubTitle from './list/itemSubTitle'
 import itemText from './list/itemText'
 import itemDivider from './list/itemDivider'
 
+
+// card
+import card from './card/card'
+import cardAction from './card/cardAction'
+import cardHeader from './card/cardHeader'
+import cardFooter from './card/cardFooter'
+import cardContent from './card/cardContent'
+import cardTitle from './card/cardTitle'
+import cardTools from './card/cardTools'
+import cardImage from './card/cardImage'
+
 // content block
 import contentBlock from './contentBlock'
 import contentTitle from './contentTitle'
@@ -65,6 +76,14 @@ var components = {
   'content-title': contentTitle,
   'grid-row': gridRow,
   'grid-col': gridCol,
+  card,
+  'card-action': cardAction,
+  'card-header': cardHeader,
+  'card-footer': cardFooter,
+  'card-content': cardContent,
+  'card-title': cardTitle,
+  'card-tools': cardTools,
+  'card-image': cardImage
 }
 
 export default {
