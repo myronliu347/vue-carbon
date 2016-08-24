@@ -1,11 +1,13 @@
 <template>
-  <a href="javascript:;" class="button" :class="buttonClass">
+  <a href="javascript:;" class="button" v-el:button :class="buttonClass">
     <icon v-if="icon" :value="icon"></icon>
-    <span class="button-text">{{text}}</span>
+    <span class="button-text" v-if="text">{{text}}</span>
+    <ripple :trigger="$els.button"></ripple>
   </a>
 </template>
 
 <script>
+import ripple from '../ripple'
 import icon from '../icon/icon'
 export default {
   props: {
@@ -51,7 +53,8 @@ export default {
     }
   },
   components: {
-    icon
+    icon,
+    ripple
   }
 }
 </script>
@@ -71,7 +74,6 @@ export default {
   -ms-appearance: none;
   appearance: none;
   background: none;
-  padding: 0 10px;
   margin: 0;
   height: 36px;
   white-space: nowrap;
@@ -117,6 +119,9 @@ export default {
   &.button-fill {
     background-color: @red;
     color: #fff;
+    .ripple-ink{
+      color: rgba(255,255,255,0.4);
+    }
     html:not(.watch-active-state) &:active, &.active-state {
       background: darken(@red, 8%);
     }
@@ -134,6 +139,9 @@ export default {
     border-radius: 3px;
   }
 
+  .ripple-ink{
+    color: rgba(0, 0, 0, .1);
+  }
 }
 
 .button-raised {

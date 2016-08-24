@@ -13,7 +13,8 @@ import button from './button/button'
 // bars
 import action from './bars/action'
 import headerBar from './bars/headerBar'
-
+import tabBar from './bars/tabBar'
+import tabBarItem from './bars/tabBarItem'
 // tips
 import toast from './toast/toast'
 
@@ -59,6 +60,8 @@ var components = {
   'button-row': buttonRow,
   button,
   'header-bar': headerBar,
+  'tab-bar': tabBar,
+  'tab-bar-item': tabBarItem,
   toast,
   action,
   list,

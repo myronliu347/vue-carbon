@@ -1,16 +1,21 @@
 <template>
-<a href="javascript:;" class="item" :class="{'item-link': link}">
+<a href="javascript:;" class="item" v-el:item :class="{'item-link': link}">
   <slot></slot>
+  <ripple :trigger="$els.item"></ripple>
 </a>
 </template>
 
 <script>
+import ripple from '../ripple'
 export default {
   props: {
     link: {
       type: Boolean,
       default: false
     }
+  },
+  components: {
+    ripple
   }
 }
 </script>
@@ -27,6 +32,9 @@ export default {
   min-height: 48px;
   color: @body_color;
   display: flex;
+  .ripple-ink {
+    color: rgba(0, 0, 0, .1);
+  }
 }
 
 .item-link .item-content {

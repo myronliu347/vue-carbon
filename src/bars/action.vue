@@ -12,8 +12,11 @@ export default {
   }
 }
 </script>
-<style media="screen">
+<style lang="less">
   .link {
     position: relative;
+    .ripple-ink {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="ui-ripple-ink"></div>
+    <div class="ripple-ink"></div>
 </template>
 
 <script>
@@ -12,8 +12,8 @@
 import classlist from './utils/classList'
 var startRipple = function startRipple (eventType, event) {
   var holder = event.currentTarget || event.target
-  if (!classlist.has(holder, 'ui-ripple-ink')) {
-    holder = holder.querySelector('.ui-ripple-ink')
+  if (!classlist.has(holder, 'ripple-ink')) {
+    holder = holder.querySelector('.ripple-ink')
     if (!holder) return
   }
     // Store the event use to generate this ripple on the holder: don't allow
@@ -114,7 +114,7 @@ export default {
 </script>
 
 <style lang="less">
-.ui-ripple-ink {
+.ripple-ink {
     display: block;
     overflow: hidden;
     border-radius: inherit;
@@ -126,7 +126,7 @@ export default {
     // Forces webkit to properly contain content within border-radius
     -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
 }
-.ui-ripple-ink .ripple {
+.ripple-ink .ripple {
     position: absolute;
     width: 0;
     height: 0;
@@ -135,11 +135,11 @@ export default {
     border-radius: 50%;
     background-color: currentColor;
     background-clip: padding-box;
-    opacity: 0.2;
+    // opacity: 0.2;
     transform: scale(0);
     transition: transform 0.4s ease-out, opacity 0.4s ease-out;
     &.held {
-        opacity: 0.4;
+        // opacity: 0.4;
         transform: scale(1);
     }
     &.done {

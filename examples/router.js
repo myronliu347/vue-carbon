@@ -11,6 +11,7 @@ import refreshControl from './views/refreshControl'
 
 // css
 import headerBar from './views/headerBar'
+import tabBar from './views/tabbar'
 import grid from './views/grid'
 import contentBlock from './views/contentBlock'
 import listView from './views/listView'
@@ -68,6 +69,10 @@ export default function (router) {
     '/refreshControl': {
       name: 'refreshControl',
       component: refreshControl
+    },
+    '/tabBar': {
+      name: 'tabBar',
+      component: tabBar
     }
   })
 }
