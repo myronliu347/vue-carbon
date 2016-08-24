@@ -54,6 +54,10 @@
     .active-highlight();
     padding: 0 16px;
     font-size: 18px;
+    border-radius: 50%;
+    &:before{
+      border-radius: 50%;
+    }
   }
 }
 </style>

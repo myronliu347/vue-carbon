@@ -2,13 +2,13 @@
 <div class="preloader-wrapper active" :style="{'width': size + 'px', 'height': size + 'px'}">
   <div class="spinner active" :style="{'border-color': color}">
       <div class="circle-clipper left">
-          <div class="circle"></div>
+          <div class="circle" :style="{'border-width': borderWidth + 'px'}"></div>
       </div>
       <div class="gap-patch">
           <div class="circle"></div>
       </div>
       <div class="circle-clipper right">
-          <div class="circle"></div>
+          <div class="circle" :style="{'border-width': borderWidth + 'px'}"></div>
       </div>
   </div>
 </div>
@@ -24,6 +24,10 @@ export default {
     color: {
       type: String,
       default: ''
+    },
+    borderWidth: {
+      type: Number,
+      default: 3
     }
   }
 }

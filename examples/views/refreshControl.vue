@@ -1,26 +1,31 @@
 <template>
-  <div class="refresh-control">
-    <icon value="refresh"/>
-    <circular :size="20" :border-width="2"></circular>
-  </div>
+<div class="page">
+  <header-bar>
+    <action slot="left" @click="back()">
+      <icon value="arrow_back"></icon>
+    </action>
+    <span>Refresh Control</span>
+  </header-bar>
+  <content>
+    <div class="refresh-control">
+      <circular :size="20" :border-width="2"></circular>
+    </div>
+  </content>
+</div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
+  methods: {
+    back () {
+      window.history.back()
     }
-  },
-  computed: {},
-  ready () {},
-  attached () {},
-  methods: {},
-  components: {}
+  }
 }
 </script>
 
 <style lang="less">
-@import "./utils/_mixins.less";
+@import '../../src/utils/_mixins.less';
 .refresh-control{
   display: flex;
   margin: 0 auto;
@@ -55,4 +60,5 @@ export default {
   transform: scale(1);
   opacity: 1;
 }
+
 </style>

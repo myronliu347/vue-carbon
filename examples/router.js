@@ -7,6 +7,7 @@ import button from './views/button'
 import overlay from './views/overlay'
 import circular from './views/circular'
 import toast from './views/toast'
+import refreshControl from './views/refreshControl'
 
 // css
 import headerBar from './views/headerBar'
@@ -63,6 +64,10 @@ export default function (router) {
     '/card': {
       name: 'card',
       component: card
+    },
+    '/refreshControl': {
+      name: 'refreshControl',
+      component: refreshControl
     }
   })
 }

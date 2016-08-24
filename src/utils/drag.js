@@ -1,19 +1,18 @@
+const IS_TOUCH = ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch
 export default class Drag {
   constructor (element) {
-    this.slider = element
+    this.el = element
     this.startPos = {}
     this.endPos = {}
     this.starts = []
     this.drags = []
     this.ends = []
-
-    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch) {
-      this.slider.addEventListener('touchstart', this, false)
+    if (IS_TOUCH) {
+      this.el.addEventListener('touchstart', this, false)
     } else {
-      this.slider.addEventListener('mousedown', this, false)
+      this.el.addEventListener('mousedown', this, false)
     }
   }
-
   handleEvent (event) {
     switch (event.type) {
       case 'touchstart':
@@ -45,8 +44,8 @@ export default class Drag {
       time: new Date().getTime()
     }
     this.endPos = {}
-    this.slider.addEventListener('touchmove', this, false)
-    this.slider.addEventListener('touchend', this, false)
+    this.el.addEventListener('touchmove', this, false)
+    this.el.addEventListener('touchend', this, false)
     this.starts.map((func) => {
       func.call(this, this.startPos, event)
     })
@@ -68,8 +67,8 @@ export default class Drag {
   touchEnd (event) {
     this.endPos.time = new Date().getTime() - this.startPos.time
 
-    this.slider.removeEventListener('touchmove', this, false)
-    this.slider.removeEventListener('touchend', this, false)
+    this.el.removeEventListener('touchmove', this, false)
+    this.el.removeEventListener('touchend', this, false)
     this.ends.map((func) => {
       func.call(this, this.endPos, event)
     })
@@ -81,8 +80,8 @@ export default class Drag {
       y: event.clientY,
       time: new Date().getTime()
     }
-    this.slider.addEventListener('mousemove', this, false)
-    this.slider.addEventListener('mouseup', this, false)
+    this.el.addEventListener('mousemove', this, false)
+    this.el.addEventListener('mouseup', this, false)
     this.starts.map((func) => {
       func.call(this, this.startPos, event)
     })
@@ -100,8 +99,8 @@ export default class Drag {
   }
 
   mouseEnd (event) {
-    this.slider.removeEventListener('mousemove', this, false)
-    this.slider.removeEventListener('mouseup', this, false)
+    this.el.removeEventListener('mousemove', this, false)
+    this.el.removeEventListener('mouseup', this, false)
 
     this.endPos.time = new Date().getTime() - this.startPos.time
 
@@ -123,5 +122,13 @@ export default class Drag {
   drag (fun) {
     this.drags.push(fun)
     return this
+  }
+
+  destory () {
+    if (IS_TOUCH) {
+      this.el.removeEventListener('touchstart', this, false)
+    } else {
+      this.el.removeEventListener('mousedown', this, false)
+    }
   }
 }

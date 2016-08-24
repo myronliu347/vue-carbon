@@ -47,6 +47,4 @@
 
 * [] floatButton
 * [] searchBar
-* [] smartSelect
-* [] datePicker
 * [] VirtualList
