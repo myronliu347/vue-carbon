@@ -10,14 +10,14 @@
 * [X] page
 * [X] pageContent
 * [X] toast
-* [] refreshControl
-* [] infiniteScroll
+* [ ] refreshControl
+* [ ] infiniteScroll
 
 ## css
 
 * [X] headerBar
 * [X] navBar
-* [] tabBar
+* [ ] tabBar
 * [X] listView
 * [X] card
 * [X] grid
@@ -25,26 +25,27 @@
 
 ## modal
 
-* [] modal
-* [] alert, confirm, propmt
-* [] popup
-* [] picker
-* [] popover
-* [] Indicator
+* [ ] modal
+* [ ] alert, confirm, propmt
+* [ ] popup
+* [ ] actionSheet
+* [ ] picker
+* [ ] popover
+* [ ] Indicator
 
 ## forms
 
-* [] itemInput
-* [] textField
-* [] textArea
-* [] select
-* [] check
-* [] range
-* [] switch
-* [] date
+* [ ] itemInput
+* [ ] textField
+* [ ] textArea
+* [ ] select
+* [ ] check
+* [ ] range
+* [ ] switch
+* [ ] date
 
 ## others
 
-* [] floatButton
-* [] searchBar
-* [] VirtualList
+* [ ] floatButton
+* [ ] searchBar
+* [ ] VirtualList
