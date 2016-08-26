@@ -1,5 +1,5 @@
 <template>
-  <a class="item item-cell"  v-el:item :class="{'item-link': link}">
+  <a class="item item-cell" href="javascript:;"  v-el:item :class="{'item-link': link}">
     <slot></slot>
     <ripple v-if="link" :trigger="$els.item"></ripple>
   </a>

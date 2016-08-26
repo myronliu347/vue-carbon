@@ -1,9 +1,7 @@
 <template>
 <div class="page">
   <header-bar>
-    <action slot="left" @click="back()">
-      <icon value="arrow_back"></icon>
-    </action>
+    <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Button</span>
   </header-bar>
   <content>
@@ -56,6 +54,12 @@
           <button fill big raised text="button"></button>
           <button fill big raised text="button"></button>
         </button-row>
+      </content-block>
+      <content-title>icon buttons</content-title>
+      <content-block>
+        <icon-button icon="mode_edit"></icon-button>
+        <icon-button icon="search" fill gray></icon-button>
+        <icon-button icon="add" fill></icon-button>
       </content-block>
   </content>
 </div>

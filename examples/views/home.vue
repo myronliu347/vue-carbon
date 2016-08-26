@@ -1,9 +1,7 @@
 <template>
   <div class="page" transition="app">
       <header-bar>
-        <action slot="left">
-          <icon value="menu"></icon>
-        </action>
+        <icon-button slot="left" icon="menu"></icon-button>
         <span>Vue Carbon</span>
       </header-bar>
       <content>

@@ -42,21 +42,25 @@
     padding-right: 16px;
     white-space: nowrap;
   }
-  .link {
-    height: @header-height;
-    line-height: @header-height;
-    position: relative;
-    color: #ffffff;
-    .flex-shrink(0);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .active-highlight();
-    padding: 0 16px;
+  
+  .button {
     font-size: 18px;
-    border-radius: 50%;
-    &:before{
-      border-radius: 50%;
+    background: none;
+    height: 56px;
+    line-height: 56px;
+    color: #FFF;
+    .ripple-ink{
+      color: rgba(255, 255, 255, .3);
+    }
+  }
+
+  .icon-button {
+    background: none;
+    width: 56px;
+    height: 56px;
+    color: #FFF;
+    .ripple-ink{
+      color: rgba(255, 255, 255, .3);
     }
   }
 }

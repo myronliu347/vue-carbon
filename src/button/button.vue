@@ -64,23 +64,17 @@ export default {
 @import "../utils/_mixins.less";
 .button {
   color: @color;
-  text-decoration: none;
-  text-align: center;
-  display: block;
   border-radius: 2px;
+  height: 36px;
   line-height: 36px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
   appearance: none;
   background: none;
+  text-decoration: none;
+  text-align: center;
   margin: 0;
-  height: 36px;
   white-space: nowrap;
   text-overflow:ellipsis;
   text-transform: uppercase;
-  font-family: inherit;
-  cursor: pointer;
   min-width: 64px;
   padding: 0 8px;
   position: relative;
@@ -92,22 +86,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  input[type="submit"]&, input[type="button"]&{
-    width: 100%;
-  }
-  html:not(.watch-active-state) &:active, &.active-state {
-    background: rgba(0,0,0,0.1);
+  &:active{
+    background: @tap-color;
   }
   i.icon + span,
-  span:not(.ripple-wave) + span,
-  span:not(.ripple-wave) + i.icon,
   i.icon + i.icon {
     margin-left: 8px;
   }
+
   .icon{
     .flex-shrink(0);
   }
-
+  
   .button-text{
     .flex-shrink(1);
     white-space:nowrap;
@@ -116,32 +106,33 @@ export default {
     break-word;
   }
 
-  &.button-fill {
-    background-color: @red;
-    color: #fff;
-    .ripple-ink{
-      color: rgba(255,255,255,0.4);
-    }
-    html:not(.watch-active-state) &:active, &.active-state {
-      background: darken(@red, 8%);
-    }
-  }
-
-  &.button-gray {
-    background-color: @carbon;
-    html:not(.watch-active-state) &:active, &.active-state {
-      background: darken(@carbon, 8%);
-    }
-  }
-  &.button-big {
-    height: 48px;
-    line-height: 48px;
-    border-radius: 3px;
-  }
-
   .ripple-ink{
-    color: rgba(0, 0, 0, .1);
+    color: @tap-color;
   }
+}
+
+.button-fill {
+  background-color: @red;
+  color: #fff;
+  .ripple-ink{
+    color: rgba(255,255,255,0.4);
+  }
+  &:active {
+    background: darken(@red, 8%);
+  }
+}
+
+.button-gray {
+  background-color: @carbon;
+  &:active {
+    background: darken(@carbon, 8%);
+  }
+}
+
+.button-big {
+  height: 48px;
+  line-height: 48px;
+  border-radius: 3px;
 }
 
 .button-raised {

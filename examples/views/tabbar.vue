@@ -1,9 +1,7 @@
 <template>
 <div class="page">
   <header-bar>
-    <action slot="left" @click="back()">
-      <icon value="arrow_back"></icon>
-    </action>
+    <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Tab Bar</span>
   </header-bar>
   <tab-bar :active="tabActive">

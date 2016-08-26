@@ -1,9 +1,7 @@
 <template>
   <div class="page">
     <header-bar>
-      <action slot="left" @click="back()">
-        <icon value="arrow_back"></icon>
-      </action>
+      <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Card</span>
     </header-bar>
     <content>
@@ -38,9 +36,7 @@
         <card-header>
           <card-title>Vue.js</card-title>
           <card-tools>
-            <card-action>
-              <icon value="add_a_photo"></icon>
-            </card-action>
+            <icon-button icon="add_a_photo"></icon-button>
           </card-tools>
         </card-header>
         <card-image src="http://vuejs.org/images/logo.png">
@@ -49,12 +45,8 @@
           Vue.js 是用于构建交互式的 Web  界面的库。它提供了 MVVM 数据绑定和一个可组合的组件系统，具有简单、灵活的 API。
         </card-content>
         <card-footer>
-          <card-action>
-            <icon value="favorite"></icon>
-          </card-action>
-          <card-action>
-            <icon value="share"></icon>
-          </card-action>
+          <icon-button icon="favorite"></icon-button>
+          <icon-button icon="share"></icon-button>
         </card-footer>
       </card>
       <card>
@@ -117,12 +109,8 @@
           </list>
         </card-content>
         <card-footer>
-          <card-action>
-            <icon value="favorite"></icon>
-          </card-action>
-          <card-action>
-            <icon value="share"></icon>
-          </card-action>
+          <icon-button icon="favorite"></icon-button>
+          <icon-button icon="share"></icon-button>
         </card-footer>
       </card>
     </content>

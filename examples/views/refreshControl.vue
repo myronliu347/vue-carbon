@@ -1,13 +1,9 @@
 <template>
 <div class="page">
   <header-bar>
-    <action slot="left" @click="back()">
-      <icon value="arrow_back"></icon>
-    </action>
+    <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Refresh Control</span>
-    <action slot="right" @click="refresh()">
-      <icon value="refresh"></icon>
-    </action>
+    <icon-button slot="right" @click="refresh()" icon="refresh"></icon-button>
   </header-bar>
   <content v-el:trigger>
     <refresh-control @refresh="refresh" :trigger="$els.trigger" :refreshing="refreshing"></refresh-control>

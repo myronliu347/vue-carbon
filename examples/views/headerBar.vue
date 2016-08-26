@@ -1,9 +1,7 @@
 <template>
   <div class="page">
     <header-bar>
-      <action slot="left" @click="back()">
-        <icon value="arrow_back"></icon>
-      </action>
+      <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Header Bar</span>
     </header-bar>
     <content>
@@ -12,23 +10,15 @@
       </header-bar>
 
       <header-bar class="header-bar-demo">
-        <action slot="left">
-          <icon value="menu"></icon>
-        </action>
+        <icon-button slot="left" icon="menu"></icon-button>
         <span>左边有 icon</span>
       </header-bar>
 
       <header-bar class="header-bar-demo">
-        <action slot="left" @click="back()">
-          <icon value="arrow_back"></icon>
-        </action>
+        <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
         <span>两边有 icon</span>
-        <action slot="right">
-          <icon value="search"></icon>
-        </action>
-        <action slot="right">
-          <icon value="share"></icon>
-        </action>
+        <icon-button slot="right" icon="search"></icon-button>
+        <icon-button slot="right" icon="share"></icon-button>
       </header-bar>
     </content>
   </div>

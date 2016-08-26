@@ -2,6 +2,7 @@
 import content from './content'
 import overlay from './overlay'
 import icon from './icon/icon'
+import iconButton from './icon/iconButton'
 import badge from './badge'
 import circular from './circular'
 import refreshControl from './refreshControl'
@@ -13,7 +14,6 @@ import buttonRow from './button/buttonRow'
 import button from './button/button'
 
 // bars
-import action from './bars/action'
 import headerBar from './bars/headerBar'
 import tabBar from './bars/tabBar'
 import tabBarItem from './bars/tabBarItem'
@@ -36,7 +36,6 @@ import itemDivider from './list/itemDivider'
 
 // card
 import card from './card/card'
-import cardAction from './card/cardAction'
 import cardHeader from './card/cardHeader'
 import cardFooter from './card/cardFooter'
 import cardContent from './card/cardContent'
@@ -56,6 +55,7 @@ var components = {
   content,
   overlay,
   icon,
+  'icon-button': iconButton,
   badge,
   circular,
   'refresh-control': refreshControl,
@@ -67,7 +67,6 @@ var components = {
   'tab-bar': tabBar,
   'tab-bar-item': tabBarItem,
   toast,
-  action,
   list,
   item,
   'item-cell': itemCell,
@@ -84,7 +83,6 @@ var components = {
   'grid-row': gridRow,
   'grid-col': gridCol,
   card,
-  'card-action': cardAction,
   'card-header': cardHeader,
   'card-footer': cardFooter,
   'card-content': cardContent,
