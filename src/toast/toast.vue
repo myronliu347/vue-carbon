@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" :style="{'z-index': zIndex}" :class="{'toast-center': center || loading}" transition="fade">
+  <div class="toast" :style="{'z-index': zIndex}" :class="{'toast-center': center || loading}" transition="toast">
     <circular :size="36" v-if="loading" color="#FFF"></circular>
     <icon v-if="icon && !loading" :value="icon" :size="36"></icon>
     <div class="toast-text">{{text}}</div>
@@ -63,6 +63,15 @@ export default {
     top: 50%;
     bottom: auto;
     transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+.toast-transition {
+  -webkit-transition: opacity .3s linear;
+  transition: opacity .3s linear;
+  &.toast-enter,
+  &.toast-leave {
+    opacity: 0;
   }
 }
 </style>

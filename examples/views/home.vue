@@ -83,6 +83,12 @@ export default {
           title: 'Content Block',
           link: '/contentBlock'
         }]
+      }, {
+        title: 'Forms',
+        children: [{
+          title: 'TextField',
+          link: '/inputs'
+        }]
       }]
     }
   }

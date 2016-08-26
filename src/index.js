@@ -51,6 +51,10 @@ import contentTitle from './contentTitle'
 import gridRow from './grid/gridRow'
 import gridCol from './grid/gridCol'
 
+// forms
+import formList from './forms/formList'
+import textField from './forms/textField'
+
 var components = {
   content,
   overlay,
@@ -88,7 +92,9 @@ var components = {
   'card-content': cardContent,
   'card-title': cardTitle,
   'card-tools': cardTools,
-  'card-image': cardImage
+  'card-image': cardImage,
+  'form-list': formList,
+  'text-field': textField
 }
 
 export default {

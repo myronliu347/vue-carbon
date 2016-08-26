@@ -16,6 +16,9 @@ import grid from './views/grid'
 import contentBlock from './views/contentBlock'
 import listView from './views/listView'
 import card from './views/card'
+
+// forms
+import inputs from './views/inputs'
 export default function (router) {
   router.map({
     '/': {
@@ -77,6 +80,10 @@ export default function (router) {
     '/infiniteScroll': {
       name: 'infiniteScroll',
       component: infiniteScroll
+    },
+    '/inputs': {
+      name: 'inputs',
+      component: inputs
     }
   })
 }
