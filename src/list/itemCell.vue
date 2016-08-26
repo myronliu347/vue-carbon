@@ -1,16 +1,21 @@
 <template>
-  <a href="javascript:;" class="item item-cell" :class="{'item-link': link}">
+  <a class="item item-cell"  v-el:item :class="{'item-link': link}">
     <slot></slot>
+    <ripple v-if="link" :trigger="$els.item"></ripple>
   </a>
 </template>
 
 <script>
+import ripple from '../ripple'
 export default {
   props: {
     link: {
       type: Boolean,
       default: false
     }
+  },
+  components: {
+    ripple
   }
 }
 </script>

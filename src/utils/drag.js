@@ -21,6 +21,7 @@ export default class Drag {
       case 'touchmove':
         this.touchMove(event)
         break
+      case 'touchcancel':
       case 'touchend':
         this.touchEnd(event)
         break
@@ -30,6 +31,7 @@ export default class Drag {
       case 'mousemove':
         this.mouseMove(event)
         break
+      case 'mouseleave':
       case 'mouseup':
         this.mouseEnd(event)
         break
@@ -124,6 +126,18 @@ export default class Drag {
     return this
   }
 
+  reset (event) {
+    let touch = event.touches ? event.touches[0] : {}
+    this.startPos = { // 取第一个touch的坐标值
+      x: touch.pageX || event.clientX,
+      y: touch.pageY || event.clientY,
+      time: new Date().getTime()
+    }
+    this.endPos = {
+      x: 0,
+      y: 0
+    }
+  }
   destory () {
     if (IS_TOUCH) {
       this.el.removeEventListener('touchstart', this, false)

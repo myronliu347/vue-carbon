@@ -8,7 +8,7 @@ import overlay from './views/overlay'
 import circular from './views/circular'
 import toast from './views/toast'
 import refreshControl from './views/refreshControl'
-
+import infiniteScroll from './views/infiniteScroll'
 // css
 import headerBar from './views/headerBar'
 import tabBar from './views/tabbar'
@@ -73,6 +73,10 @@ export default function (router) {
     '/tabBar': {
       name: 'tabBar',
       component: tabBar
+    },
+    '/infiniteScroll': {
+      name: 'infiniteScroll',
+      component: infiniteScroll
     }
   })
 }

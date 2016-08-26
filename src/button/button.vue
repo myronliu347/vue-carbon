@@ -63,7 +63,7 @@ export default {
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
 .button {
-  color: @red;
+  color: @color;
   text-decoration: none;
   text-align: center;
   display: block;

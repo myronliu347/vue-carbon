@@ -4,6 +4,8 @@ import overlay from './overlay'
 import icon from './icon/icon'
 import badge from './badge'
 import circular from './circular'
+import refreshControl from './refreshControl'
+import infiniteScroll from './infiniteScroll'
 
 // button
 import buttonArea from './button/buttonArea'
@@ -56,6 +58,8 @@ var components = {
   icon,
   badge,
   circular,
+  'refresh-control': refreshControl,
+  'infinite-scroll': infiniteScroll,
   'button-area': buttonArea,
   'button-row': buttonRow,
   button,
