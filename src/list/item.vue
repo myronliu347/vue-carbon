@@ -1,7 +1,7 @@
 <template>
-<a href="javascript:;" class="item" v-el:item :class="{'item-link': link}">
+<a href="javascript:;" class="item" v-el:item :class="{'item-link': link, 'item-ripple': ripple || link}">
   <slot></slot>
-  <ripple v-if="link" :trigger="$els.item"></ripple>
+  <ripple v-if="ripple || link" :trigger="$els.item"></ripple>
 </a>
 </template>
 
@@ -10,6 +10,10 @@ import ripple from '../ripple'
 export default {
   props: {
     link: {
+      type: Boolean,
+      default: false
+    },
+    ripple: {
       type: Boolean,
       default: false
     }
@@ -32,7 +36,7 @@ export default {
   color: @body_color;
   display: flex;
 }
-.item-link {
+.item-ripple {
   .active-highlight(@tap-color);
   .ripple-ink {
     color: rgba(0, 0, 0, .1);
