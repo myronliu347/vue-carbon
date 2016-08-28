@@ -53,8 +53,14 @@ import gridCol from './grid/gridCol'
 
 // forms
 import formList from './forms/formList'
+import itemForm from './forms/itemForm'
 import textField from './forms/textField'
-
+import _switch from './forms/switch'
+import range from './forms/range'
+import checkbox from './forms/checkbox'
+import radio from './forms/radio'
+import selectField from './forms/selectField'
+import dateSelect from './forms/dateSelect'
 var components = {
   content,
   overlay,
@@ -94,7 +100,14 @@ var components = {
   'card-tools': cardTools,
   'card-image': cardImage,
   'form-list': formList,
-  'text-field': textField
+  'item-form': itemForm,
+  'text-field': textField,
+  'switch': _switch,
+  range,
+  checkbox,
+  radio,
+  'select-field': selectField,
+  'date-select': dateSelect
 }
 
 export default {

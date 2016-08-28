@@ -38,22 +38,22 @@ export default {
       menus: [{
         title: '基础组件',
         children: [{
-          title: 'icon',
+          title: 'Icon',
           link: '/icons'
         }, {
-          title: 'badge',
+          title: 'Badge',
           link: '/badge'
         }, {
-          title: 'button',
+          title: 'Button',
           link: '/button'
         }, {
-          title: 'overlay',
+          title: 'Overlay',
           link: '/overlay'
         }, {
-          title: 'circular',
+          title: 'Circular',
           link: '/circular'
         }, {
-          title: 'toast',
+          title: 'Toast',
           link: '/toast'
         }, {
           title: 'Refresh Control',
@@ -74,10 +74,10 @@ export default {
           title: 'List View',
           link: '/listView'
         }, {
-          title: 'card',
+          title: 'Card',
           link: '/card'
         }, {
-          title: 'grid',
+          title: 'Grid',
           link: '/grid'
         }, {
           title: 'Content Block',
@@ -88,6 +88,21 @@ export default {
         children: [{
           title: 'TextField',
           link: '/inputs'
+        }, {
+          title: 'Switch',
+          link: '/switch'
+        }, {
+          title: 'Range',
+          link: '/range'
+        }, {
+          title: 'Checkbox And Radio',
+          link: '/check'
+        }, {
+          title: 'Select Field',
+          link: '/select'
+        }, {
+          title: 'Date Select',
+          link: '/dateSelect'
         }]
       }]
     }

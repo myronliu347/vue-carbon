@@ -19,6 +19,11 @@ import card from './views/card'
 
 // forms
 import inputs from './views/inputs'
+import _switch from './views/switch'
+import range from './views/range'
+import check from './views/check'
+import select from './views/select'
+import dateSelect from './views/dateSelect'
 export default function (router) {
   router.map({
     '/': {
@@ -84,6 +89,26 @@ export default function (router) {
     '/inputs': {
       name: 'inputs',
       component: inputs
+    },
+    '/switch': {
+      name: '_switch',
+      component: _switch
+    },
+    '/range': {
+      name: 'range',
+      component: range
+    },
+    '/check': {
+      name: 'check',
+      component: check
+    },
+    '/select': {
+      name: 'select',
+      component: select
+    },
+    '/dateSelect': {
+      name: 'dateSelect',
+      component: dateSelect
     }
   })
 }

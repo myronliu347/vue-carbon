@@ -1,27 +1,23 @@
 <template>
-  <div class="text-field" :class="{'focus-state': focus, 'not-empty-state': value}">
-    <div class="text-field-icon" v-if="icon">
-      <icon :value="icon"></icon>
-    </div>
-    <div class="text-field-content">
-      <label class="text-field-label">
-        <div :class="{'text-field-label-text': !labelFloat, 'text-field-floating-label': labelFloat}" v-if="label">{{label}}</div>
-        <input :type="type" v-model="value" class="text-field-input" @focus="onfocus" @blur="onblur"
-          v-if="type !== 'textarea'"  autocomplete="off" :placeholder="placeholder" />
-        <textarea  v-model="value" @focus="onfocus" @blur="onblur"
-            :style="{'height': height + 'px'}" v-el:textarea
-            class="resizable text-field-input"
-            v-if="type === 'textarea'" @focus="this.focus = true"
-            @blur="this.focus = false"  v-model="value"
-            :placeholder="placeholder">
-        </textarea>
-      </label>
-    </div>
-  </div>
+  <item-form :focus="focus" :no-empty="!!value" :icon="icon">
+    <label class="text-field">
+      <div :class="{'label': !labelFloat, 'floating-label': labelFloat}" v-if="label">{{label}}</div>
+      <input :type="type" v-model="value"  @focus="onfocus" @blur="onblur"
+        v-if="type !== 'textarea'"  autocomplete="off" :placeholder="placeholder" />
+      <textarea v-model="value" @focus="onfocus" @blur="onblur"
+          :style="{'height': height + 'px'}" v-el:textarea
+          class="resizable"
+          v-if="type === 'textarea'" @focus="this.focus = true"
+          @blur="this.focus = false"  v-model="value"
+          :placeholder="placeholder">
+      </textarea>
+    </label>
+  </item-form>
 </template>
 
 <script>
 import icon from '../icon/icon'
+import itemForm from './itemForm'
 export default {
   props: {
     label: {
@@ -104,7 +100,8 @@ export default {
     }
   },
   components: {
-    icon
+    icon,
+    'item-form': itemForm
   }
 }
 </script>
@@ -112,74 +109,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.text-field{
-  position: relative;
-  overflow: hidden;
-  padding-left: 16px;
-  min-height: 48px;
-  color: #7e848c;
-  font-size: 14px;
-  display: flex;
-  &.focus-state,
-  &.not-empty-state {
-    .text-field-floating-label {
-      transform: scale(1) translateY(0);
-    }
-  }
-  &.focus-state {
-    .text-field-floating-label {
-      color: @red;
-    }
-  }
-}
-
-.text-field-icon{
-  width: 40px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  margin-top: 31px;
-  .flex-shrink(0);
-  + .item-field-content{
-    margin-left: 16px;
-  }
-}
-
-.text-field-content{
-  flex: 1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 16px;
-}
-
-
-.text-field-floating-label,
-.text-field-label-text {
-  vertical-align: top;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  transition-duration: 200ms;
-  width: 35%;
-  .flex-shrink(0);
-}
-.text-field-floating-label,
-.text-field-label-text {
-  font-size: 14px;
-  width: 100%;
-}
-.text-field-floating-label {
-  transform-origin: left;
-  transform: scale(16/12) translateY(21px);
-  color: #7e848c;
-  width: auto;
-  max-width: 75%;
-}
-
-
-
-.text-field-label {
+.text-field {
   width: 100%;
   display: block;
   position: relative;
@@ -201,10 +131,6 @@ export default {
   }
 }
 
-.text-field.focus-state{
-  color: @red;
-}
-
 input[type="date"],
 input[type="datetime-local"],
 input[type="email"],
@@ -221,6 +147,7 @@ textarea {
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
+  outline: none;
   box-sizing: border-box;
   border: none;
   background: none;
@@ -237,15 +164,5 @@ textarea {
   &::-webkit-input-placeholder {
     color: #7e848c;
   }
-}
-
-input,textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none;
-  outline: none;
-  box-shadow: none;
-  border:none;
 }
 </style>

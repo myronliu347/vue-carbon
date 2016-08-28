@@ -1,11 +1,15 @@
 <template>
-  <div class="overlay" @touchmove="prevent" :style="{'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
+  <div class="overlay" :style="{'position': fixed ? 'fixed' : ''}" @touchmove="prevent" :style="{'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
 </template>
 <script>
 import {getZIndex} from './utils'
 export default {
   props: {
     white: {
+      type: Boolean,
+      default: false
+    },
+    fixed: {
       type: Boolean,
       default: false
     }

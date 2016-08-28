@@ -16,6 +16,5 @@
   word-break: break-all;
   text-overflow: ellipsis;
   max-width: 100%;
-  text-transform: capitalize;
 }
 </style>
