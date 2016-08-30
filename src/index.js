@@ -18,7 +18,7 @@ import headerBar from './bars/headerBar'
 import tabBar from './bars/tabBar'
 import tabBarItem from './bars/tabBarItem'
 // tips
-import toast from './toast/toast'
+import toast from './toast'
 
 // listview
 import list from './list/list'
@@ -61,6 +61,12 @@ import checkbox from './forms/checkbox'
 import radio from './forms/radio'
 import selectField from './forms/selectField'
 import dateSelect from './forms/dateSelect'
+
+// modal
+import modal from './modal/modal'
+import alert from './modal/alert'
+import confirm from './modal/confirm'
+import prompt from './modal/prompt'
 var components = {
   content,
   overlay,
@@ -107,7 +113,11 @@ var components = {
   checkbox,
   radio,
   'select-field': selectField,
-  'date-select': dateSelect
+  'date-select': dateSelect,
+  modal,
+  alert,
+  confirm,
+  prompt
 }
 
 export default {

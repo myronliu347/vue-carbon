@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import {getZIndex} from '../utils'
-import icon from '../icon/icon'
-import circular from '../circular'
+import {getZIndex} from './utils'
+import icon from './icon/icon'
+import circular from './circular'
 export default {
   data () {
     return {

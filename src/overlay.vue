@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" :style="{'position': fixed ? 'fixed' : ''}" @touchmove="prevent" :style="{'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
+  <div class="overlay"  @touchmove="prevent" :style="{'position': fixed ? 'fixed' : '', 'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
 </template>
 <script>
 import {getZIndex} from './utils'

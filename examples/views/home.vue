@@ -104,6 +104,12 @@ export default {
           title: 'Date Select',
           link: '/dateSelect'
         }]
+      }, {
+        title: 'Modals',
+        children: [{
+          title: ['Modal'],
+          link: '/modal'
+        }]
       }]
     }
   }

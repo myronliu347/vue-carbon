@@ -11,9 +11,6 @@
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
-  "peerDependencies": {
-    "vue": "^1.0.21"
-  },
   "devDependencies": {
     "babel-core": "^6.0.0",
     "babel-eslint": "^6.1.2",
@@ -73,6 +70,8 @@
     "webpack-merge": "^0.8.3"
   },
   "dependencies": {
-    "moment": "^2.14.1"
+    "moment": "^2.14.1",
+    "vue": "^1.0.21",
+    "vue-popup": "^0.2.2"
   }
 }

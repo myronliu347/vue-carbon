@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="css">
-@import "./style.css";
+@import "../../static/icomoon/style.css";
 .icon{
   position: relative;
 }

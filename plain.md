@@ -24,6 +24,17 @@
 * [X] grid
 * [X] content-block
 
+## forms
+
+* [X] itemInput
+* [X] textField
+* [X] textArea
+* [X] select
+* [X] check
+* [X] range
+* [X] switch
+* [X] date
+
 ## modal
 
 * [ ] modal
@@ -33,20 +44,9 @@
 * [ ] popover
 * [ ] Indicator
 
-## forms
-
-* [ ] itemInput
-* [ ] textField
-* [ ] textArea
-* [ ] select
-* [ ] check
-* [ ] range
-* [ ] switch
-* [ ] date
-
 ## others
-
+* [ ] rating
 * [ ] picker
 * [ ] floatButton
 * [ ] searchBar
-* [ ] VirtualList
+* [ ] sidePanel

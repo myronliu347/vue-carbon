@@ -97,7 +97,7 @@ export default {
   .icon{
     .flex-shrink(0);
   }
-  
+
   .button-text{
     .flex-shrink(1);
     white-space:nowrap;
@@ -136,9 +136,9 @@ export default {
 }
 
 .button-raised {
-    .depth(1);
-    html:not(.watch-active-state) &:active, &.active-state {
-        .depth(2);
-    }
+  .depth(1);
+  html:not(.watch-active-state) &:active, &.active-state {
+    .depth(2);
+  }
 }
 </style>

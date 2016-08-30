@@ -127,7 +127,7 @@ export default {
   .focus-state &:after,
   .not-empty-state &:after {
     background: @red;
-    .transform(scaleY(2)) !important;
+    transform: scaleY(2) !important;
   }
 }
 

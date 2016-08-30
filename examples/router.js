@@ -24,6 +24,9 @@ import range from './views/range'
 import check from './views/check'
 import select from './views/select'
 import dateSelect from './views/dateSelect'
+
+// modal
+import modal from './views/modal'
 export default function (router) {
   router.map({
     '/': {
@@ -109,6 +112,10 @@ export default function (router) {
     '/dateSelect': {
       name: 'dateSelect',
       component: dateSelect
+    },
+    '/modal': {
+      name: 'modal',
+      component: modal
     }
   })
 }
