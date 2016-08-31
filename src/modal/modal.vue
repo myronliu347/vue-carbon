@@ -100,6 +100,10 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  .button-fill,
+  .button-raise {
+    margin-left: 10px;
+  }
 }
 
 .modal-scale-transition{

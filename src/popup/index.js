@@ -124,7 +124,6 @@ export default {
       if (!this.rendered) {
         this.rendered = true
         this.show = true
-
         return
       }
 

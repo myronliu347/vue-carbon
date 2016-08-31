@@ -3,8 +3,8 @@
     <div class="alert-content" :class="{'info': type === 'info',
                                         'warning': type === 'warning',
                                         'success': type === 'success',
-                                        'error': type === 'erro'}">
-      <icon :value="type" v-if="type" :size="36"></icon>
+                                        'error': type === 'error'}">
+      <icon :value="type === 'success' ? 'check' : type" v-if="type" :size="36"></icon>
       <span class="alert-text">{{msg}}</span>
     </div>
     <button slot="footer" text="确定" @click="sure"></button>

@@ -20,11 +20,56 @@
           <button text="prompt" raised @click="showPrompt"></button>
         </button-row>
       </content-block>
+      <content-block>
+        <div class="">
+          不同类型的alert
+        </div>
+        <button-row>
+          <button text="info" raised @click="showAlert('info')"></button>
+          <button text="success" raised @click="showAlert('success')"></button>
+        </button-row>
+        <button-row>
+          <button text="warning" raised @click="showAlert('warning')"></button>
+          <button text="error" raised @click="showAlert('error')"></button>
+        </button-row>
+      </content-block>
+      <content-block>
+        <div class="">
+          自定义的modal
+        </div>
+        <button-row>
+          <button text="select Modal" raised @click="showSelectModal()"></button>
+          <button text="Login Modal" raised @click="showLoginModal()"></button>
+        </button-row>
+      </content-block>
   </content>
   <modal title="标题" :show.sync="modal">
     这里是内容区域，点击关闭按钮，或者遮盖层关闭
   </modal>
-  <alert :title="alert.title" :show.sync="alert.show" :msg="alert.msg" ></alert>
+
+  <modal title="Select Modal" :show.sync="selectModal">
+    <div class="">
+      选择一个你喜欢的
+    </div>
+    <div class="demo-select-modal">
+      <radio :model="radio" name="demoModal" value="守望先锋" label="守望先锋"></radio>
+      <radio :model="radio" name="demoModal" value="英雄联盟" label="英雄联盟"></radio>
+      <radio :model="radio" name="demoModal" value="精灵梦可宝" label="精灵梦可宝"></radio>
+      <radio :model="radio" name="demoModal" value="王者荣耀" label="王者荣耀"></radio>
+    </div>
+  </modal>
+  <modal title="Login Modal" :show.sync="loginModal">
+    <div class="login-modal">
+      <text-field label="用户名" placeholder="请输入用户名"></text-field>
+      <text-field label="密码" placeholder="请输入密码" type="password"></text-field>
+      <item-form>
+        <switch label="自动登录"></switch>
+      </item-form>
+    </div>
+    <button text="取消" slot="footer" @click="this.loginModal = false" fill gray></button>
+    <button text="登录" slot="footer" @click="this.loginModal = false" fill></button>
+  </modal>
+  <alert :title="alert.title" :type="alert.type" :show.sync="alert.show" :msg="alert.msg" ></alert>
   <confirm :title="confirm.title" show-icon @sure="handlerSure" :show.sync="confirm.show" :msg="confirm.msg" ></confirm>
   <prompt :title="prompt.title" @sure="handlerSure" :show.sync="prompt.show" :msg="prompt.msg" ></prompt>
 </div>
@@ -34,7 +79,10 @@
 export default {
   data () {
     return {
+      radio: '守望先锋',
       modal: false,
+      selectModal: false,
+      loginModal: false,
       alert: {
         show: false
       },
@@ -53,14 +101,21 @@ export default {
     showModal () {
       this.modal = true
     },
+    showSelectModal () {
+      this.selectModal = true
+    },
+    showLoginModal () {
+      this.loginModal = true
+    },
     closeAlert () {
       this.alert.show = false
     },
-    showAlert () {
+    showAlert (type) {
       this.alert = {
         title: '标题',
-        msg: '这是内容',
-        show: true
+        msg: !type ? '这是内容' : type === 'info' ? '这是普通信息' : type === 'success' ? '成功啦！' : type === 'warning' ? '这是提醒！' : '出错啦！',
+        show: true,
+        type: type
       }
     },
     showConfirm () {
@@ -97,4 +152,15 @@ export default {
 </script>
 
 <style lang="css">
+.demo-select-modal{
+  display: flex;
+  flex-direction: column;
+}
+.login-modal .item-form{
+  padding: 0;
+}
+.login-modal .item-form-content{
+  padding: 0;
+  padding-top: 10px;
+}
 </style>
