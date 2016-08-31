@@ -25,20 +25,20 @@
 * [X] content-block
 
 ## forms
-
-* [X] itemInput
+* [X] formList
+* [X] itemForm
 * [X] textField
-* [X] textArea
-* [X] select
-* [X] check
+* [X] selectField
+* [X] checkbox
+* [X] radio
 * [X] range
 * [X] switch
-* [X] date
+* [X] dateSelect
 
 ## modal
 
-* [ ] modal
-* [ ] alert, confirm, propmt
+* [X] modal
+* [X] alert, confirm, propmt
 * [ ] popup
 * [ ] actionSheet
 * [ ] popover

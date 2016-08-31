@@ -1,25 +1,25 @@
 <template>
-<div class="modal-wrapper">
-  <div class="modal" v-if="rendered" v-show="show" transition="modal-scale">
-    <div class="modal-header" v-if="title">
-      <div class="modal-title">
-          {{title}}
+  <div class="modal-wrapper">
+    <div class="modal" v-if="rendered" v-show="show" transition="modal-scale">
+      <div class="modal-header" v-if="title">
+        <div class="modal-title">
+            {{title}}
+        </div>
+      </div>
+      <div class="modal-body">
+        <slot>
+          <div v-if="msg">
+            {{msg}}
+          </div>
+        </slot>
+      </div>
+      <div class="modal-footer">
+        <slot name="footer">
+          <button text="关闭" @click="close"></button>
+        </slot>
       </div>
     </div>
-    <div class="modal-body">
-      <slot>
-        <div v-if="msg">
-          {{msg}}
-        </div>
-      </slot>
-    </div>
-    <div class="modal-footer">
-      <slot name="footer">
-        <button text="关闭" @click="close"></button>
-      </slot>
-    </div>
   </div>
-</div>
 </template>
 
 <script>

@@ -21,19 +21,77 @@
         </button-row>
       </content-block>
   </content>
+  <modal title="标题" :show.sync="modal">
+    这里是内容区域，点击关闭按钮，或者遮盖层关闭
+  </modal>
+  <alert :title="alert.title" :show.sync="alert.show" :msg="alert.msg" ></alert>
+  <confirm :title="confirm.title" show-icon @sure="handlerSure" :show.sync="confirm.show" :msg="confirm.msg" ></confirm>
+  <prompt :title="prompt.title" @sure="handlerSure" :show.sync="prompt.show" :msg="prompt.msg" ></prompt>
 </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      modal: false,
+      alert: {
+        show: false
+      },
+      confirm: {
+        show: false
+      },
+      prompt: {
+        show: false
+      }
+    }
+  },
   methods: {
     back () {
       window.history.back()
     },
-    showModal () {},
-    showAlert () {},
-    showConfirm () {},
-    showPrompt () {}
+    showModal () {
+      this.modal = true
+    },
+    closeAlert () {
+      this.alert.show = false
+    },
+    showAlert () {
+      this.alert = {
+        title: '标题',
+        msg: '这是内容',
+        show: true
+      }
+    },
+    showConfirm () {
+      this.confirm = {
+        title: '问题',
+        msg: '你确定？',
+        show: true
+      }
+    },
+    showPrompt () {
+      this.prompt = {
+        title: '录入信息',
+        msg: '请输入你的姓名',
+        show: true
+      }
+    },
+    handlerSure (input) {
+      if (input) {
+        this.alert = {
+          title: '信息',
+          msg: '你输入的是：' + input,
+          show: true
+        }
+      } else {
+        this.alert = {
+          title: '信息',
+          msg: '你点击了确定',
+          show: true
+        }
+      }
+    }
   }
 }
 </script>
