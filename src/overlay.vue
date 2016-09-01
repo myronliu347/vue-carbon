@@ -1,17 +1,24 @@
 <template>
-  <div class="overlay"  @touchmove="prevent" :style="{'position': fixed ? 'fixed' : '', 'z-index': zIndex}" :class="{'overlay-white': white}" transition="fade"></div>
+  <div class="overlay" @click="handlerClick" @touchmove="prevent" :style="style" transition="fade"></div>
 </template>
 <script>
 import {getZIndex} from './utils'
 export default {
   props: {
-    white: {
-      type: Boolean,
-      default: false
-    },
     fixed: {
       type: Boolean,
       default: false
+    },
+    onClick: {
+      type: Function
+    },
+    opacity: {
+      type: Number,
+      default: 0.4
+    },
+    color: {
+      type: String,
+      default: '#000'
     }
   },
   data () {
@@ -19,10 +26,25 @@ export default {
       zIndex: getZIndex()
     }
   },
+  computed: {
+    style () {
+      return {
+        'opacity': this.opacity,
+        'background-color': this.color,
+        'position': this.fixed ? 'fixed' : '',
+        'z-index': this.zIndex
+      }
+    }
+  },
   methods: {
     prevent (event) {
       event.preventDefault()
       event.stopPropagation()
+    },
+    handlerClick () {
+      if (this.onClick) {
+        this.onClick()
+      }
     }
   }
 }
@@ -39,13 +61,9 @@ export default {
   z-index: 1000;
 }
 
-.overlay-white{
-  background-color: #FFF;
-  opacity: .8;
-}
 
 .overlay-fade-transition {
-  transition: opacity .3s linear;
+  transition: all .3s linear;
   &.overlay-fade-enter,
   &.overlay-fade-leave {
     opacity: 0;

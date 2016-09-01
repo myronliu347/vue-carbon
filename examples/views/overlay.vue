@@ -9,7 +9,7 @@
       <button fill raised text="show overlay" @click="toggleOverlay()"></button>
       <button fill raised text="show white overlay" @click="toggleWhiteOverlay()"></button>
     </button-area>
-    <overlay v-if="showWhite" white @click="toggleWhiteOverlay()"></overlay>
+    <overlay v-if="showWhite" :opacity="0.8" color="#FFF"  @click="toggleWhiteOverlay()"></overlay>
   </content>
   <overlay v-if="show" @click="toggleOverlay()"></overlay>
 </div>

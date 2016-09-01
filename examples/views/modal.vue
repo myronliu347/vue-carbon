@@ -13,7 +13,7 @@
         </div>
         <button-row>
           <button text="Modal" raised @click="showModal"></button>
-          <button text="Alert" raised @click="showAlert"></button>
+          <button text="Alert" raised @click="showAlert('')"></button>
         </button-row>
         <button-row>
           <button text="confirm" raised @click="showConfirm"></button>
@@ -69,7 +69,7 @@
     <button text="取消" slot="footer" @click="this.loginModal = false" fill gray></button>
     <button text="登录" slot="footer" @click="this.loginModal = false" fill></button>
   </modal>
-  <alert :title="alert.title" :type="alert.type" :show.sync="alert.show" :msg="alert.msg" ></alert>
+  <alert :title="alert.title" :type="alert.type" :show.sync="alert.show" v-if="alert.show" :msg="alert.msg" ></alert>
   <confirm :title="confirm.title" show-icon @sure="handlerSure" :show.sync="confirm.show" :msg="confirm.msg" ></confirm>
   <prompt :title="prompt.title" @sure="handlerSure" :show.sync="prompt.show" :msg="prompt.msg" ></prompt>
 </div>

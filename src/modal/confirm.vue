@@ -1,5 +1,5 @@
 <template>
-  <modal :close-on-click-modal="false" :show.sync="show" :title="title">
+  <modal :click-overlay-close="false" :show.sync="show" :title="title">
     <div class="confirm-content">
       <icon value="help_outline" v-if="showIcon" :size="36"></icon>
       <span class="confirm-text">{{msg}}</span>

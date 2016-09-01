@@ -1,5 +1,5 @@
 <template>
-  <modal :close-on-click-modal="false" :show.sync="show" :title="title">
+  <modal :click-overlay-close="false" :show.sync="show" :title="title">
     <div class="alert-content" :class="{'info': type === 'info',
                                         'warning': type === 'warning',
                                         'success': type === 'success',

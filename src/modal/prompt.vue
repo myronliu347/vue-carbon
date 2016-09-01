@@ -1,5 +1,5 @@
 <template>
-  <modal :close-on-click-modal="false" :show.sync="show" :title="title">
+  <modal :click-overlay-close="false" :show.sync="show" :title="title">
     <div class="prompt-content" v-el:content>
       <div class="prompt-text">{{msg}}</div>
       <div class="prompt-text-field" :class="{'focus-state': focus, 'not-empty-state': input}">
