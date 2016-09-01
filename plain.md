@@ -39,7 +39,7 @@
 
 * [X] modal
 * [X] alert, confirm, propmt
-* [ ] popup
+* [X] popup
 * [ ] actionSheet
 * [ ] popover
 * [ ] Indicator

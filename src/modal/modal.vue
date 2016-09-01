@@ -52,7 +52,6 @@ export default {
 <style lang="less">
 @import "../utils/_mixins.less";
 @import "../utils/_vars.less";
-@import "../popup/popup.css";
 .modal {
   position: fixed;
   left: 50%;

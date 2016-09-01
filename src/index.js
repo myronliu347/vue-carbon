@@ -67,6 +67,8 @@ import modal from './modal/modal'
 import alert from './modal/alert'
 import confirm from './modal/confirm'
 import prompt from './modal/prompt'
+
+import popup from './popup/popup'
 var components = {
   content,
   overlay,
@@ -117,7 +119,8 @@ var components = {
   modal,
   alert,
   confirm,
-  prompt
+  prompt,
+  popup
 }
 
 export default {

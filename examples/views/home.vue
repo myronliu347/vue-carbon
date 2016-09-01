@@ -107,8 +107,11 @@ export default {
       }, {
         title: 'Modals',
         children: [{
-          title: ['Modal'],
+          title: 'Modal',
           link: '/modal'
+        }, {
+          title: 'Popup',
+          link: '/popup'
         }]
       }]
     }

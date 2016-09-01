@@ -27,6 +27,7 @@ import dateSelect from './views/dateSelect'
 
 // modal
 import modal from './views/modal'
+import popup from './views/popup'
 export default function (router) {
   router.map({
     '/': {
@@ -116,6 +117,10 @@ export default function (router) {
     '/modal': {
       name: 'modal',
       component: modal
+    },
+    '/popup': {
+      name: 'popup',
+      component: popup
     }
   })
 }
