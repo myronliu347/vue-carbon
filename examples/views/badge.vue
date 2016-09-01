@@ -30,6 +30,16 @@
         <item>
           <item-content>
             <item-title-row>
+              <item-title>blue</item-title>
+              <item-title-after>
+                <badge value="12" color="blue"></badge>
+              </item-title-after>
+            </item-title-row>
+          </item-content>
+        </item>
+        <item>
+          <item-content>
+            <item-title-row>
               <item-title>red</item-title>
               <item-title-after>
                 <badge value="12" color="red"></badge>

@@ -63,4 +63,8 @@ export default {
   background-color: @amber;
 }
 
+.badge-blue{
+  background-color: @blue;
+}
+
 </style>

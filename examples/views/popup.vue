@@ -26,12 +26,12 @@
   </popup>
   <popup position="left" class="demo-popup-left" :show.sync="leftPopup">
     <button-area>
-      <button text="关闭弹框" @click="leftPopup = false" fill raised></button>
+      <button text="关闭弹框" @click="leftPopup = false" fill color="red" raised></button>
     </button-area>
   </popup>
   <popup position="right" class="demo-popup-right" :show.sync="rightPopup">
     <button-area>
-      <button text="关闭弹框" @click="rightPopup = false" fill raised></button>
+      <button text="关闭弹框" @click="rightPopup = false" fill color="red" raised></button>
     </button-area>
   </popup>
 </div>

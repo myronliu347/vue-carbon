@@ -39,8 +39,13 @@
       <content-title>Color Buttons</content-title>
       <content-block>
         <button-row>
-          <button fill raised gray text="button"></button>
-          <button fill raised text="button"></button>
+          <button fill raised text="default"></button>
+          <button fill raised color="red" text="red"></button>
+          <button fill raised color="blue" text="blue"></button>
+        </button-row>
+        <button-row>
+          <button fill raised color="green" text="green"></button>
+          <button fill raised color="amber" text="amber"></button>
         </button-row>
       </content-block>
 
@@ -51,8 +56,8 @@
           <button big text="button"></button>
         </button-row>
         <button-row>
-          <button fill big raised text="button"></button>
-          <button fill big raised text="button"></button>
+          <button fill big raised color="red" text="button"></button>
+          <button fill big raised color="red" text="button"></button>
         </button-row>
       </content-block>
       <content-title>icon buttons</content-title>

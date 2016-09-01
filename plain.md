@@ -43,10 +43,10 @@
 * [ ] actionSheet
 * [ ] popover
 * [ ] Indicator
+* [ ] picker
+* [ ] sidePanel
 
 ## others
 * [ ] rating
-* [ ] picker
 * [ ] floatButton
 * [ ] searchBar
-* [ ] sidePanel

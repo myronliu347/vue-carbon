@@ -6,10 +6,10 @@
   </header-bar>
   <content>
     <button-area>
-      <button fill raised text="show toast" @click="show('default')"></button>
-      <button fill raised text="show center toast" @click="show('center')"></button>
-      <button fill raised text="show loading toast" @click="show('loading')"></button>
-      <button fill raised text="show ok toast" @click="show('ok')"></button>
+      <button fill raised color="red" text="show toast" @click="show('default')"></button>
+      <button fill raised color="red" text="show center toast" @click="show('center')"></button>
+      <button fill raised color="red" text="show loading toast" @click="show('loading')"></button>
+      <button fill raised color="red" text="show ok toast" @click="show('ok')"></button>
     </button-area>
   </content>
   <toast v-for="toast in toasts" :text="toast.text" :loading="toast.loading" :icon="toast.icon" :center="toast.center"></toast>

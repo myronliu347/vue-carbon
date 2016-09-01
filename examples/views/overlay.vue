@@ -6,8 +6,8 @@
   </header-bar>
   <content>
     <button-area>
-      <button fill raised text="show overlay" @click="toggleOverlay()"></button>
-      <button fill raised text="show white overlay" @click="toggleWhiteOverlay()"></button>
+      <button fill raised color="red" text="show overlay" @click="toggleOverlay()"></button>
+      <button fill raised color="red" text="show white overlay" @click="toggleWhiteOverlay()"></button>
     </button-area>
     <overlay v-if="showWhite" :opacity="0.8" color="#FFF"  @click="toggleWhiteOverlay()"></overlay>
   </content>

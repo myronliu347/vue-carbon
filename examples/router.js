@@ -28,6 +28,7 @@ import dateSelect from './views/dateSelect'
 // modal
 import modal from './views/modal'
 import popup from './views/popup'
+import actionSheet from './views/actionSheet'
 export default function (router) {
   router.map({
     '/': {
@@ -121,6 +122,10 @@ export default function (router) {
     '/popup': {
       name: 'popup',
       component: popup
+    },
+    '/actionSheet': {
+      name: 'actionSheet',
+      component: actionSheet
     }
   })
 }

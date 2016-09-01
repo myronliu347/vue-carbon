@@ -39,7 +39,7 @@ export default {
 .item-ripple {
   .active-highlight(@tap-color);
   .ripple-ink {
-    color: rgba(0, 0, 0, .1);
+    color: @tap-color;
   }
 }
 .item-link .item-content {

@@ -1,7 +1,9 @@
 <template>
   <a href="javascript:;" class="button" v-el:button :class="buttonClass">
-    <icon v-if="icon" :value="icon"></icon>
-    <span class="button-text" v-if="text">{{text}}</span>
+    <slot>
+      <icon v-if="icon" :value="icon"></icon>
+      <span class="button-text" v-if="text">{{text}}</span>
+    </slot>
     <ripple :trigger="$els.button"></ripple>
   </a>
 </template>
@@ -31,10 +33,6 @@ export default {
       type: Boolean,
       default: false
     },
-    gray: {
-      type: Boolean,
-      default: false
-    },
     color: {
       type: String,
       default: ''
@@ -48,7 +46,7 @@ export default {
         'button-raised': this.raised,
         'button-gray': this.gray
       }
-      style['color-' + this.color] = true
+      if (this.color) style['color-' + this.color] = true
       return style
     }
   },
@@ -109,23 +107,63 @@ export default {
   .ripple-ink{
     color: @tap-color;
   }
+
+  &.color-red{
+    color: @red;
+  }
+
+  &.color-green{
+    color: @green;
+  }
+
+  &.color-amber{
+    color: @amber;
+  }
+
+  &.color-blue{
+    color: @blue;
+  }
 }
 
 .button-fill {
-  background-color: @red;
+  background-color: @carbon;
   color: #fff;
   .ripple-ink{
     color: rgba(255,255,255,0.4);
   }
   &:active {
-    background: darken(@red, 8%);
+    background-color: darken(@carbon, 8%);
   }
-}
+  &.color-red{
+    color: #fff;
+    background-color: @red;
+    &:active {
+      background-color: darken(@red, 8%);
+    }
+  }
 
-.button-gray {
-  background-color: @carbon;
-  &:active {
-    background: darken(@carbon, 8%);
+  &.color-green{
+    color: #fff;
+    background-color: @green;
+    &:active {
+      background-color: darken(@green, 8%);
+    }
+  }
+
+  &.color-amber{
+    color: #fff;
+    background-color: @amber;
+    &:active {
+      background-color: darken(@amber, 8%);
+    }
+  }
+
+  &.color-blue{
+    color: #fff;
+    background-color: @blue;
+    &:active {
+      background-color: darken(@blue, 8%);
+    }
   }
 }
 

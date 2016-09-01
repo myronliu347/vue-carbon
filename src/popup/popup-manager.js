@@ -49,6 +49,7 @@ const PopupManager = {
     document.body.style.overflow = 'hidden'
   },
   closeOverlay () {
+    if (!this.overlay) return
     document.body.style.overflow = this.bodyOverflow
     let overlay = this.overlay
     this.overlay = null

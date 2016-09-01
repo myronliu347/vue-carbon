@@ -112,6 +112,9 @@ export default {
         }, {
           title: 'Popup',
           link: '/popup'
+        }, {
+          title: 'actionSheet',
+          link: '/actionSheet'
         }]
       }]
     }
