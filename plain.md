@@ -47,3 +47,8 @@
 * [X] indicator
 * [X] picker
 * [ ] sidePanel
+
+## others
+
+* [] 生成git-pages
+* [] 编写readme文件 发布

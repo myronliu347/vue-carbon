@@ -10,8 +10,8 @@
       <button text="不带 cancel 按钮的" @click="showActionSheet(true)" raised></button>
     </button-area>
   </content>
-  <action-sheet :actions="actionSheet.actions" v-if="actionSheet.show" :show.sync="actionSheet.show" :show-cancel="actionSheet.showCancel"></action-sheet>
-  <modal v-if="modal.show" :show.sync="modal.show" :title="modal.title" :msg="modal.msg"></modal>
+  <action-sheet :actions="actionSheet.actions" :show.sync="actionSheet.show" :show-cancel="actionSheet.showCancel"></action-sheet>
+  <modal :show.sync="modal.show" :title="modal.title" :msg="modal.msg"></modal>
 </div>
 </template>
 

@@ -67,6 +67,10 @@ export default {
   right: 0;
   bottom: 0;
   background: #FFF;
+  max-height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .action-sheet-group {
   position: relative;

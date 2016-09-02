@@ -34,6 +34,8 @@ import actionSheet from './views/actionSheet'
 import popover from './views/popover'
 import indicator from './views/indicator'
 import picker from './views/picker'
+
+import about from './views/about'
 export default function (router) {
   router.map({
     '/': {
@@ -151,6 +153,10 @@ export default function (router) {
     '/picker': {
       name: 'picker',
       component: picker
+    },
+    '/about': {
+      name: 'about',
+      component: about
     }
   })
 }

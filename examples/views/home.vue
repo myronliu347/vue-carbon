@@ -1,7 +1,7 @@
 <template>
   <div class="page" transition="app">
       <header-bar>
-        <icon-button slot="left" icon="menu"></icon-button>
+        <icon-button slot="left" @click="showNav" icon="menu"></icon-button>
         <span>Vue Carbon</span>
       </header-bar>
       <content>
@@ -35,6 +35,7 @@
 export default {
   data () {
     return {
+      navShow: false,
       menus: [{
         title: 'Basic',
         children: [{
@@ -92,7 +93,7 @@ export default {
       }, {
         title: 'Forms',
         children: [{
-          title: 'TextField',
+          title: 'Text Field',
           link: '/inputs'
         }, {
           title: 'Switch',
@@ -111,7 +112,7 @@ export default {
           link: '/dateSelect'
         }]
       }, {
-        title: 'Modals',
+        title: 'Popups',
         children: [{
           title: 'Modal',
           link: '/modal'
@@ -133,6 +134,11 @@ export default {
         }]
       }]
     }
+  },
+  methods: {
+    showNav () {
+      this.$dispatch('menu-show')
+    }
   }
 }
 </script>
@@ -150,5 +156,26 @@ export default {
   line-height: 1;
   font-weight: bold;
   border-radius: 50%;
+}
+.nav-icon-logo {
+  width: 80px;
+  height: 80px;
+  background-color: #bbbfc4;
+  color:#FFF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.nav-demo-title{
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.nav-demo-sub-title{
+  color: #d3d6db;
+  font-size: 14px;
 }
 </style>

@@ -2,7 +2,7 @@
 <div class="page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
-    <span>Badge</span>
+    <span>Modal</span>
   </header-bar>
   <content>
     <content-block>
@@ -66,8 +66,8 @@
         <switch label="自动登录"></switch>
       </item-form>
     </div>
-    <button text="取消" slot="footer" @click="this.loginModal = false" fill gray></button>
-    <button text="登录" slot="footer" @click="this.loginModal = false" fill></button>
+    <button text="取消" slot="footer" @click="this.loginModal = false" fill></button>
+    <button text="登录" slot="footer" @click="this.loginModal = false" color="red" fill></button>
   </modal>
   <alert :title="alert.title" :type="alert.type" :show.sync="alert.show" v-if="alert.show" :msg="alert.msg" ></alert>
   <confirm :title="confirm.title" show-icon @sure="handlerSure" :show.sync="confirm.show" :msg="confirm.msg" ></confirm>
