@@ -1,5 +1,5 @@
 <template>
-    <div class="ripple-ink"></div>
+    <div class="ripple-ink" :style="{'color': color}"></div>
 </template>
 
 <script>
@@ -86,6 +86,10 @@ export default {
     trigger: {
       type: window.Element,
       required: true
+    },
+    color: {
+      type: String,
+      default: ''
     }
   },
   watch: {

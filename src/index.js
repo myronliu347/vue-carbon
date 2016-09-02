@@ -12,11 +12,13 @@ import infiniteScroll from './infiniteScroll'
 import buttonArea from './button/buttonArea'
 import buttonRow from './button/buttonRow'
 import button from './button/button'
-
+import floatButton from './button/floatButton'
 // bars
 import headerBar from './bars/headerBar'
 import tabBar from './bars/tabBar'
 import tabBarItem from './bars/tabBarItem'
+import searchBar from './bars/searchBar'
+
 // tips
 import toast from './toast'
 
@@ -71,6 +73,9 @@ import prompt from './modal/prompt'
 import popup from './popup/popup'
 import actionSheet from './actionSheet/actionSheet'
 import popover from './popover/popover'
+import indicator from './indicator/indicator'
+import picker from './picker/picker.vue'
+import pickerSlot from './picker/picker-slot.vue'
 var components = {
   content,
   overlay,
@@ -83,9 +88,11 @@ var components = {
   'button-area': buttonArea,
   'button-row': buttonRow,
   button,
+  'float-button': floatButton,
   'header-bar': headerBar,
   'tab-bar': tabBar,
   'tab-bar-item': tabBarItem,
+  'search-bar': searchBar,
   toast,
   list,
   item,
@@ -124,7 +131,10 @@ var components = {
   prompt,
   popup,
   popover,
-  'action-sheet': actionSheet
+  'action-sheet': actionSheet,
+  indicator,
+  picker,
+  'picker-slot': pickerSlot
 }
 
 export default {

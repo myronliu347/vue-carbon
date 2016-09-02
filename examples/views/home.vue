@@ -36,7 +36,7 @@ export default {
   data () {
     return {
       menus: [{
-        title: '基础组件',
+        title: 'Basic',
         children: [{
           title: 'Icon',
           link: '/icons'
@@ -46,6 +46,9 @@ export default {
         }, {
           title: 'Button',
           link: '/button'
+        }, {
+          title: 'Float Button',
+          link: '/floatButton'
         }, {
           title: 'Overlay',
           link: '/overlay'
@@ -70,6 +73,9 @@ export default {
         }, {
           title: 'Tab Bar',
           link: '/tabBar'
+        }, {
+          title: 'Search Bar',
+          link: '/searchBar'
         }, {
           title: 'List View',
           link: '/listView'
@@ -113,11 +119,17 @@ export default {
           title: 'Popup',
           link: '/popup'
         }, {
-          title: 'actionSheet',
+          title: 'Action Sheet',
           link: '/actionSheet'
         }, {
-          title: 'popover',
+          title: 'Popover',
           link: '/popover'
+        }, {
+          title: 'Indicator',
+          link: '/indicator'
+        }, {
+          title: 'Picker',
+          link: '/picker'
         }]
       }]
     }

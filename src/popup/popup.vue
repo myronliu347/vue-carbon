@@ -84,7 +84,7 @@ export default {
   .popup-slide-right-transition,
   .popup-slide-bottom-transition,
   .popup-slide-left-transition {
-    transition: transform .3s ease-out 100ms;
+    transition: transform .3s ease;
   }
 
   .popup-slide-top-enter,

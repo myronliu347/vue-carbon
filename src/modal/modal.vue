@@ -12,7 +12,7 @@
         </div>
       </slot>
     </div>
-    <div class="modal-footer">
+    <div class="modal-footer" v-if="!hideClose">
       <slot name="footer">
         <button text="关闭" @click="close"></button>
       </slot>
@@ -36,6 +36,10 @@ export default {
     clickOverlayClose: {
       type: Boolean,
       default: true
+    },
+    hideClose: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

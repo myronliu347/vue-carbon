@@ -1,8 +1,9 @@
 <template>
-  <div class="toast" :style="{'z-index': zIndex}" :class="{'toast-center': center || loading}" transition="toast">
-    <circular :size="36" v-if="loading" color="#FFF"></circular>
-    <icon v-if="icon && !loading" :value="icon" :size="36"></icon>
-    <div class="toast-text">{{text}}</div>
+  <div class="toast" :style="{'z-index': zIndex}" :class="{'toast-center': center}" transition="toast">
+    <slot>
+      <icon v-if="icon" :value="icon" :size="36"></icon>
+      <div class="toast-text">{{text}}</div>
+    </slot>
   </div>
 </template>
 
@@ -24,10 +25,6 @@ export default {
     text: {
       type: String,
       default: ''
-    },
-    loading: {
-      type: Boolean,
-      default: false
     },
     icon: {
       type: String,

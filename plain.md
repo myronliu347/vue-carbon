@@ -22,8 +22,8 @@
 * [X] card
 * [X] grid
 * [X] content-block
-* [ ] floatButton
-* [ ] searchBar
+* [X] floatButton
+* [X] searchBar
 
 ## forms
 * [X] formList
@@ -35,7 +35,7 @@
 * [X] range
 * [X] switch
 * [X] dateSelect
-* [ ] rating
+
 
 ## Popups
 
@@ -43,7 +43,7 @@
 * [X] alert, confirm, propmt
 * [X] popup
 * [X] actionSheet
-* [ ] popover
-* [ ] Indicator
-* [ ] picker
+* [X] popover
+* [X] indicator
+* [X] picker
 * [ ] sidePanel

@@ -4,6 +4,7 @@ import home from './views/home'
 import icon from './views/icon'
 import badge from './views/badge'
 import button from './views/button'
+import floatButton from './views/floatButton'
 import overlay from './views/overlay'
 import circular from './views/circular'
 import toast from './views/toast'
@@ -11,6 +12,7 @@ import refreshControl from './views/refreshControl'
 import infiniteScroll from './views/infiniteScroll'
 // css
 import headerBar from './views/headerBar'
+import searchBar from './views/searchBar'
 import tabBar from './views/tabbar'
 import grid from './views/grid'
 import contentBlock from './views/contentBlock'
@@ -30,6 +32,8 @@ import modal from './views/modal'
 import popup from './views/popup'
 import actionSheet from './views/actionSheet'
 import popover from './views/popover'
+import indicator from './views/indicator'
+import picker from './views/picker'
 export default function (router) {
   router.map({
     '/': {
@@ -47,6 +51,10 @@ export default function (router) {
     '/button': {
       name: 'button',
       component: button
+    },
+    '/floatButton': {
+      name: 'floatButton',
+      component: floatButton
     },
     '/overlay': {
       name: 'overlay',
@@ -87,6 +95,10 @@ export default function (router) {
     '/tabBar': {
       name: 'tabBar',
       component: tabBar
+    },
+    '/searchBar': {
+      name: 'searchBar',
+      component: searchBar
     },
     '/infiniteScroll': {
       name: 'infiniteScroll',
@@ -131,6 +143,14 @@ export default function (router) {
     '/popover': {
       name: 'popover',
       component: popover
+    },
+    '/indicator': {
+      name: 'indicator',
+      component: indicator
+    },
+    '/picker': {
+      name: 'picker',
+      component: picker
     }
   })
 }
