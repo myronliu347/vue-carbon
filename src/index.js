@@ -70,6 +70,7 @@ import prompt from './modal/prompt'
 
 import popup from './popup/popup'
 import actionSheet from './actionSheet/actionSheet'
+import popover from './popover/popover'
 var components = {
   content,
   overlay,
@@ -122,6 +123,7 @@ var components = {
   confirm,
   prompt,
   popup,
+  popover,
   'action-sheet': actionSheet
 }
 

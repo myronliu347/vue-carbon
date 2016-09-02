@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" @click="handlerClick" @touchmove="prevent" :style="style" transition="fade"></div>
+  <div class="overlay" @click="handlerClick" @touchmove="prevent" :style="style" transition="overlay-fade"></div>
 </template>
 <script>
 import {getZIndex} from './utils'
@@ -66,7 +66,7 @@ export default {
   transition: all .3s linear;
   &.overlay-fade-enter,
   &.overlay-fade-leave {
-    opacity: 0;
+    opacity: 0 !important;
   }
 }
 </style>

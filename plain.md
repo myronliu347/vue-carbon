@@ -1,6 +1,6 @@
 # 组件开发计划
 
-## base
+## basic
 
 * [X] icon
 * [X] badge
@@ -15,7 +15,6 @@
 * [X] infiniteScroll
 
 ## css
-
 * [X] headerBar
 * [X] navBar
 * [X] tabBar
@@ -23,6 +22,8 @@
 * [X] card
 * [X] grid
 * [X] content-block
+* [ ] floatButton
+* [ ] searchBar
 
 ## forms
 * [X] formList
@@ -34,19 +35,15 @@
 * [X] range
 * [X] switch
 * [X] dateSelect
+* [ ] rating
 
-## modal
+## Popups
 
 * [X] modal
 * [X] alert, confirm, propmt
 * [X] popup
-* [ ] actionSheet
+* [X] actionSheet
 * [ ] popover
 * [ ] Indicator
 * [ ] picker
 * [ ] sidePanel
-
-## others
-* [ ] rating
-* [ ] floatButton
-* [ ] searchBar

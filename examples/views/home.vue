@@ -115,6 +115,9 @@ export default {
         }, {
           title: 'actionSheet',
           link: '/actionSheet'
+        }, {
+          title: 'popover',
+          link: '/popover'
         }]
       }]
     }

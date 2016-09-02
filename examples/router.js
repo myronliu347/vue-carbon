@@ -29,6 +29,7 @@ import dateSelect from './views/dateSelect'
 import modal from './views/modal'
 import popup from './views/popup'
 import actionSheet from './views/actionSheet'
+import popover from './views/popover'
 export default function (router) {
   router.map({
     '/': {
@@ -126,6 +127,10 @@ export default function (router) {
     '/actionSheet': {
       name: 'actionSheet',
       component: actionSheet
+    },
+    '/popover': {
+      name: 'popover',
+      component: popover
     }
   })
 }

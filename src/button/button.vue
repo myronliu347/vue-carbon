@@ -92,6 +92,11 @@ export default {
     margin-left: 8px;
   }
 
+  .icon,
+  .button-text {
+    pointer-events: none;
+  }
+
   .icon{
     .flex-shrink(0);
   }
