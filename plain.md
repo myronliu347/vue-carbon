@@ -46,7 +46,7 @@
 * [X] popover
 * [X] indicator
 * [X] picker
-* [ ] sidePanel
+* [X] sidePanel
 
 ## others
 

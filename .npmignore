@@ -1,0 +1,6 @@
+node_modules
+build
+test
+static
+.DS_Store
+.*
