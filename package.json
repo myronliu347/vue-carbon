@@ -1,7 +1,7 @@
 {
   "name": "vue-carbon",
-  "version": "0.1.0",
-  "description": "A Vue.js project",
+  "version": "0.1.1",
+  "description": "基于 vue 开发 material design 风格的移动端 WEB UI 库",
   "author": "liuyy <953788477@qq.com>",
   "main": "src/index.js",
   "scripts": {

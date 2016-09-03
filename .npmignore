@@ -1,6 +1,9 @@
 node_modules
 build
 test
+res
+examples
+src-examples
 static
 .DS_Store
 .*
