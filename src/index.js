@@ -74,8 +74,12 @@ import popup from './popup/popup'
 import actionSheet from './actionSheet/actionSheet'
 import popover from './popover/popover'
 import indicator from './indicator/indicator'
-import picker from './picker/picker.vue'
-import pickerSlot from './picker/picker-slot.vue'
+import picker from './picker/picker'
+import pickerSlot from './picker/picker-slot'
+import navDrawer from './nav/navDrawer'
+import navMenu from './nav/navMenu'
+import navDivider from './nav/navDivider'
+import navMenuHeader from './nav/navMenuHeader'
 var components = {
   content,
   overlay,
@@ -134,7 +138,11 @@ var components = {
   'action-sheet': actionSheet,
   indicator,
   picker,
-  'picker-slot': pickerSlot
+  'picker-slot': pickerSlot,
+  'nav-drawer': navDrawer,
+  'nav-menu': navMenu,
+  'nav-divider': navDivider,
+  'nav-menu-header': navMenuHeader
 }
 
 export default {

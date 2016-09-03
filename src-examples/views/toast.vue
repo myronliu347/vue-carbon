@@ -6,10 +6,9 @@
   </header-bar>
   <content>
     <button-area>
-      <button fill raised color="red" text="show toast" @click="show('default')"></button>
-      <button fill raised color="red" text="show center toast" @click="show('center')"></button>
-      <button fill raised color="red" text="show loading toast" @click="show('loading')"></button>
-      <button fill raised color="red" text="show ok toast" @click="show('ok')"></button>
+      <button fill raised color="red" text="显示 toast" @click="show('default')"></button>
+      <button fill raised color="red" text="在中间的 toast" @click="show('center')"></button>
+      <button fill raised color="red" text="带icon的 toast" @click="show('ok')"></button>
     </button-area>
   </content>
   <toast v-for="toast in toasts" :text="toast.text" :loading="toast.loading" :icon="toast.icon" :center="toast.center"></toast>

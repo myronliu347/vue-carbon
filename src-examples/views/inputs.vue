@@ -2,7 +2,7 @@
 <div class="page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
-    <span>TextField</span>
+    <span>Text Field</span>
   </header-bar>
   <content>
     <content-title>输入框</content-title>

@@ -2,7 +2,7 @@
 <div class="page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
-    <span>Header Bar</span>
+    <span>Float Button</span>
   </header-bar>
   <content>
     <content-block class="demo-float-button">
