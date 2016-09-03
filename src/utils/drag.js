@@ -82,6 +82,7 @@ export default class Drag {
       y: event.clientY,
       time: new Date().getTime()
     }
+    this.endPos = {}
     this.el.addEventListener('mousemove', this, false)
     this.el.addEventListener('mouseup', this, false)
     this.starts.map((func) => {
