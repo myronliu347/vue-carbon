@@ -96,9 +96,9 @@ export default {
 
 ## Todos
 
-[] rating
-[] virtual list
-[] layer
+[ ] rating
+[ ] virtual list
+[ ] layer
 
 ## Licence
 
