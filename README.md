@@ -104,4 +104,4 @@ export default {
 
 vue-carbon is open source and released under the MIT Licence.
 
-Copyright (c) 2016 Josephus Paye II
+Copyright (c) 2016 myron
