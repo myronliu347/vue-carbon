@@ -6,12 +6,12 @@
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aa953788477/vue-carbon.git"
+    "url": "git+https://github.com/myronliu347/vue-carbon.git"
   },
   "bugs": {
-    "url": "https://github.com/aa953788477/vue-carbon/issues"
+    "url": "https://github.com/myronliu347/vue-carbon/issues"
   },
-  "homepage": "https://github.com/aa953788477/vue-carbon#readme",
+  "homepage": "https://github.com/myronliu347/vue-carbon#readme",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
