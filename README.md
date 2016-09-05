@@ -2,7 +2,7 @@
 
 基于 vue 开发 material design 风格的移动端 WEB UI 库, 设计资源参考 [CARBON](http://materialmockups.com/) [FrameWork7](https://github.com/nolimits4web/Framework7)
 
-在线访问地址 [github.io](https://aa953788477.github.io/vue-carbon)
+在线访问地址 [vue-carbon demos](https://myronliu347.github.io/vue-carbon/)
 
 也可以扫描二维码
 
