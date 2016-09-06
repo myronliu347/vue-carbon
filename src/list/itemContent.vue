@@ -15,5 +15,6 @@
   align-self: stretch;
   flex-direction: column;
   position: relative;
+  width: 100%;
 }
 </style>

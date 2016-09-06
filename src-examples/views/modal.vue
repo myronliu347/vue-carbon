@@ -54,7 +54,7 @@
     <div class="demo-select-modal">
       <radio :model="radio" name="demoModal" value="守望先锋" label="守望先锋"></radio>
       <radio :model="radio" name="demoModal" value="英雄联盟" label="英雄联盟"></radio>
-      <radio :model="radio" name="demoModal" value="精灵梦可宝" label="精灵梦可宝"></radio>
+      <radio :model="radio" name="demoModal" value="精灵宝可梦go" label="精灵宝可梦go"></radio>
       <radio :model="radio" name="demoModal" value="王者荣耀" label="王者荣耀"></radio>
     </div>
   </modal>

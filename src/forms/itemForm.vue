@@ -78,6 +78,7 @@ export default {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 16px;
+  width: 100%;
   .item-form{
     padding-left: 0;
   }

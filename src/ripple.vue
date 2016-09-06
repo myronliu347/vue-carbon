@@ -52,9 +52,11 @@ var startRipple = function startRipple (eventType, event) {
   setTimeout(function () {
     classlist.add(ripple, 'held')
   }, 0)
-  var releaseEvent = (eventType === 'mousedown' ? 'mouseup' : 'touchend')
+  var releaseEvents = eventType === 'mousedown' ? ['mouseup', 'mousemove'] : ['touchend', 'touchmove', 'touchcancel']
   var release = function () {
-    document.removeEventListener(releaseEvent, release)
+    releaseEvents.forEach((releaseEvent) => {
+      document.removeEventListener(releaseEvent, release)
+    })
     classlist.add(ripple, 'done')
     // Larger than the animation duration in CSS
     setTimeout(function () {
@@ -65,8 +67,11 @@ var startRipple = function startRipple (eventType, event) {
       }
     }, 450)
   }
-  document.addEventListener(releaseEvent, release)
+  releaseEvents.forEach((releaseEvent) => {
+    document.addEventListener(releaseEvent, release)
+  })
 }
+
 var handleMouseDown = function handleMouseDown (e) {
   // Trigger on left click only
   if (e.button === 0) {
@@ -80,6 +85,7 @@ var handleTouchStart = function handleTouchStart (e) {
     }
   }
 }
+
 export default {
   name: 'ripple',
   props: {

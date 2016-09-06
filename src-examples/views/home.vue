@@ -13,18 +13,14 @@
             {{group.title}}
           </content-title>
           <list>
-            <item link v-link="menu.link" v-for="menu in group.children">
+            <item-cell link v-link="menu.link" v-for="menu in group.children">
               <item-media>
                 <i class="logo">C</i>
               </item-media>
-              <item-content>
-                <item-title-row>
-                  <item-title>
-                    {{menu.title}}
-                  </item-title>
-                </item-title-row>
-              </item-content>
-            </item>
+              <item-title>
+                {{menu.title}}
+              </item-title>
+            </item-cell>
           </list>
         </template>
       </content>
