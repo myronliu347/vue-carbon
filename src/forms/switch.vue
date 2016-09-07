@@ -34,11 +34,11 @@ export default {
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
 .switch{
-  height: 36px;
   position: relative;
-  display: inline-flex;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
   margin-right: 32px;
-  align-items: center;
   color: @body_color;
   input[type="checkbox"] {
     display: none;
@@ -85,9 +85,6 @@ export default {
   z-index: 0;
   margin: 0;
   padding: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
   appearance: none;
   border: none;
   cursor: pointer;
@@ -110,5 +107,10 @@ export default {
     transition: transform 300ms;
     backface-visibility: hidden;
   }
+}
+.switch-label,
+.switch-checkbox{
+  display: inline-block;
+  vertical-align: middle;
 }
 </style>

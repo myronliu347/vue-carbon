@@ -104,7 +104,9 @@ export default {
 * [ ] 改善一些组件的使用方式
 * [ ] 剩余组件开发
   * [ ] rate
+  * [ ] Collapsible
   * [ ] Notification
+
 * [ ] 编写文档
 
 ## Licence

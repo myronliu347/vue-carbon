@@ -1,8 +1,9 @@
 <template>
   <label class="checkbox" :class="{'label-left': labelLeft}">
     <input type="checkbox" :name="name" :value="value" v-model="model">
+    <div class="checkbox-label"  v-if="label && labelLeft">{{label}}</div>
     <div class="checkbox-icon"></div>
-    <div class="checkbox-label"  v-if="label">{{label}}</div>
+    <div class="checkbox-label"  v-if="label && !labelLeft">{{label}}</div>
   </label>
 </template>
 
@@ -47,9 +48,9 @@ export default {
 @import "../utils/_mixins.less";
 .checkbox {
   position: relative;
-  display: flex;
+  display: inline-block;
   height: 36px;
-  align-items: center;
+  line-height: 36px;
   margin-right: 32px;
   input[type="checkbox"] {
     display: none;
@@ -81,9 +82,7 @@ export default {
 }
 
 .checkbox-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -93,17 +92,22 @@ export default {
   background: transparent;
   transition-duration: 300ms;
   &:after {
-    content:' ';
-    display: block;
-    flex: 1;
-    width: 18px;
-    height: 18px;
-    transition-duration: 300ms;
+    left: 50%;
+    top: 50%;
+    margin-left: -3px;
+    margin-top: -7px;
+    width: 6px;
+    height: 13px;
+    transform: rotate(45deg);
     opacity: 0;
-    .encoded-svg-background("<svg xmlns='http://www.w3.org/2000/svg' fill='#ffffff' width='24' height='24' viewBox='0 0 24 24'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 18px;
+    transition: opacity .3s ease;
+    transition-delay: .1s;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    box-sizing: border-box;
+    position: absolute;
+    display: block;
+    content: "";
   }
 }
 
@@ -112,5 +116,11 @@ export default {
   font-size: 16px;
   margin-left: 8px;
   margin-right: auto;
+}
+
+.checkbox-icon,
+.checkbox-label {
+  display: inline-block;
+  vertical-align: middle;
 }
 </style>

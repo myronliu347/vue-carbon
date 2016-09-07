@@ -14,7 +14,7 @@
     <list>
       <item-cell>
         <item-title>选中的项</item-title>
-        <item-after>{{checkbox1}}</item-after>
+        <item-title-after>{{checkbox1}}</item-title-after>
       </item-cell>
     </list>
     <content-title>
@@ -26,7 +26,7 @@
     <list>
       <item-cell>
         <item-title>选中的项</item-title>
-        <item-after>{{radio1}}</item-after>
+        <item-title-after>{{radio1}}</item-title-after>
       </item-cell>
     </list>
     <content-title>
@@ -43,7 +43,7 @@
       </item-cell>
       <item-cell>
         <item-title>选中的项</item-title>
-        <item-after>{{checkbox2}}</item-after>
+        <item-title-after>{{checkbox2}}</item-title-after>
       </item-cell>
     </list>
     <content-title>

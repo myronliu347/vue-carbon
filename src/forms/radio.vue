@@ -45,9 +45,9 @@ export default {
 @import "../utils/_mixins.less";
 .radio {
   position: relative;
-  display: flex;
+  display: inline-block;;
   height: 36px;
-  align-items: center;
+  line-height: 36px;
   margin-right: 32px;
   input[type="radio"] {
     display: none;
@@ -78,9 +78,6 @@ export default {
 }
 
 .radio-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 20px;
   height: 20px;
   border-radius: 36px;
@@ -89,11 +86,17 @@ export default {
   border-color: @body_color;
   background: transparent;
   transition-duration: 300ms;
+  position: relative;
   &:after {
     content:' ';
     display: block;
     width: 10px;
     height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -5px;
+    margin-top: -5px;
     background-color: @red;
     border-radius: 100%;
     transform: scale(0);
@@ -106,5 +109,11 @@ export default {
   font-size: 16px;
   margin-left: 8px;
   margin-right: auto;
+}
+
+.radio-label,
+.radio-icon {
+  display: inline-block;
+  vertical-align: middle;
 }
 </style>

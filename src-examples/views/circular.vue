@@ -7,8 +7,8 @@
   <content>
     <div class="content-block">
       <circular style="margin-left: 16px;"></circular>
-      <circular style="margin-left: 16px;" color="#ffc107" :size="36"></circular>
-      <circular style="margin-left: 16px;" color="#4caf50" :size="48"></circular>
+      <circular style="margin-left: 16px;" color="green" :size="36"></circular>
+      <circular style="margin-left: 16px;" color="amber" :size="48"></circular>
     </div>
   </content>
 </div>
