@@ -1,11 +1,12 @@
 <template>
   <div class="infinite-scroll">
-    <circular v-show="loading" :size="24" color="#7e848c"></circular>
+    <circular v-show="loading" :size="24" color="carbon"></circular>
     <span v-show="loading" class="infinite-scroll-text">正在加载。。。</span>
   </div>
 </template>
 
 <script>
+import circular from './circular'
 export default {
   props: {
     loading: {
@@ -37,6 +38,9 @@ export default {
   },
   detached () {
     this.trigger.removeEventListener('scroll', this.handlerScroll, false)
+  },
+  components: {
+    circular
   }
 }
 </script>

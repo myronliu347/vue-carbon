@@ -19,7 +19,7 @@ npm install vue-carbon --save
 ```javascript
 import Vue from 'vue'
 import VueCarbon from 'vue-carbon'
-
+import 'vue-carbon/dist/vue-carbon.css' // 加载文件
 Vue.use(VueCarbon)
 ```
 

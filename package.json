@@ -1,9 +1,9 @@
 {
   "name": "vue-carbon",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "基于 vue 开发 material design 风格的移动端 WEB UI 库",
   "author": "liuyy <953788477@qq.com>",
-  "main": "src/index.js",
+  "main": "dist/vue-carbon.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/myronliu347/vue-carbon.git"
@@ -14,6 +14,7 @@
   "homepage": "https://github.com/myronliu347/vue-carbon#readme",
   "scripts": {
     "dev": "node build/dev-server.js",
+    "examples": "node build/examples.js",
     "build": "node build/build.js",
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",

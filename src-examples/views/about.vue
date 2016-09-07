@@ -8,7 +8,7 @@
     <img src="http://www.myronliu.com/img/uicon.jpg" class="my-icon"/>
     <div class="my-name">Myron</div>
     <a class="my-link" target="_blank" href="http://www.myronliu.com/">博客地址</a>
-    <a class="my-link" target="_blank" href="https://github.com/aa953788477/vue-carbon">项目地址</a>
+    <a class="my-link" target="_blank" href="https://github.com/myronliu347/vue-carbon">项目地址</a>
     <button raised fill @click="go" text="(✪ω✪)赏个star吧" color="red"></button>
   </content>
 </div>
@@ -21,7 +21,7 @@ export default {
       window.history.back()
     },
     go () {
-      window.open('https://github.com/aa953788477/vue-carbon')
+      window.open('https://github.com/myronliu347/vue-carbon')
     }
   }
 }
