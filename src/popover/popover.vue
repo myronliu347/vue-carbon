@@ -29,6 +29,13 @@ export default {
       }
     }
   },
+  ready () {
+    const display = this.$el.style.display
+    this.$el.style.display = ''
+    this.ctWw = this.$el.offsetWidth
+    this.ctWh = this.$el.offsetHeight
+    this.$el.style.display = display
+  },
   attached () {
     this.hanlderOpen = (e) => this.open(e)
     if (this.trigger instanceof window.Element) {
@@ -68,12 +75,10 @@ export default {
       let position = 'bottom'
       let left = elInfo.left
       let top = elInfo.top
-      this.$el.style.display = ''
-      const ctWw = this.$el.offsetWidth
-      const ctWh = this.$el.offsetHeight
-      this.$el.style.display = 'none'
       const ww = window.innerWidth
       const wh = window.innerHeight
+      const ctWw = this.ctWw
+      const ctWh = this.ctWh
       if (wh - elInfo.top - space < ctWh) {
         position = 'top'
         top = elInfo.top + elInfo.height - ctWh
@@ -122,7 +127,7 @@ export default {
 
 .popover-transition{
   transition-duration: 300ms;
-  transition-property: all;
+  transition-property: opacity, transform;
   &.popover-enter {
     transform: scale(0);
     opacity: 0;

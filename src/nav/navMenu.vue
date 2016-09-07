@@ -47,10 +47,10 @@ export default {
 .nav-menu{
   display: flex;
   width: 100%;
-  line-height: 48px;
   height: 48px;
   padding: 10px 16px;
   position: relative;
+  align-items: center;
   color: @body_color;
   &:active{
     color: @color;
