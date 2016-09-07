@@ -94,11 +94,16 @@ export default {
 
 ![](res/refresh.png)
 
+## 文档
+
+正在努力编写中。。。。。
+
 ## Todos
 
-* [ ] rating
-* [ ] virtual list
-* [ ] layer
+* [ ] 修复现有的问题和bug
+* [ ] 改善一些组件的使用方式
+* [ ] 修改组件的使用方式，改为可以单个使用不用每次加载全部
+* [ ] 编写文档
 
 ## Licence
 
