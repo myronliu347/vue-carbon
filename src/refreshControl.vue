@@ -153,6 +153,10 @@ export default {
   margin-left: -18px;
   margin-top: 24px;
   z-index: 100;
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .refresh-control-animate{

@@ -25,6 +25,7 @@
   font-size: 20px;
   height: @header-height;
   width: 100%;
+  padding: 0 8px;
   .flex-shrink(0);
   > .left,
   > .right{
@@ -42,12 +43,12 @@
     padding-right: 16px;
     white-space: nowrap;
   }
-  
+
   .button {
     font-size: 18px;
     background: none;
-    height: 56px;
-    line-height: 56px;
+    height: 48px;
+    line-height: 48px;
     color: #FFF;
     .ripple-ink{
       color: rgba(255, 255, 255, .3);
@@ -56,8 +57,8 @@
 
   .icon-button {
     background: none;
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     color: #FFF;
     .ripple-ink{
       color: rgba(255, 255, 255, .3);

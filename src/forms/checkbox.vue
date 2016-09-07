@@ -47,10 +47,10 @@ export default {
 @import "../utils/_mixins.less";
 .checkbox {
   position: relative;
-  display: inline-flex;
+  display: flex;
   height: 36px;
-  margin-right: 32px;
   align-items: center;
+  margin-right: 32px;
   input[type="checkbox"] {
     display: none;
     &:checked + .checkbox-icon{
@@ -95,12 +95,14 @@ export default {
   &:after {
     content:' ';
     display: block;
+    flex: 1;
     width: 18px;
     height: 18px;
     transition-duration: 300ms;
     opacity: 0;
-    background: no-repeat center;
     .encoded-svg-background("<svg xmlns='http://www.w3.org/2000/svg' fill='#ffffff' width='24' height='24' viewBox='0 0 24 24'><path d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: 18px;
   }
 }

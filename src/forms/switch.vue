@@ -46,7 +46,7 @@ export default {
       +.switch-checkbox {
         background: rgba(red(@red), green(@red), blue(@red), 0.5);
         &:after {
-          .transform(translateX(16px));
+          transform: translate3d(16px, 0, 0);
           background: @red;
         }
       }
@@ -92,12 +92,9 @@ export default {
   border: none;
   cursor: pointer;
   position: relative;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  perspective: 1000;
   transform: translate3d(0, 0, 0);
-  transition-duration: 300ms;
+  transition: all 300ms;
   &:after {
     content: ' ';
     height: 20px;
@@ -109,12 +106,9 @@ export default {
     top: -3px;
     left: 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.4);
-    transform: translateX(0);
-    transition-duration: 300ms;
-    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: transform 300ms;
     backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    perspective: 1000;
   }
 }
 </style>

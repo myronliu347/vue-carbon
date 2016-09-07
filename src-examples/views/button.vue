@@ -61,9 +61,9 @@
         </button-row>
       </content-block>
       <content-title>icon buttons</content-title>
-      <content-block>
+      <content-block class="inline-content-block">
         <icon-button icon="mode_edit"></icon-button>
-        <icon-button icon="search" fill gray></icon-button>
+        <icon-button icon="search" fill></icon-button>
         <icon-button icon="add" fill></icon-button>
       </content-block>
   </content>
@@ -81,4 +81,13 @@ export default {
 </script>
 
 <style lang="css">
+.inline-content-block{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inline-content-block .icon-button {
+    margin-left: 10px;
+}
+
 </style>

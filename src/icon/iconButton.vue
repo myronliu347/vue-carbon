@@ -65,7 +65,7 @@ export default {
   outline: 0;
   transition-duration: 300ms;
   transform: translate3d(0, 0, 0);
-  border-radius: 50%;
+  border-radius: 100%;
   color: @color;
   .flex-shrink(0);
   &:active{

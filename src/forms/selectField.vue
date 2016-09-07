@@ -196,8 +196,10 @@ export default {
 }
 .select-option{
   display: flex;
+  align-items: center;
   font-size: 16px;
   padding: 6px 12px;
+  min-height: 36px;
   color: @color;
   position: relative;
   .ripple-ink{
@@ -207,6 +209,7 @@ export default {
     color: @red;
     > .icon{
       display: inline-block;
+      vertical-align: middle;
     }
   }
   > .icon {

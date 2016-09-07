@@ -44,6 +44,7 @@ export default {
   align-items: center;
   input[type="range"] {
     position: relative;
+    display: block;
     height: 20px;
     width: 100%;
     margin: 0;

@@ -37,6 +37,7 @@ export default {
 @import "./utils/_vars.less";
 .preloader-wrapper {
   display: inline-block;
+  vertical-align: middle;
   position: relative;
   width: 48px;
   height: 48px;

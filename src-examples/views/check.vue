@@ -51,7 +51,9 @@
     </content-title>
     <form-list>
       <item-form label="选择一个" icon="help_outline">
-        <radio v-for="item in radioData2" name="radio2" :model.sync="radio2" :value="item" :label="item"></radio>
+        <div>
+          <radio v-for="item in radioData2" name="radio2" :model.sync="radio2" :value="item" :label="item"></radio>
+        </div>
       </item-form>
     </form-list>
   </content>

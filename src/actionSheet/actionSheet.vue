@@ -1,7 +1,7 @@
 <template>
   <div class="action-sheet" v-show="show" transition="actionsheet">
     <div class="action-sheet-group">
-      <a href="javascript:;" @click="actionClick(action)" v-el:button :class="{ [ action.color ? 'color-' + action.color : '' ]: true, 'action-sheet-label': action.isLabel, 'action-sheet-button': !action.isLabel}" v-for="action in actions">
+      <a href="javascript:;" @click="actionClick(action)"  v-el:button :class="['color-' + action.color, action.isLabel ? 'action-sheet-label' : 'action-sheet-button']" v-for="action in actions">
         {{action.name}}
         <ripple :trigger="$els.button"></ripple>
       </a>
@@ -84,7 +84,7 @@ export default {
   width: 100%;
   font-weight: normal;
   margin: 0;
-  display: block;
+  display: flex;
   position: relative;
   padding: 0 16px;
   position: relative;

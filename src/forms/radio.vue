@@ -45,7 +45,7 @@ export default {
 @import "../utils/_mixins.less";
 .radio {
   position: relative;
-  display: inline-flex;
+  display: flex;
   height: 36px;
   align-items: center;
   margin-right: 32px;
@@ -83,7 +83,7 @@ export default {
   align-items: center;
   width: 20px;
   height: 20px;
-  border-radius: 20px;
+  border-radius: 36px;
   border-width: 2px;
   border-style: solid;
   border-color: @body_color;

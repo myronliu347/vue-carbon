@@ -117,6 +117,7 @@ export default {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   max-height: 70%;
+  border-radius: 3px;
 }
 
 .popover-transition{
