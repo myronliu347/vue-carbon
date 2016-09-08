@@ -18,7 +18,7 @@ html{
 }
 
 body{
-  font-family: Helvetica Neue,Helvetica,STHeiTi,Arial,sans-serif;
+  font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
   background-color: #EFF0F5;
   width: 100%;
   user-select: none;
