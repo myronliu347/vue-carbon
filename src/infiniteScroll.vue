@@ -15,7 +15,9 @@ export default {
     },
     trigger: {
       type: window.Element,
-      require: true
+      default () {
+        return document
+      }
     }
   },
   methods: {

@@ -74,7 +74,7 @@ export default {
   bottom: 16px;
 }
 
-.float-button-default{
+.float-button-carbon{
   background-color: @color;
 }
 

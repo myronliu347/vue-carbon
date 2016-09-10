@@ -6,7 +6,7 @@
   </header-bar>
   <content>
     <content-block class="demo-float-button">
-      <float-button icon="delete_forever" color="default"></float-button>
+      <float-button icon="delete_forever" color="carbon"></float-button>
       <float-button icon="mode_edit"></float-button>
       <float-button icon="search" color="green"></float-button>
       <float-button icon="star" color="amber"></float-button>

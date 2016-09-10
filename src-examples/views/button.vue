@@ -63,8 +63,9 @@
       <content-title>icon buttons</content-title>
       <content-block class="inline-content-block">
         <icon-button icon="mode_edit"></icon-button>
-        <icon-button icon="search" fill></icon-button>
-        <icon-button icon="add" fill></icon-button>
+        <icon-button icon="share" fill></icon-button>
+        <icon-button icon="search" color="red" fill></icon-button>
+        <icon-button icon="add" color="green" fill></icon-button>
       </content-block>
   </content>
 </div>

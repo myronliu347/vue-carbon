@@ -47,14 +47,8 @@ export default {
           title: 'Float Button',
           link: '/floatButton'
         }, {
-          title: 'Overlay',
-          link: '/overlay'
-        }, {
           title: 'Circular',
           link: '/circular'
-        }, {
-          title: 'Toast',
-          link: '/toast'
         }, {
           title: 'Refresh Control',
           link: '/refreshControl'
@@ -110,6 +104,12 @@ export default {
       }, {
         title: 'Popups',
         children: [{
+          title: 'Overlay',
+          link: '/overlay'
+        }, {
+          title: 'Toast',
+          link: '/toast'
+        }, {
           title: 'Modal',
           link: '/modal'
         }, {

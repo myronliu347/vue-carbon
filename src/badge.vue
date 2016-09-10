@@ -1,5 +1,9 @@
 <template>
-  <em class="badge" :class="classNames">{{value}}</em>
+  <em class="badge" :class="classNames">
+    <slot>
+      {{value}}
+    </slot>
+  </em>
 </template>
 
 <script>

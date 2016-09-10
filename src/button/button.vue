@@ -43,8 +43,7 @@ export default {
       let style = {
         'button-fill': this.fill,
         'button-big': this.big,
-        'button-raised': this.raised,
-        'button-gray': this.gray
+        'button-raised': this.raised
       }
       if (this.color) style['color-' + this.color] = true
       return style

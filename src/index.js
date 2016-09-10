@@ -1,5 +1,5 @@
-/*eslint-disable*/
 import content from './content'
+import ripple from './ripple'
 import overlay from './overlay'
 import icon from './icon/icon'
 import iconButton from './icon/iconButton'
@@ -34,7 +34,6 @@ import itemTitleAfter from './list/itemTitleAfter'
 import itemSubTitle from './list/itemSubTitle'
 import itemText from './list/itemText'
 import itemDivider from './list/itemDivider'
-
 
 // card
 import card from './card/card'
@@ -84,6 +83,7 @@ var components = {
   content,
   overlay,
   icon,
+  ripple,
   'icon-button': iconButton,
   badge,
   circular,

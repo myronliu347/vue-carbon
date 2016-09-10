@@ -19,10 +19,6 @@ export default {
       type: Boolean,
       default: false
     },
-    gray: {
-      type: Boolean,
-      default: false
-    },
     color: {
       type: String,
       default: ''
@@ -31,8 +27,7 @@ export default {
   computed: {
     buttonClass () {
       let classNames = {
-        'icon-button-fill': this.fill,
-        'icon-button-gray': this.gray
+        'icon-button-fill': this.fill
       }
       classNames['color-' + this.color] = true
       return classNames
@@ -74,23 +69,63 @@ export default {
   .ripple-ink{
     color: @tap-color;
   }
+
+  &.color-red{
+    color: @red;
+  }
+
+  &.color-green{
+    color: @green;
+  }
+
+  &.color-amber{
+    color: @amber;
+  }
+
+  &.color-blue{
+    color: @blue;
+  }
 }
 
 .icon-button-fill {
-  background-color: @red;
+  background-color: @carbon;
   color: #fff;
   .ripple-ink{
     color: rgba(255,255,255,0.4);
   }
   &:active {
-    background: darken(@red, 8%);
+    background-color: darken(@carbon, 8%);
   }
-}
+  &.color-red{
+    color: #fff;
+    background-color: @red;
+    &:active {
+      background-color: darken(@red, 8%);
+    }
+  }
 
-.icon-button-gray {
-  background-color: @carbon;
-  &:active {
-    background: darken(@carbon, 8%);
+  &.color-green{
+    color: #fff;
+    background-color: @green;
+    &:active {
+      background-color: darken(@green, 8%);
+    }
+  }
+
+  &.color-amber{
+    background-color: @amber;
+    color: #fff;
+    &:active {
+      background-color: darken(@amber, 8%);
+    }
+  }
+
+  &.color-blue{
+    background-color: @blue;
+    color: #fff;
+    &:active {
+      background-color: darken(@blue, 8%);
+    }
   }
 }
 </style>

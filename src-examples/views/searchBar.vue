@@ -2,7 +2,7 @@
   <div class="page">
     <header-bar>
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
-      <span>Header Bar</span>
+      <span>Search Bar</span>
     </header-bar>
     <search-bar :focus.sync="focus"></search-bar>
     <content>
