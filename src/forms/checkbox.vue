@@ -54,11 +54,14 @@ export default {
   margin-right: 32px;
   input[type="checkbox"] {
     display: none;
-    &:checked + .checkbox-icon{
-      border-color: @red;
-      background-color: @red;
-      &:after{
-        opacity: 1;
+    &:checked {
+      + .checkbox-icon,
+      + .checkbox-label + .checkbox-icon{
+        border-color: @red;
+        background-color: @red;
+        &:after{
+          opacity: 1;
+        }
       }
     }
   }
@@ -66,10 +69,6 @@ export default {
     pointer-events: none;
   }
   &.label-left{
-    .checkbox-icon{
-      order: 1
-    }
-
     .checkbox-label {
       margin-left: 0;
       margin-right: 8px;

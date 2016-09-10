@@ -1,8 +1,9 @@
 <template>
 <label class="switch" :class="{'label-left': labelLeft}">
-  <input type="checkbox" v-model="value">
+  <input type="checkbox" v-model="value" />
+  <div class="switch-label" v-if="label && labelLeft">{{label}}</div>
   <div class="switch-checkbox"></div>
-  <div class="switch-label" v-if="label">{{label}}</div>
+  <div class="switch-label" v-if="label && !labelLeft">{{label}}</div>
 </label>
 </template>
 
@@ -43,7 +44,8 @@ export default {
   input[type="checkbox"] {
     display: none;
     &:checked {
-      +.switch-checkbox {
+      +.switch-checkbox,
+      +.switch-label+.switch-checkbox{
         background: rgba(red(@red), green(@red), blue(@red), 0.5);
         &:after {
           transform: translate3d(16px, 0, 0);
@@ -55,12 +57,7 @@ export default {
   * {
     pointer-events: none;
   }
-
   &.label-left{
-    .switch-checkbox{
-      order: 1
-    }
-
     .switch-label {
       margin-left: 0;
       margin-right: 8px;

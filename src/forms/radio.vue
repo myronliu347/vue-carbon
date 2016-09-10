@@ -1,8 +1,9 @@
 <template>
   <label class="radio" :class="{'label-left': labelLeft}">
     <input type="radio" :name="name" :value="value" v-model="model">
+    <div class="checkbox-label" v-if="label && labelLeft">{{label}}</div>
     <div class="radio-icon"></div>
-    <div class="radio-label" v-if="label">{{label}}</div>
+    <div class="radio-label" v-if="label && !labelLeft">{{label}}</div>
   </label>
 </template>
 
@@ -51,10 +52,13 @@ export default {
   margin-right: 32px;
   input[type="radio"] {
     display: none;
-    &:checked + .radio-icon{
-      border-color: @red;
-      &:after{
-        transform: scale(1);
+    &:checked{
+      + .radio-icon,
+      + .radio-label + .radio-icon{
+        border-color: @red;
+        &:after{
+          transform: scale(1);
+        }
       }
     }
   }
@@ -62,9 +66,6 @@ export default {
     pointer-events: none;
   }
   &.label-left{
-    .radio-icon{
-      order: 1
-    }
 
     .radio-label {
       margin-left: 0;
