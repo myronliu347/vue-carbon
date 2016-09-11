@@ -30,9 +30,6 @@ export default {
     change (index, args) {
       this.values[index] = args[0]
       this.$emit('picker-change', this.values)
-    },
-    sure () {
-      this.$emit('picker-sure', this.values)
     }
   },
   components: {

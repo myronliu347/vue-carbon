@@ -8,7 +8,7 @@
     </div>
     <div class="action-sheet-group" v-if="showCancel">
       <a class="action-sheet-button" href="javascript:;" @click="cancel"  v-el:cancel>
-        取消
+        {{cancelText}}
         <ripple :trigger="$els.cancel"></ripple>
       </a>
     </div>

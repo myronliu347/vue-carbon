@@ -6,6 +6,7 @@ res
 examples
 src-examples
 static
+docs
 .DS_Store
 .*
 index.html

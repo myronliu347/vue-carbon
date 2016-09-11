@@ -1,0 +1,825 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>RefreshControl | Vue Carbon 使用文档</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        <meta name="identifier" content="978-3-16-148410-0" scheme="ISBN">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../basic/button.html" />
+    
+    
+    <link rel="prev" href="../basic/infiniteScroll.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="1.7"
+        data-chapter-title="RefreshControl"
+        data-filepath="basic/refreshControl.md"
+        data-basepath=".."
+        data-revision="Sun Sep 11 2016 18:10:20 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Basic</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="basic/badge.html">
+            
+                
+                    <a href="../basic/badge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Badge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic/icon.html">
+            
+                
+                    <a href="../basic/icon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Icon
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic/circular.html">
+            
+                
+                    <a href="../basic/circular.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Circular
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic/ripple.html">
+            
+                
+                    <a href="../basic/ripple.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Ripple
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="basic/content.html">
+            
+                
+                    <a href="../basic/content.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Content
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="basic/infiniteScroll.html">
+            
+                
+                    <a href="../basic/infiniteScroll.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        InfineScroll
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="basic/refreshControl.html">
+            
+                
+                    <a href="../basic/refreshControl.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        RefreshControl
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="basic/button.html">
+            
+                
+                    <a href="../basic/button.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        Button
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="basic/iconButton.html">
+            
+                
+                    <a href="../basic/iconButton.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        IconButton
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="basic/floatButton.html">
+            
+                
+                    <a href="../basic/floatButton.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        FloatButton
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Css</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="css/headerbar.html">
+            
+                
+                    <a href="../css/headerbar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        HeaderBar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="css/tabbar.html">
+            
+                
+                    <a href="../css/tabbar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        TabBar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="css/searchBar.html">
+            
+                
+                    <a href="../css/searchBar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        SearchBar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="css/grid.html">
+            
+                
+                    <a href="../css/grid.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Grid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="css/list.html">
+            
+                
+                    <a href="../css/list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        ListView
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="css/card.html">
+            
+                
+                    <a href="../css/card.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Card
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="css/contentBlock.html">
+            
+                
+                    <a href="../css/contentBlock.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        ContentBlock
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Forms</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="forms/formList.html">
+            
+                
+                    <a href="../forms/formList.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        FormList
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="forms/itemForm.html">
+            
+                
+                    <a href="../forms/itemForm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        ItemForm
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="forms/textField.html">
+            
+                
+                    <a href="../forms/textField.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        TextField
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="forms/selectField.html">
+            
+                
+                    <a href="../forms/selectField.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        SelectField
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="forms/dataSelect.html">
+            
+                
+                    <a href="../forms/dataSelect.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        DateSelect
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="forms/switch.html">
+            
+                
+                    <a href="../forms/switch.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Switch
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="forms/checkbox.html">
+            
+                
+                    <a href="../forms/checkbox.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Checkbox
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="forms/radio.html">
+            
+                
+                    <a href="../forms/radio.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        Radio
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="forms/range.html">
+            
+                
+                    <a href="../forms/range.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Range
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Popups</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="popups/overlay.html">
+            
+                
+                    <a href="../popups/overlay.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Overlay
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="popups/toast.html">
+            
+                
+                    <a href="../popups/toast.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Toast
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="popups/modal.html">
+            
+                
+                    <a href="../popups/modal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Modal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="popups/indicator.html">
+            
+                
+                    <a href="../popups/indicator.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Indicator
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="popups/popup.html">
+            
+                
+                    <a href="../popups/popup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        popup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="popups/actionSheet.html">
+            
+                
+                    <a href="../popups/actionSheet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        ActionSheet
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="popups/popover.html">
+            
+                
+                    <a href="../popups/popover.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Popover
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="popups/picker.html">
+            
+                
+                    <a href="../popups/picker.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Picker
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="popups/drawer.html">
+            
+                
+                    <a href="../popups/drawer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        NavDrawer
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Vue Carbon 使用文档</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="refresh-control">Refresh Control</h1>
+<p>&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x7EC4;&#x4EF6;, <a href="https://myronliu347.github.io/vue-carbon/#!/refreshControl" target="_blank">demo</a></p>
+<h2 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h2>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;page&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header-bar</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">icon-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;left&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;back()&quot;</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">&quot;arrow_back&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">icon-button</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Refresh Control<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">icon-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">&quot;right&quot;</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">&quot;refresh()&quot;</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">&quot;refresh&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">icon-button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">header-bar</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">content</span> <span class="hljs-attr">v-el:trigger</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--&#x52A0;&#x8F7D;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x6570;&#x636E;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">refresh-control</span> @<span class="hljs-attr">refresh</span>=<span class="hljs-string">&quot;refresh&quot;</span> <span class="hljs-attr">:trigger</span>=<span class="hljs-string">&quot;$els.trigger&quot;</span> <span class="hljs-attr">:refreshing</span>=<span class="hljs-string">&quot;refreshing&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">refresh-control</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">content-block</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;refresh-desc&quot;</span>&gt;</span>
+         &#x6309;&#x4F4F; - &#x4E0B;&#x62C9; - &#x91CA;&#x653E;&#x53EF;&#x4EE5;&#x5237;&#x65B0;&#x6570;&#x636E;
+      <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">content-block</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--&#x6E32;&#x67D3;&#x6570;&#x636E;--&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">list</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">item-cell</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">&quot;item in items&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">item-title</span>&gt;</span>
+          {{item}}
+        <span class="hljs-tag">&lt;/<span class="hljs-name">item-title</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">item-cell</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">list</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">content</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
+  data () {
+    <span class="hljs-keyword">return</span> {
+      items: [<span class="hljs-string">&apos;1&apos;</span>, <span class="hljs-string">&apos;2&apos;</span>, <span class="hljs-string">&apos;3&apos;</span>, <span class="hljs-string">&apos;5&apos;</span>, <span class="hljs-string">&apos;6&apos;</span>, <span class="hljs-string">&apos;7&apos;</span>, <span class="hljs-string">&apos;8&apos;</span>, <span class="hljs-string">&apos;9&apos;</span>, <span class="hljs-string">&apos;10&apos;</span>],
+      end: <span class="hljs-number">10</span>,
+      refreshing: <span class="hljs-literal">false</span>
+    }
+  },
+  methods: {
+    back () {
+      <span class="hljs-built_in">window</span>.history.back()
+    },
+    refresh () {
+      <span class="hljs-keyword">this</span>.refreshing = <span class="hljs-literal">true</span>
+      setTimeout(() =&gt; {
+        <span class="hljs-keyword">this</span>.refreshing = <span class="hljs-literal">false</span>
+        <span class="hljs-keyword">var</span> arr = []
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-keyword">this</span>.end; i &lt; <span class="hljs-keyword">this</span>.end + <span class="hljs-number">10</span>; i++) {
+          arr.push(<span class="hljs-built_in">String</span>(i + <span class="hljs-number">1</span>))
+        }
+        <span class="hljs-keyword">this</span>.end += <span class="hljs-number">10</span>
+        <span class="hljs-keyword">this</span>.items = arr
+      }, <span class="hljs-number">2000</span>)
+    }
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+<span class="hljs-selector-class">.refresh-desc</span>{
+  <span class="hljs-attribute">text-align</span>: center;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+</code></pre>
+<h2 id="api">API</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x53EF;&#x9009;&#x503C;</th>
+<th style="text-align:left">&#x9ED8;&#x8BA4;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">trigger</td>
+<td style="text-align:left">&#x89E6;&#x53D1;&#x4E0B;&#x62C9;&#x5237;&#x65B0;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5143;&#x7D20;&#x7684;&#x5FC5;&#x987B;&#x662F;&#x5E26;&#x6EDA;&#x52A8;&#x6761;&#x7684;</td>
+<td style="text-align:left">Element</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">document</td>
+</tr>
+<tr>
+<td style="text-align:left">refreshing</td>
+<td style="text-align:left">&#x662F;&#x5426;&#x663E;&#x793A;&#x5237;&#x65B0;&#x7EC4;&#x4EF6;</td>
+<td style="text-align:left">Boolean</td>
+<td style="text-align:left">true/false</td>
+<td style="text-align:left">false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<h3 id="refresh">refresh</h3>
+<p>&#x5237;&#x65B0;&#x6570;&#x636E;&#x4E8B;&#x4EF6;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x54CD;&#x5E94;&#x65B9;&#x6CD5;&#x4E2D;&#x63A7;&#x5236; refreshing &#x7684;&#x503C;&#xFF0C; &#x7EC4;&#x4EF6;&#x624D;&#x4F1A;&#x5448;&#x73B0;&#x4E0D;&#x540C;&#x7684;&#x663E;&#x793A;&#x6548;&#x679C;&#x3002;</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../basic/infiniteScroll.html" class="navigation navigation-prev " aria-label="Previous page: InfineScroll"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../basic/button.html" class="navigation navigation-next " aria-label="Next page: Button"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

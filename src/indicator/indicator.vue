@@ -1,7 +1,7 @@
 <template>
   <div class="indicator" v-show="show">
     <toast center v-if="type === 'toast'">
-      <circular :size="36" color="#FFF"></circular>
+      <circular :size="36" color="white"></circular>
       <div class="toast-text" v-if="text">{{text}}</div>
     </toast>
     <modal v-if="type === 'modal'" hide-close :overlay="false" show>

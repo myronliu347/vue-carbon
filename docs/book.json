@@ -2,6 +2,7 @@
     "title": "Vue Carbon 使用文档",
     "description": "基于 vue 开发 material design 风格的移动端 WEB UI 库",
     "isbn": "978-3-16-148410-0",
-    "language": "zh-CN",
-    "direction": "ltr"
+    "language": "zh-hans",
+    "direction": "ltr",
+    "plugins": ["-search"]
 }
