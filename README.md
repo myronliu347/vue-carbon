@@ -23,6 +23,10 @@ import 'vue-carbon/dist/vue-carbon.css' // 加载文件
 Vue.use(VueCarbon)
 ```
 
+## 文档
+
+[Vue Carbon 使用文档](https://myronliu347.github.io/vue-carbon/book/)
+
 ## 简单使用
 
 例如这个 Refresh Control 组件的demo页面
@@ -94,20 +98,16 @@ export default {
 
 ![](res/refresh.png)
 
-## 文档
-
-正在努力编写中。。。。。
 
 ## Todos
 
-* [ ] 修复现有的问题和bug
-* [ ] 改善一些组件的使用方式
+* [X] 修复现有的问题和bug
+* [X] 改善一些组件的使用方式
+* [X] 编写文档
 * [ ] 剩余组件开发
   * [ ] rate
   * [ ] Collapsible
   * [ ] Notification
-
-* [ ] 编写文档
 
 ## Licence
 
