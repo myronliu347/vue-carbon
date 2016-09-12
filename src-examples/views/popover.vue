@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<div class="vc-page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Popover</span>
@@ -50,13 +50,13 @@ export default {
 </script>
 
 <style lang="css">
-.list.demo-popver-list{
+.vc-list.demo-popver-list{
   margin: 0;
 }
-.list.demo-popver-list .item:after{
+.vc-list.demo-popver-list .vc-item:after{
   content: none;
 }
-.center-block{
+.vc-center-block{
   display: flex;
   align-items: center;
 }

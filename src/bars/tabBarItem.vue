@@ -1,5 +1,5 @@
 <template>
-<a href="javascript:;" class="tab-link" v-el:tablink :class="{'active': show}" @click="tabClick()">
+<a href="javascript:;" class="vc-tab-link" v-el:tablink :class="{'active': show}" @click="tabClick()">
   <slot></slot>
   <ripple :trigger="$els.tablink"></ripple>
 </a>
@@ -47,7 +47,7 @@ export default {
 
 <style lang="less">
 @import "../utils/_mixins.less";
-.tab-link{
+.vc-tab-link{
   flex: 1;
   width: 100%;
   height: 100%;
@@ -58,7 +58,7 @@ export default {
   justify-content: center;
   align-items: center;
   .active-highlight();
-  .ripple-ink{
+  .vc-ripple-ink{
     color: rgba(255, 255, 255, .3);
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <em class="badge" :class="classNames">
+  <em class="vc-badge" :class="classNames">
     <slot>
       {{value}}
     </slot>
@@ -21,7 +21,7 @@ export default {
   computed: {
     classNames () {
       let obj = {}
-      obj['badge-' + this.color] = true
+      obj['vc-badge-' + this.color] = true
       return obj
     }
   }
@@ -30,7 +30,7 @@ export default {
 
 <style lang="less">
 @import "./utils/_vars.less";
-.badge{
+.vc-badge{
   font-size: 10px;
   display: inline-block;
   font-style: normal;
@@ -41,7 +41,7 @@ export default {
   line-height: normal;
 }
 
-.icon .badge {
+.icon .vc-badge {
   position: absolute;
   left: 100%;
   margin-left: -10px;
@@ -51,23 +51,23 @@ export default {
   border-radius: 10px;
 }
 
-.badge-carbon{
+.vc-badge-carbon{
   background-color: @carbon;
 }
 
-.badge-red{
+.vc-badge-red{
   background-color: @red;
 }
 
-.badge-green{
+.vc-badge-green{
   background-color: @green;
 }
 
-.badge-amber{
+.vc-badge-amber{
   background-color: @amber;
 }
 
-.badge-blue{
+.vc-badge-blue{
   background-color: @blue;
 }
 

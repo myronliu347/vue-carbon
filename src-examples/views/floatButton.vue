@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<div class="vc-page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Float Button</span>
@@ -33,7 +33,7 @@ export default {
   justify-content: flex-start;
   align-content: center;
 }
-.demo-float-button .float-button +  .float-button{
+.demo-float-button .vc-float-button +  .vc-float-button{
   margin-left: 10px;
 }
 </style>

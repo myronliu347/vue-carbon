@@ -1,11 +1,12 @@
 <template>
-  <div v-show="show" class="popup" :class="[position ? 'popup-' + position : '']" :transition="popupTransition">
+  <div v-show="show" class="vc-popup" :style="{'z-index': zIndex}" :class="[position ? 'vc-popup-' + position : '']" :transition="popupTransition">
     <slot></slot>
   </div>
 </template>
 
 <script>
 import Popup from './index'
+import {getZIndex} from '../utils'
 export default {
   mixins: [Popup],
   props: {
@@ -24,7 +25,11 @@ export default {
       default: ''
     }
   },
-
+  computed: {
+    zIndex () {
+      return this.overlay ? '' : getZIndex()
+    }
+  },
   compiled () {
     if (this.popupTransition !== 'popup-fade') {
       this.popupTransition = `popup-slide-${this.position}`
@@ -40,7 +45,7 @@ export default {
 </script>
 
 <style lang="css">
-.popup {
+.vc-popup {
   position: fixed;
   background: #fff;
   top: 50%;
@@ -49,7 +54,7 @@ export default {
   backface-visibility: hidden;
 }
 
-.popup-top {
+.vc-popup-top {
   top: 0;
   right: auto;
   bottom: auto;
@@ -57,14 +62,14 @@ export default {
   transform: translate3d(-50%, 0, 0);
 }
 
-.popup-right {
+.vc-popup-right {
   top: 50%;
   right: 0;
   bottom: auto;
   left: auto;
   transform: translate3d(0, -50%, 0);
 }
-.popup-bottom {
+.vc-popup-bottom {
   top: auto;
   right: auto;
   bottom: 0;
@@ -72,7 +77,7 @@ export default {
   transform: translate3d(-50%, 0, 0);
 }
 
-.popup-left {
+.vc-popup-left {
   top: 50%;
   right: auto;
   bottom: auto;

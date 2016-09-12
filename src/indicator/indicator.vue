@@ -1,13 +1,13 @@
 <template>
-  <div class="indicator" v-show="show">
+  <div class="vc-indicator" v-show="show">
     <toast center v-if="type === 'toast'">
       <circular :size="36" color="white"></circular>
       <div class="toast-text" v-if="text">{{text}}</div>
     </toast>
     <modal v-if="type === 'modal'" hide-close :overlay="false" show>
-      <div class="indicator-modal-content">
+      <div class="vc-indicator-modal-content">
         <circular :size="36"></circular>
-        <div class="indicator-modal-text" v-if="text">
+        <div class="vc-indicator-modal-text" v-if="text">
           {{text}}
         </div>
       </div>
@@ -43,14 +43,14 @@ export default {
 
 <style lang="less">
 @import "../utils/_vars.less";
-.indicator-modal-content{
+.vc-indicator-modal-content{
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.indicator-modal-text{
+.vc-indicator-modal-text{
   font-size: 16px;
   color: @color;
   margin-top: 12px;

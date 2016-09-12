@@ -1,5 +1,5 @@
 <template>
-  <a class="icon-button" href="javascript:;" :class="buttonClass" v-el:button>
+  <a class="vc-icon-button" href="javascript:;" :class="buttonClass" v-el:button>
     <icon :value="icon"></icon>
     <ripple :trigger="$els.button"></ripple>
   </a>
@@ -27,7 +27,7 @@ export default {
   computed: {
     buttonClass () {
       let classNames = {
-        'icon-button-fill': this.fill
+        'vc-icon-button-fill': this.fill
       }
       classNames['color-' + this.color] = true
       return classNames
@@ -43,7 +43,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.icon-button {
+.vc-icon-button {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -66,7 +66,7 @@ export default {
   &:active{
     background: @tap-color;
   }
-  .ripple-ink{
+  .vc-ripple-ink{
     color: @tap-color;
   }
 
@@ -87,10 +87,10 @@ export default {
   }
 }
 
-.icon-button-fill {
+.vc-icon-button-fill {
   background-color: @carbon;
   color: #fff;
-  .ripple-ink{
+  .vc-ripple-ink{
     color: rgba(255,255,255,0.4);
   }
   &:active {

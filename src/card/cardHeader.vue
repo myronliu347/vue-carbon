@@ -1,12 +1,12 @@
 <template>
-<div class="card-header">
+<div class="vc-card-header">
   <slot></slot>
 </div>
 </template>
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.card-header{
+.vc-card-header{
   border-radius: 2px 2px 0 0;
   font-size: 18px;
   .hairline(bottom, @border-color);
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .card-title{
+  .vc-card-title{
     color: @color;
     white-space:nowrap;
     text-overflow:ellipsis;

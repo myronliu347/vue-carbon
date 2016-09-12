@@ -1,7 +1,7 @@
 <template>
-  <div class="tab-bar">
+  <div class="vc-tab-bar">
     <slot></slot>
-    <span class="tab-link-highlight" :style="tabLightStyle"></span>
+    <span class="vc-tab-link-highlight" :style="tabLightStyle"></span>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.tab-bar{
+.vc-tab-bar{
   height: 48px;
   line-height: 48px;
   display: flex;
@@ -46,9 +46,10 @@ export default {
   font-size: 18px;
   position: relative;
   width: 100%;
+  z-index: 100;
 }
 
-.tab-link-highlight{
+.vc-tab-link-highlight{
   position: absolute;
   left: 0;
   bottom: 0;

@@ -1,7 +1,7 @@
 <template>
 <item-form :label="label" :icon="icon" :no-empty="value ? true : false">
-  <div class="date-select">
-    <div class="date-select-text" @click="showSelect()" :class="{'placeholder': !value}">{{value || placeholder}}</div>
+  <div class="vc-date-select">
+    <div class="vc-date-select-text" @click="showSelect()" :class="{'placeholder': !value}">{{value || placeholder}}</div>
     <icon value="insert_invitation" @click="showSelect()"></icon>
     <overlay v-if="show" fixed @click="hideSelect"></overlay>
     <date-picker @date-select-cancel="hideSelect" :type="type" :format="format" :limit="limit" @date-select-sure="select" v-if="show" :time="value"></date-picker>
@@ -71,7 +71,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.date-select{
+.vc-date-select{
   width: 100%;
   height: 36px;
   display: flex;
@@ -99,7 +99,7 @@ export default {
   }
 }
 
-.date-select-text{
+.vc-date-select-text{
   flex: 1;
   font-size: 16px;
   height: 36px;

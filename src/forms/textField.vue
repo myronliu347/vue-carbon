@@ -1,6 +1,6 @@
 <template>
   <item-form :focus="focus" :no-empty="!!value" :icon="icon">
-    <label class="text-field">
+    <label class="vc-text-field">
       <div :class="{'label': !labelFloat, 'floating-label': labelFloat}" v-if="label">{{label}}</div>
       <input :type="type" v-model="value"  @focus="onfocus" @blur="onblur"
         v-if="type !== 'textarea'"  autocomplete="off" :placeholder="placeholder" />
@@ -109,7 +109,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.text-field {
+.vc-text-field {
   width: 100%;
   display: block;
   position: relative;

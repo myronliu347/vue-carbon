@@ -1,11 +1,11 @@
 <template>
-  <div class="content-title">
+  <div class="vc-content-title">
     <slot></slot>
   </div>
 </template>
 
 <style lang="less">
-.content-title {
+.vc-content-title {
   position: relative;
   overflow: hidden;
   text-transform: capitalize;
@@ -16,7 +16,7 @@
   margin: 16px 16px 16px;
   padding-top: 16px;
   font-weight: 500;
-  + .list, + .content-block, +.card {
+  + .vc-list, + .vc-content-block, +.vc-card {
     margin-top: 0px;
   }
 }

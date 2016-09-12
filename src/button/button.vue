@@ -1,8 +1,8 @@
 <template>
-  <a href="javascript:;" class="button" v-el:button :class="buttonClass">
+  <a href="javascript:;" class="vc-button" v-el:button :class="buttonClass">
     <slot>
       <icon v-if="icon" :value="icon"></icon>
-      <span class="button-text" v-if="text">{{text}}</span>
+      <span class="vc-button-text" v-if="text">{{text}}</span>
     </slot>
     <ripple :trigger="$els.button"></ripple>
   </a>
@@ -41,9 +41,9 @@ export default {
   computed: {
     buttonClass () {
       let style = {
-        'button-fill': this.fill,
-        'button-big': this.big,
-        'button-raised': this.raised
+        'vc-button-fill': this.fill,
+        'vc-button-big': this.big,
+        'vc-button-raised': this.raised
       }
       if (this.color) style['color-' + this.color] = true
       return style
@@ -59,7 +59,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.button {
+.vc-button {
   color: @color;
   border-radius: 2px;
   height: 36px;
@@ -92,7 +92,7 @@ export default {
   }
 
   .icon,
-  .button-text {
+  .vc-button-text {
     pointer-events: none;
   }
 
@@ -100,7 +100,7 @@ export default {
     .flex-shrink(0);
   }
 
-  .button-text{
+  .vc-button-text{
     .flex-shrink(1);
     white-space:nowrap;
     text-overflow:ellipsis;
@@ -108,7 +108,7 @@ export default {
     break-word;
   }
 
-  .ripple-ink{
+  .vc-ripple-ink{
     color: @tap-color;
   }
 
@@ -129,10 +129,10 @@ export default {
   }
 }
 
-.button-fill {
+.vc-button-fill {
   background-color: @carbon;
   color: #fff;
-  .ripple-ink{
+  .vc-ripple-ink{
     color: rgba(255,255,255,0.4);
   }
   &:active {
@@ -171,13 +171,13 @@ export default {
   }
 }
 
-.button-big {
+.vc-button-big {
   height: 48px;
   line-height: 48px;
   border-radius: 3px;
 }
 
-.button-raised {
+.vc-button-raised {
   .depth(1);
   html:not(.watch-active-state) &:active, &.active-state {
     .depth(2);

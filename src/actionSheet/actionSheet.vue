@@ -1,13 +1,13 @@
 <template>
-  <div class="action-sheet" v-show="show" transition="actionsheet">
-    <div class="action-sheet-group">
-      <a href="javascript:;" @click="actionClick(action)"  v-el:button :class="['color-' + action.color, action.isLabel ? 'action-sheet-label' : 'action-sheet-button']" v-for="action in actions">
+  <div class="vc-action-sheet" v-show="show" transition="actionsheet">
+    <div class="vc-action-sheet-group">
+      <a href="javascript:;" @click="actionClick(action)"  v-el:button :class="['color-' + action.color, action.isLabel ? 'vc-action-sheet-label' : 'vc-action-sheet-button']" v-for="action in actions">
         {{action.name}}
         <ripple :trigger="$els.button"></ripple>
       </a>
     </div>
-    <div class="action-sheet-group" v-if="showCancel">
-      <a class="action-sheet-button" href="javascript:;" @click="cancel"  v-el:cancel>
+    <div class="vc-action-sheet-group" v-if="showCancel">
+      <a class="vc-action-sheet-button" href="javascript:;" @click="cancel"  v-el:cancel>
         {{cancelText}}
         <ripple :trigger="$els.cancel"></ripple>
       </a>
@@ -61,7 +61,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.action-sheet{
+.vc-action-sheet{
   position: fixed;
   left: 0;
   right: 0;
@@ -72,15 +72,15 @@ export default {
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
-.action-sheet-group {
+.vc-action-sheet-group {
   position: relative;
   .hairline(bottom, @border-color);
   &:last-child {
     .hairline-remove(bottom);
   }
 }
-.action-sheet-button,
-.action-sheet-label {
+.vc-action-sheet-button,
+.vc-action-sheet-label {
   width: 100%;
   font-weight: normal;
   margin: 0;
@@ -93,7 +93,7 @@ export default {
   text-overflow: ellipsis;
 }
 
-.action-sheet-label {
+.vc-action-sheet-label {
   font-size: 14px;
   line-height: 1;
   min-height: 57px;
@@ -109,7 +109,7 @@ export default {
   }
 }
 
-.action-sheet-button{
+.vc-action-sheet-button{
   cursor: pointer;
   height: 48px;
   line-height: 48px;

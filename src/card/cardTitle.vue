@@ -1,5 +1,5 @@
 <template>
-<div class="card-title">
+<div class="vc-card-title">
   <slot></slot>
 </div>
 </template>

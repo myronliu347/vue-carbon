@@ -1,5 +1,5 @@
 <template>
-  <div class="page" transition="app">
+  <div class="vc-page" transition="app">
       <header-bar>
         <icon-button slot="left" @click="showNav" icon="menu"></icon-button>
         <span>Vue Carbon</span>

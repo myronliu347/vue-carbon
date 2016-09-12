@@ -1,15 +1,15 @@
 <template>
-  <div class="button-area">
+  <div class="vc-button-area">
     <slot></slot>
   </div>
 </template>
 
 <style lang="less">
-.button-area {
+.vc-button-area {
   margin-top: 16px;
   margin-bottom: 32px;
   padding: 0 16px;
-  > .button + .button{
+  > .vc-button + .vc-button{
     margin-top: 16px;
   }
   width: 100%;

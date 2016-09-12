@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<div class="vc-page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Popup</span>
@@ -65,7 +65,7 @@ export default {
 </script>
 
 <style lang="css">
-.center-block{
+.vc-center-block{
   display: flex;
   align-items: center;
 }

@@ -1,5 +1,5 @@
 <template>
-    <div class="ripple-ink" :style="{'color': color}"></div>
+    <div class="vc-ripple-ink" :style="{'color': color}"></div>
 </template>
 
 <script>
@@ -12,8 +12,8 @@
 import classlist from './utils/classList'
 var startRipple = function startRipple (eventType, event) {
   var holder = event.currentTarget || event.target
-  if (!classlist.has(holder, 'ripple-ink')) {
-    holder = holder.querySelector('.ripple-ink')
+  if (!classlist.has(holder, 'vc-ripple-ink')) {
+    holder = holder.querySelector('.vc-ripple-ink')
     if (!holder) return
   }
     // Store the event use to generate this ripple on the holder: don't allow
@@ -124,7 +124,7 @@ export default {
 </script>
 
 <style lang="less">
-.ripple-ink {
+.vc-ripple-ink {
     display: block;
     overflow: hidden;
     border-radius: inherit;
@@ -136,7 +136,7 @@ export default {
     // Forces webkit to properly contain content within border-radius
     -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
 }
-.ripple-ink .ripple {
+.vc-ripple-ink .ripple {
     position: absolute;
     width: 0;
     height: 0;

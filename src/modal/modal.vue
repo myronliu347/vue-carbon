@@ -1,18 +1,18 @@
 <template>
-  <div class="modal" v-show="show" transition="modal-scale">
-    <div class="modal-header" v-if="title">
-      <div class="modal-title">
+  <div class="vc-modal" v-show="show" transition="vc-modal-scale">
+    <div class="vc-modal-header" v-if="title">
+      <div class="vc-modal-title">
           {{title}}
       </div>
     </div>
-    <div class="modal-body">
+    <div class="vc-modal-body">
       <slot>
         <div v-if="msg">
           {{msg}}
         </div>
       </slot>
     </div>
-    <div class="modal-footer" v-if="!hideClose">
+    <div class="vc-modal-footer" v-if="!hideClose">
       <slot name="footer">
         <button text="关闭" @click="close"></button>
       </slot>
@@ -56,7 +56,7 @@ export default {
 <style lang="less">
 @import "../utils/_mixins.less";
 @import "../utils/_vars.less";
-.modal {
+.vc-modal {
   position: fixed;
   left: 50%;
   top: 50%;
@@ -76,11 +76,11 @@ export default {
   color: @body_color;
 }
 
-.modal-header {
+.vc-modal-header {
   display: flex;
   align-items: center;
   padding: 24px 24px 20px;
-  .modal-title {
+  .vc-modal-title {
     flex: 1;
     font-size: 20px;
     display: flex;
@@ -89,19 +89,19 @@ export default {
     font-weight: normal;
     color: @color;
   }
-  + .modal-body{
+  + .vc-modal-body{
     padding-top: 0;
   }
 }
 
-.modal-body {
+.vc-modal-body {
     padding-left: 24px;
     padding-right: 24px;
     padding-top: 24px;
     padding-bottom: 20px;
 }
 
-.modal-footer {
+.vc-modal-footer {
   padding: 6px 8px;
   min-height: 48px;
   display: flex;
@@ -113,18 +113,18 @@ export default {
   }
 }
 
-.modal-scale-transition{
+.vc-modal-scale-transition{
   transition: all .3s ease;
 }
-.modal-scale-enter,
-.modal-scale-leave {
+.vc-modal-scale-enter,
+.vc-modal-scale-leave {
     opacity: 0;
 }
 
-.modal-scale-enter {
+.vc-modal-scale-enter {
   transform: translate3d(-50%, -50%, 0) scale(1.1) ;
 }
-.modal-scale-leave {
+.vc-modal-scale-leave {
   transform: translate3d(-50%, -50%, 0) scale(0.8) ;
 }
 </style>

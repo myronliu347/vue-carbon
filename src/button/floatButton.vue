@@ -1,5 +1,5 @@
 <template>
-<a href="javascript:;" class="float-button" :class="classNames" v-el:button>
+<a href="javascript:;" class="vc-float-button" :class="classNames" v-el:button>
   <icon :value="icon"></icon>
   <ripple color="rgba(255, 255, 255, .3)" :trigger="$els.button"></ripple>
 </a>
@@ -30,8 +30,8 @@ export default {
   computed: {
     classNames () {
       let className = {}
-      className['float-button-' + this.color] = true
-      className['float-button-fixed'] = this.fixed
+      className['vc-float-button-' + this.color] = true
+      className['vc-float-button-fixed'] = this.fixed
       return className
     }
   }
@@ -42,7 +42,7 @@ export default {
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
 
-.float-button{
+.vc-float-button{
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -68,29 +68,29 @@ export default {
   .active-highlight()
 }
 
-.float-button-fixed{
+.vc-float-button-fixed{
   position: fixed;
   right: 16px;
   bottom: 16px;
 }
 
-.float-button-carbon{
+.vc-float-button-carbon{
   background-color: @color;
 }
 
-.float-button-red{
+.vc-float-button-red{
   background-color: @red;
 }
 
-.float-button-green{
+.vc-float-button-green{
   background-color: @green;
 }
 
-.float-button-blue{
+.vc-float-button-blue{
   background-color: @blue;
 }
 
-.float-button-amber{
+.vc-float-button-amber{
   background-color: @amber;
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-  <div class="item-title">
+  <div class="vc-item-title">
     <slot></slot>
   </div>
 </template>
 
 <style lang="less">
 @import "../utils/_vars.less";
-.item-title{
+.vc-item-title{
   flex: 1;
   color: @color;
   overflow: hidden;

@@ -1,6 +1,6 @@
 <template>
-<div class="card-content">
-  <div class="card-content-inner">
+<div class="vc-card-content">
+  <div class="vc-card-content-inner">
     <slot></slot>
   </div>
 </div>
@@ -8,10 +8,10 @@
 
 <style lang="less">
 @import "../utils/_vars.less";
-.card-content{
+.vc-card-content{
   position: relative;
 }
-.card-content-inner{
+.vc-card-content-inner{
   padding: 16px;
   position: relative;
   color: @body_color;
@@ -21,8 +21,8 @@
   > p:last-child {
       margin-bottom: 0;
   }
-  > .list,
-  >.content-block {
+  > .vc-list,
+  > .vc-content-block {
       margin: -15px;
       width: auto;
   }

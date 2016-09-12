@@ -1,102 +1,102 @@
 <template>
-  <div class="date-picker" :style="{'z-index': zIndex}">
-    <div class="date-monthly">
-      <div class="date-previous" @click="nextMonth('pre')">
+  <div class="vc-date-picker" :style="{'z-index': zIndex}">
+    <div class="vc-date-monthly">
+      <div class="vc-date-previous" @click="nextMonth('pre')">
         <i class="icon icon-keyboard_arrow_left"></i>
       </div>
-      <div class="date-caption">
+      <div class="vc-date-caption">
         <a class="date-year" @click="showYear"><small>{{checked.year}}</small></a>
         <a class="date-month" @click="showMonth">{{displayInfo.month}}</a>
       </div>
-      <div class="date-next" @click="nextMonth('next')">»</div>
+      <div class="vc-date-next" @click="nextMonth('next')">»</div>
     </div>
     <div class="date-box" v-if="showInfo.day">
-      <div class="picker-box">
-        <div class="week">
+      <div class="vc-picker-box">
+        <div class="vc-week">
           <ul>
             <li v-for="weekie in library.week">{{weekie}}</li>
           </ul>
         </div>
-        <div class="day-row">
+        <div class="vc-day-row">
           <div
-          class="day"
+          class="vc-day"
           v-for="day in dayList"
           track-by="$index"
           @click="checkDay(day)"
-          :class="{'checked':day.checked,'unavailable':day.unavailable,'passive-day': !(day.inMonth)}"
+          :class="{'checked':day.checked,'unavailable':day.unavailable,'vc-passive-day': !(day.inMonth)}"
           v-if="$index < 7"><span>{{day.value}}</span></div>
         </div>
-        <div class="day-row">
+        <div class="vc-day-row">
           <div
-          class="day"
+          class="vc-day"
           v-for="day in dayList"
           track-by="$index"
           @click="checkDay(day)"
-          :class="{'checked':day.checked,'unavailable':day.unavailable,'passive-day': !(day.inMonth)}"
+          :class="{'checked':day.checked,'unavailable':day.unavailable,'vc-passive-day': !(day.inMonth)}"
           v-if="$index >= 7 && $index < 14"><span>{{day.value}}</span></div>
         </div>
-        <div class="day-row">
+        <div class="vc-day-row">
           <div
-          class="day"
+          class="vc-day"
           v-for="day in dayList"
           track-by="$index"
           @click="checkDay(day)"
-          :class="{'checked':day.checked,'unavailable':day.unavailable,'passive-day': !(day.inMonth)}"
+          :class="{'checked':day.checked,'unavailable':day.unavailable,'vc-passive-day': !(day.inMonth)}"
           v-if="$index >= 14 && $index < 21"><span>{{day.value}}</span></div>
         </div>
-        <div class="day-row">
+        <div class="vc-day-row">
           <div
-          class="day"
+          class="vc-day"
           v-for="day in dayList"
           track-by="$index"
           @click="checkDay(day)"
-          :class="{'checked':day.checked,'unavailable':day.unavailable,'passive-day': !(day.inMonth)}"
+          :class="{'checked':day.checked,'unavailable':day.unavailable,'vc-passive-day': !(day.inMonth)}"
           v-if="$index >= 21 && $index < 28"><span>{{day.value}}</span></div>
         </div>
-        <div class="day-row">
+        <div class="vc-day-row">
           <div
-          class="day"
+          class="vc-day"
           v-for="day in dayList"
           track-by="$index"
           @click="checkDay(day)"
-          :class="{'checked':day.checked,'unavailable':day.unavailable,'passive-day': !(day.inMonth)}"
+          :class="{'checked':day.checked,'unavailable':day.unavailable,'vc-passive-day': !(day.inMonth)}"
           v-if="$index >= 28 && $index < 35"><span>{{day.value}}</span></div>
         </div>
-        <div class="day-row">
+        <div class="vc-day-row">
           <div
-          class="day"
+          class="vc-day"
           v-for="day in dayList"
           track-by="$index"
           @click="checkDay(day)"
-          :class="{'checked':day.checked,'unavailable':day.unavailable,'passive-day': !(day.inMonth)}"
+          :class="{'checked':day.checked,'unavailable':day.unavailable,'vc-passive-day': !(day.inMonth)}"
           v-if="$index >= 35 && $index < 42"><span>{{day.value}}</span></div>
         </div>
       </div>
     </div>
     <div class="date-box list-box" v-if="showInfo.year">
-      <div class="picker-box date-list" id="yearList">
-        <div class="date-item" v-for="yearItem in library.year" track-by="$index" @click="setYear(yearItem)">{{yearItem}}</div>
+      <div class="vc-picker-box vc-date-list" id="yearList">
+        <div class="vc-date-item" v-for="yearItem in library.year" track-by="$index" @click="setYear(yearItem)">{{yearItem}}</div>
       </div>
     </div>
     <div class="date-box list-box" v-if="showInfo.month">
-      <div class="picker-box date-list">
-        <div class="date-item" v-for="monthItem in library.month" track-by="$index" @click="setMonth(monthItem)">{{monthItem}}</div>
+      <div class="vc-picker-box vc-date-list">
+        <div class="vc-date-item" v-for="monthItem in library.month" track-by="$index" @click="setMonth(monthItem)">{{monthItem}}</div>
       </div>
     </div>
     <div class="date-box list-box" v-if="showInfo.hour">
-      <div class="picker-box date-list">
-        <div class="watch-box">
-          <div class="hour-box">
+      <div class="vc-picker-box vc-date-list">
+        <div class="vc-watch-box">
+          <div class="vc-hour-box">
             <div class="mui-pciker-rule mui-pciker-rule-ft"></div>
             <ul>
-              <li class="hour-item" v-for="hitem in hours" @click="setTime('hour', hitem, hours)"
+              <li class="vc-hour-item" v-for="hitem in hours" @click="setTime('hour', hitem, hours)"
               :class="{'active':hitem.checked}">{{hitem.value}}</li>
             </ul>
           </div>
-          <div class="min-box">
+          <div class="vc-min-box">
             <div class="mui-pciker-rule mui-pciker-rule-ft"></div>
               <div
-              class="min-item"
+              class="vc-min-item"
               v-for="mitem in mins"
               @click="setTime('min',mitem, mins)"
               :class="{'active':mitem.checked}"
@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="button-box">
+    <div class="vc-button-box">
       <button @click="dismiss" :text="option.buttons? option.buttons.cancel : 'Cancel' " ></button>
       <button @click="picked" :text="option.buttons? option.buttons.ok : 'Ok' " ></button>
     </div>
@@ -474,7 +474,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.date-picker {
+.vc-date-picker {
   display: inline-block;
   background: @color;
   overflow: hidden;
@@ -493,18 +493,18 @@ export default {
   transform: translate(-50%, -50%);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
-.picker-box {
+.vc-picker-box {
   background: #fff;
   width: 100%;
   max-width: 400px;
   height: 280px;
 }
-.day-row{
+.vc-day-row{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.day {
+.vc-day {
   width: 14.2857143%;
   text-align: center;
   cursor: pointer;
@@ -528,17 +528,17 @@ export default {
     border-radius: 50%;
   }
 }
-.week{
+.vc-week{
   height: 40px;
   width: 100%;
 }
-.week ul {
+.vc-week ul {
   margin: 0;
   padding: 0;
   list-style: none;
   height: 40px;
 }
-.week ul li {
+.vc-week ul li {
   width: 14.2%;
   height: 40px;
   line-height: 40px;
@@ -548,14 +548,14 @@ export default {
   color: #000;
   font-weight: bold;
 }
-.passive-day{
+.vc-passive-day{
   color: #bbb;
 }
 .unavailable {
   color: #ccc;
   cursor: not-allowed;
 }
-.date-monthly {
+.vc-date-monthly {
   height: 100px;
   color: #fff;
   display: flex;
@@ -563,13 +563,13 @@ export default {
   align-items: center;
 
 }
-.date-monthly > div {
+.vc-date-monthly > div {
   display: block;
   text-align: center;
   cursor: pointer;
 }
-.date-previous,
-.date-next {
+.vc-date-previous,
+.vc-date-next {
   position: relative;
   width: 20% !important;
   text-indent: -300px;
@@ -577,7 +577,7 @@ export default {
   height: 100px;
   color: #fff;
 }
-.date-caption {
+.vc-date-caption {
   width: 60%;
   box-sizing: border-box;
   font-size: 24px;
@@ -590,12 +590,12 @@ export default {
   }
 }
 
-.date-caption span:hover {
+.vc-date-caption span:hover {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.date-next::before,
-.date-previous::before {
+.vc-date-next::before,
+.vc-date-previous::before {
   width: 20px;
   height: 2px;
   text-align: center;
@@ -611,8 +611,8 @@ export default {
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.date-next::after,
-.date-previous::after {
+.vc-date-next::after,
+.vc-date-previous::after {
   width: 20px;
   height: 2px;
   text-align: center;
@@ -628,35 +628,35 @@ export default {
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.date-previous::after {
+.vc-date-previous::after {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.date-previous::before {
+.vc-date-previous::before {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.date-item {
+.vc-date-item {
   text-align: center;
   font-size: 20px;
   padding: 10px 0;
   cursor: pointer;
 }
-.date-item:hover {
+.vc-date-item:hover {
   background: #e0e0e0;
 }
-.date-list {
+.vc-date-list {
   overflow: auto;
   vertical-align: top;
   padding: 0;
 }
-.vue-date {
+.vc-vue-date {
   display: inline-block;
   color: #5D5D5D;
 }
-.button-box {
+.vc-button-box {
   background: #fff;
   vertical-align: top;
   height: 48px;
@@ -666,12 +666,12 @@ export default {
   display: flex;
   justify-content: flex-end;
 }
-.watch-box {
+.vc-watch-box {
   height: 100%;
   overflow: hidden;
 }
-.hour-box,
-.min-box {
+.vc-hour-box,
+.vc-min-box {
   display: inline-block;
   width: 50%;
   text-align: center;
@@ -679,18 +679,18 @@ export default {
   overflow: auto;
   float: left;
 }
-.hour-box ul,
-.min-box ul{
+.vc-hour-box ul,
+.vc-min-box ul{
   list-style: none;
     margin: 0;
     padding: 0;
 }
-.hour-item, .min-item {
+.vc-hour-item, .vc-min-item {
   padding: 10px;
   font-size: 20px;
   cursor: pointer;
 }
-.hour-box .active, .min-box .active{
+.vc-hour-box .active, .vc-min-box .active{
   background: @red;
   color: #FFF !important;
 }

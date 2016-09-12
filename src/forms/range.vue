@@ -1,5 +1,5 @@
 <template>
-<div class="range">
+<div class="vc-range">
   <input type="range" :step="step" :min="min" :max="max" v-model="value">
 </div>
 </template>
@@ -35,7 +35,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.range {
+.vc-range {
   width: 100%;
   position: relative;
   overflow: hidden;

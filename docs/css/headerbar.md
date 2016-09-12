@@ -7,7 +7,7 @@
 ## 用法
 
 ```html
-<div class="page">
+<div class="vc-page">
   <header-bar>
     Header Bar
   </header-bar>

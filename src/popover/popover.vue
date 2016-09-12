@@ -1,8 +1,8 @@
 <template>
-<div class="popover" v-show="show" :style="{'top': pos.top + 'px', 'left': pos.left + 'px'}"
-  :class="{'popover-top': pos.position === 'top', 'popover-bottom': pos.position === 'bottom'}"
-  transition="popover">
-  <div class="popover-content">
+<div class="vc-popover" v-show="show" :style="{'top': pos.top + 'px', 'left': pos.left + 'px'}"
+  :class="{'vc-popover-top': pos.position === 'top', 'vc-popover-bottom': pos.position === 'bottom'}"
+  transition="vc-popover">
+  <div class="vc-popover-content">
     <slot></slot>
   </div>
 </div>
@@ -102,22 +102,22 @@ export default {
 
 <style lang="less">
 @import "../utils/_mixins.less";
-.popover{
+.vc-popover{
   position: fixed;
   background: #FFF;
   max-width: 300px;
   min-width: 200px;
   border-radius: 3px;
   .depth(1);
-  &.popover-bottom {
+  &.vc-popover-bottom {
     transform-origin: center top;
   }
-  &.popover-top{
+  &.vc-popover-top{
     transform-origin: center bottom;
   }
 }
 
-.popover-content{
+.vc-popover-content{
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -125,14 +125,14 @@ export default {
   border-radius: 3px;
 }
 
-.popover-transition{
+.vc-popover-transition{
   transition-duration: 300ms;
   transition-property: opacity, transform;
-  &.popover-enter {
+  &.vc-popover-enter {
     transform: scale(0);
     opacity: 0;
   }
-  &.popover-leave {
+  &.vc-popover-leave {
     opacity: 0;
   }
 }

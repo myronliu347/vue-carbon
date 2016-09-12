@@ -1,5 +1,5 @@
 <template>
-<a href="javascript:;" class="item" v-el:item :class="{'item-link': link, 'item-ripple': ripple || link}">
+<a href="javascript:;" class="vc-item" v-el:item :class="{'vc-item-link': link, 'vc-item-ripple': ripple || link}">
   <slot></slot>
   <ripple v-if="ripple || link" :trigger="$els.item"></ripple>
 </a>
@@ -27,7 +27,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.item{
+.vc-item{
   .hairline(bottom, @border-color);
   position: relative;
   overflow: hidden;
@@ -36,13 +36,13 @@ export default {
   color: @body_color;
   display: flex;
 }
-.item-ripple {
+.vc-item-ripple {
   .active-highlight(@tap-color);
-  .ripple-ink {
+  .vc-ripple-ink {
     color: @tap-color;
   }
 }
-.item-link .item-content {
+.vc-item-link .vc-item-content {
   .encoded-svg-background("<svg viewBox='0 0 60 120' xmlns='http://www.w3.org/2000/svg'><path d='m60 61.5-38.25 38.25-9.75-9.75 29.25-28.5-29.25-28.5 9.75-9.75z' fill='#989da3'/></svg>");
   background-size: 10px 20px;
   background-repeat: no-repeat;

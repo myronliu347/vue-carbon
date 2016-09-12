@@ -1,20 +1,20 @@
 <template>
-  <div class="buttons-row">
+  <div class="vc-buttons-row">
     <slot></slot>
   </div>
 </template>
 
 <style lang="less">
-.buttons-row {
+.vc-buttons-row {
   align-self: center;
   display: flex;
   margin: 1em 0;
-  .button {
+  .vc-button {
     margin-left: 16px;
     width: 100%;
     flex: 1;
   }
-  .button:first-child {
+  .vc-button:first-child {
     margin-left: 0;
   }
 }

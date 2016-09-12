@@ -1,5 +1,5 @@
 <template>
-  <div class="row" :class="{'no-gutter': !gutter}">
+  <div class="vc-row" :class="{'no-gutter': !gutter}">
     <slot></slot>
   </div>
 </template>
@@ -14,7 +14,7 @@
   }
 </script>
 <style lang="less">
-.row {
+.vc-row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -24,7 +24,7 @@
     }
 }
 @cols: 5, 10, 15, 20, 25, 30, 100/3, 35, 40, 45, 50, 55, 60, 65, 100*(2/3), 70, 75, 80, 85, 90, 95, 100;
-.row {
+.vc-row {
     .col-auto {
         width: 100%;
     }
@@ -65,7 +65,7 @@
 }
 
 @media all and (min-width:768px) {
-    .row {
+    .vc-row {
         .-(@i: length(@cols)) when (@i > 0) {
             @divider: e(extract(@cols, @i));
             @className: `Math.floor(@{divider})`;

@@ -1,9 +1,9 @@
 <template>
-  <div class="item-form" :class="{'focus-state': focus, 'not-empty-state': noEmpty}">
-    <div class="item-form-icon" v-if="icon">
+  <div class="vc-item-form" :class="{'focus-state': focus, 'not-empty-state': noEmpty}">
+    <div class="vc-item-form-icon" v-if="icon">
       <icon :value="icon"></icon>
     </div>
-    <div class="item-form-content">
+    <div class="vc-item-form-content">
       <div class="label" v-if="label">{{label}}</div>
       <slot></slot>
     </div>
@@ -40,7 +40,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.item-form{
+.vc-item-form{
   position: relative;
   padding-left: 16px;
   min-height: 48px;
@@ -61,28 +61,28 @@ export default {
 }
 
 
-.item-form-icon{
+.vc-item-form-icon{
   width: 40px;
   height: 36px;
   display: flex;
   align-items: center;
   margin-top: 31px;
   .flex-shrink(0);
-  + .item-form-content{
+  + .vc-item-form-content{
     margin-left: 16px;
   }
 }
 
-.item-form-content{
+.vc-item-form-content{
   flex: 1;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 16px;
   width: 100%;
-  .item-form{
+  .vc-item-form{
     padding-left: 0;
   }
-  .item-form-content{
+  .vc-item-form-content{
     padding: 0;
   }
 }
@@ -114,7 +114,7 @@ export default {
   max-width: 75%;
 }
 
-.item-form.focus-state{
+.vc-item-form.focus-state{
   color: @red;
 }
 </style>

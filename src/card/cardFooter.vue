@@ -1,12 +1,12 @@
 <template>
-<div class="card-footer">
+<div class="vc-card-footer">
   <slot></slot>
 </div>
 </template>
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.card-footer{
+.vc-card-footer{
   min-height: 48px;
   position: relative;
   padding: 4px 15px;
@@ -18,7 +18,7 @@
   color: #757575;
 }
 
-.card-footer{
+.vc-card-footer{
   &.no-border {
     .hairline-remove(top);
   }

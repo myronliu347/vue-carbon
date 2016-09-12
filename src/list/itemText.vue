@@ -1,11 +1,11 @@
 <template>
-  <div class="item-text">
+  <div class="vc-item-text">
     <slot></slot>
   </div>
 </template>
 
 <style lang="css">
-.item-text{
+.vc-item-text{
   font-size: 14px;
   line-height: 20px;
   max-height: 40px;

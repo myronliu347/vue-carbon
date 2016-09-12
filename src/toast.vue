@@ -1,8 +1,8 @@
 <template>
-  <div class="toast" :style="{'z-index': zIndex}" :class="{'toast-center': center}" transition="toast">
+  <div class="vc-toast" :style="{'z-index': zIndex}" :class="{'vc-toast-center': center}" transition="vc-toast">
     <slot>
       <icon v-if="icon" :value="icon" :size="36"></icon>
-      <div class="toast-text">{{text}}</div>
+      <div class="vc-toast-text">{{text}}</div>
     </slot>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style lang="less">
-.toast{
+.vc-toast{
   position: fixed;
   left: 50%;
   bottom: 50px;
@@ -51,23 +51,23 @@ export default {
   padding: 10px;
   z-index: 1000;
   transform: translate3d(-50%, 0, 0);
-  .toast-text{
+  .vc-toast-text{
     font-size: 1.4rem;
     display: block;
     text-align: center;
   }
-  &.toast-center {
+  &.vc-toast-center {
     top: 50%;
     bottom: auto;
     transform: translate3d(-50%, -50%, 0);
   }
 }
 
-.toast-transition {
+.vc-toast-transition {
   -webkit-transition: opacity .3s linear;
   transition: opacity .3s linear;
-  &.toast-enter,
-  &.toast-leave {
+  &.vc-toast-enter,
+  &.vc-toast-leave {
     opacity: 0;
   }
 }

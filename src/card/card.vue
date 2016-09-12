@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="vc-card">
     <slot></slot>
   </div>
 </template>
@@ -7,11 +7,11 @@
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.card .list {
+.vc-card .vc-list {
   .hairline-remove(top);
   .hairline-remove(bottom);
 }
-.card {
+.vc-card {
   background: #fff;
   margin: 8px;
   position: relative;

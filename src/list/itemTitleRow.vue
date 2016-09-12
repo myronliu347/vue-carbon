@@ -1,12 +1,12 @@
 <template>
-  <div class="item-title-row">
+  <div class="vc-item-title-row">
     <slot></slot>
   </div>
 </template>
 
 
 <style lang="less">
-.item-title-row{
+.vc-item-title-row{
   display: flex;
   justify-content: flex-start;
   align-items: center;

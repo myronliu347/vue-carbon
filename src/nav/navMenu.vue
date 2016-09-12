@@ -1,13 +1,13 @@
 <template>
-<a href="javascript:;" class="nav-menu" v-el:menu>
-  <div class="nav-menu-icon">
+<a href="javascript:;" class="vc-nav-menu" v-el:menu>
+  <div class="vc-nav-menu-icon">
     <icon :value="icon"></icon>
   </div>
-  <div class="nav-menu-content">
-    <div class="nav-menu-title">
+  <div class="vc-nav-menu-content">
+    <div class="vc-nav-menu-title">
       {{title}}
     </div>
-    <div class="nav-menu-after">
+    <div class="vc-nav-menu-after">
       {{after}}
     </div>
   </div>
@@ -44,7 +44,7 @@ export default {
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
 
-.nav-menu{
+.vc-nav-menu{
   display: flex;
   width: 100%;
   height: 48px;
@@ -58,25 +58,25 @@ export default {
   .active-highlight(@tap-color);
 }
 
-.nav-menu-icon{
+.vc-nav-menu-icon{
   width: 40px;
   display: flex;
   align-items: center;
 }
 
-.nav-menu-content{
+.vc-nav-menu-content{
   flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav-menu-title{
+.vc-nav-menu-title{
   font-size: 16px;
   .flex-shrink(10);
 }
 
-.nav-menu-after{
+.vc-nav-menu-after{
   margin-left: auto;
   font-size: 14px;
 }

@@ -1,11 +1,11 @@
 <template>
-  <div class="item-content">
+  <div class="vc-item-content">
     <slot></slot>
   </div>
 </template>
 
 <style lang="css">
-.item-content {
+.vc-item-content {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 16px;

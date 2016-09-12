@@ -34,7 +34,7 @@ Vue.use(VueCarbon)
 
 ```html
 <template>
-<div class="page">
+<div class="vc-page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Refresh Control</span>
@@ -99,15 +99,6 @@ export default {
 ![](res/refresh.png)
 
 
-## Todos
-
-* [X] 修复现有的问题和bug
-* [X] 改善一些组件的使用方式
-* [X] 编写文档
-* [ ] 剩余组件开发
-  * [ ] rate
-  * [ ] Collapsible
-  * [ ] Notification
 
 ## Licence
 

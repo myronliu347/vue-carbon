@@ -1,8 +1,8 @@
 <template>
   <modal :click-overlay-close="false" :show.sync="show" :title="title">
-    <div class="confirm-content">
+    <div class="vc-confirm-content">
       <icon value="help_outline" v-if="showIcon" :size="36"></icon>
-      <span class="confirm-text">{{msg}}</span>
+      <span class="vc-confirm-text">{{msg}}</span>
     </div>
     <button slot="footer" text="取消" @click="cancel"></button>
     <button slot="footer" text="确定" @click="sure"></button>
@@ -52,19 +52,19 @@ export default {
 
 <style lang="less">
 @import "../utils/_vars.less";
-.confirm-content{
+.vc-confirm-content{
   display: flex;
   .icon {
     color: @blue;
   }
 }
 
-.confirm-text{
+.vc-confirm-text{
   display: flex;
   align-items: center;
 }
 
-.confirm-content .icon + .confirm-text{
+.vc-confirm-content .icon + .vc-confirm-text{
   margin-left: 12px;
 }
 </style>

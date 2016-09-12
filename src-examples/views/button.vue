@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<div class="vc-page">
   <header-bar>
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Button</span>
@@ -87,7 +87,7 @@ export default {
     justify-content: flex-start;
 }
 
-.inline-content-block .icon-button {
+.inline-content-block .vc-icon-button {
     margin-left: 10px;
 }
 

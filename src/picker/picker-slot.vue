@@ -1,7 +1,7 @@
 <template>
-  <div class="picker-slot" :class="{'picker-slot-divider': divider}" :style="{'width': width}">
-    <div v-if="!divider" class="picker-slot-wrapper" :style="{'height': contentHeight + 'px'}" v-el:wrapper>
-      <div class="picker-item" :style="{'text-align': textAlign}" :class="{'selected': item === value}"
+  <div class="vc-picker-slot" :class="{'vc-picker-slot-divider': divider}" :style="{'width': width}">
+    <div v-if="!divider" class="vc-picker-slot-wrapper" :style="{'height': contentHeight + 'px'}" v-el:wrapper>
+      <div class="vc-picker-item" :style="{'text-align': textAlign}" :class="{'selected': item === value}"
       v-for="item in values">{{item.text || item}}</div>
     </div>
     <div v-if="divider">{{ content }}</div>
@@ -148,26 +148,26 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.picker-slot{
+.vc-picker-slot{
   .flex-shrink(1);
   font-size: 18px;
   overflow: hidden;
   position: relative;
   max-height: 100%;
   text-align: center;
-  &.picker-slot-divider{
+  &.vc-picker-slot-divider{
     color: #000;
     display: flex;
     align-items: center;
     line-height: 36px;
   }
 }
-.picker-slot-wrapper{
+.vc-picker-slot-wrapper{
   transition-duration: .3s;
   transition-timing-function: ease-out;
   backface-visibility: hidden;
 }
-.picker-item{
+.vc-picker-item{
   line-height: 36px;
   padding: 0 10px;
   white-space: nowrap;

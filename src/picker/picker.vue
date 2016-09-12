@@ -1,7 +1,7 @@
 <template>
-<div class="picker-content">
+<div class="vc-picker-content">
   <picker-slot :divider="slot.divider" :content="slot.content"  :text-align="slot.textAlign" :width="slot.width" v-for="slot in slots" @slot-select="change($index, $arguments)" :value="values[$index]" :values="slot.values" :visible-item-count="visibleItemCount"></picker-slot>
-  <div class="picker-center-highlight"></div>
+  <div class="vc-picker-center-highlight"></div>
 </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.picker-content{
+.vc-picker-content{
   background: #FFF;
   overflow: hidden;
   width: 100%;
@@ -52,7 +52,7 @@ export default {
   -webkit-mask-box-image: linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
 }
 
-.picker-center-highlight {
+.vc-picker-center-highlight {
     height: 36px;
     box-sizing: border-box;
     position: absolute;
@@ -65,14 +65,14 @@ export default {
     .hairline(bottom, #d3d6db );
 }
 
-.picker-center-highlight:before {
+.vc-picker-center-highlight:before {
     left: 0;
     top: 0;
     bottom: auto;
     right: auto;
 }
 
-.picker-center-highlight:after {
+.vc-picker-center-highlight:after {
     left: 0;
     bottom: 0;
     right: auto;

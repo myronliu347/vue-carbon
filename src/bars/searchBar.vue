@@ -1,8 +1,8 @@
 <template>
-<div class="search-bar" :class="{'searchbar-active': focus}">
-  <div class="searchbar-input">
+<div class="vc-search-bar" :class="{'vc-searchbar-active': focus}">
+  <div class="vc-searchbar-input">
     <input type="search" v-el:search @focus="this.focus = true" @blur="this.focus = false" v-model="searchText" :placeholder="placeholder">
-    <a href="javascript:;" @click.stop="clear()" class="searchbar-clear"></a>
+    <a href="javascript:;" @click.stop="clear()" class="vc-searchbar-clear"></a>
   </div>
 </div>
 </template>
@@ -50,7 +50,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.search-bar {
+.vc-search-bar {
   height: 48px;
   width: 100%;
   background: @barcolor;
@@ -60,12 +60,13 @@ export default {
   display: flex;
   align-items: center;
   color: #fff;
+  z-index: 100;
   a {
     position: relative;
     color: #fff;
     .active-highlight();
   }
-  .searchbar-input {
+  .vc-searchbar-input {
     width: 100%;
     height: 32px;
     position: relative;
@@ -104,7 +105,7 @@ export default {
       -webkit-appearance: none;
     }
   }
-  .searchbar-clear {
+  .vc-searchbar-clear {
     position: absolute;
     width: 56px;
     height: 100%;
@@ -120,20 +121,20 @@ export default {
     transition: all 300ms;
     cursor: pointer;
   }
-  .searchbar-cancel {
+  .vc-searchbar-cancel {
     display: none;
   }
-  &.searchbar-active {
+  &.vc-searchbar-active {
     input[type="search"] {
       opacity: 1;
     }
-    .searchbar-clear {
+    .vc-searchbar-clear {
       pointer-events: auto;
       opacity: 1;
     }
   }
-  &.searchbar-not-empty {
-    .searchbar-clear {
+  &.vc-searchbar-not-empty {
+    .vc-searchbar-clear {
       pointer-events: auto;
       opacity: 1;
     }

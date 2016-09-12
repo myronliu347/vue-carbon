@@ -1,9 +1,9 @@
 <template>
-  <label class="radio" :class="{'label-left': labelLeft}">
+  <label class="vc-radio" :class="{'label-left': labelLeft}">
     <input type="radio" :name="name" :value="value" v-model="model">
-    <div class="checkbox-label" v-if="label && labelLeft">{{label}}</div>
-    <div class="radio-icon"></div>
-    <div class="radio-label" v-if="label && !labelLeft">{{label}}</div>
+    <div class="vc-radio-label" v-if="label && labelLeft">{{label}}</div>
+    <div class="vc-radio-icon"></div>
+    <div class="vc-radio-label" v-if="label && !labelLeft">{{label}}</div>
   </label>
 </template>
 
@@ -44,7 +44,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.radio {
+.vc-radio {
   position: relative;
   display: inline-block;;
   height: 36px;
@@ -53,8 +53,8 @@ export default {
   input[type="radio"] {
     display: none;
     &:checked{
-      + .radio-icon,
-      + .radio-label + .radio-icon{
+      + .vc-radio-icon,
+      + .vc-radio-label + .vc-radio-icon{
         border-color: @red;
         &:after{
           transform: scale(1);
@@ -67,7 +67,7 @@ export default {
   }
   &.label-left{
 
-    .radio-label {
+    .vc-radio-label {
       margin-left: 0;
       margin-right: 8px;
     }
@@ -78,7 +78,7 @@ export default {
   }
 }
 
-.radio-icon {
+.vc-radio-icon {
   width: 20px;
   height: 20px;
   border-radius: 36px;
@@ -105,15 +105,15 @@ export default {
   }
 }
 
-.radio-label{
+.vc-radio-label{
   color: @color;
   font-size: 16px;
   margin-left: 8px;
   margin-right: auto;
 }
 
-.radio-label,
-.radio-icon {
+.vc-radio-label,
+.vc-radio-icon {
   display: inline-block;
   vertical-align: middle;
 }

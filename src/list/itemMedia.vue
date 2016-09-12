@@ -1,14 +1,14 @@
 <template>
-<div class="item-media">
+<div class="vc-item-media">
   <slot></slot>
 </div>
 </template>
 
 <style lang="less">
-.item-media {
+.vc-item-media {
   padding-top: 10px;
   padding-bottom: 10px;
-  + .item-content{
+  + .vc-item-content{
     padding-left: 16px;
   }
   img {
@@ -16,10 +16,10 @@
     border-radius: 50%;
   }
 }
-.item-cell .item-media {
+.vc-item-cell .vc-item-media {
   padding-top: 0;
   padding-bottom: 0;
-  + .item-title {
+  + .vc-item-title {
     padding-left: 16px;
   }
 }

@@ -1,11 +1,11 @@
 <template>
   <modal :click-overlay-close="false" :show.sync="show" :title="title">
-    <div class="alert-content" :class="{'info': type === 'info',
+    <div class="vc-alert-content" :class="{'info': type === 'info',
                                         'warning': type === 'warning',
                                         'success': type === 'success',
                                         'error': type === 'error'}">
       <icon :value="type === 'success' ? 'check' : type" v-if="type" :size="36"></icon>
-      <span class="alert-text">{{msg}}</span>
+      <span class="vc-alert-text">{{msg}}</span>
     </div>
     <button slot="footer" text="确定" @click="sure"></button>
   </modal>
@@ -54,31 +54,31 @@ export default {
 
 <style lang="less">
 @import "../utils/_vars.less";
-.alert-content{
+.vc-alert-content{
   display: flex;
 }
-.alert-text{
+.vc-alert-text{
   display: flex;
   align-items: center;
 }
 
-.alert-content .icon + .alert-text{
+.vc-alert-content .icon + .vc-alert-text{
   margin-left: 12px;
 }
 
-.alert-content.info .icon{
+.vc-alert-content.info .icon{
   color: @blue;
 }
 
-.alert-content.success .icon{
+.vc-alert-content.success .icon{
   color: @green;
 }
 
-.alert-content.warning .icon{
+.vc-alert-content.warning .icon{
   color: @amber;
 }
 
-.alert-content.error .icon{
+.vc-alert-content.error .icon{
   color: @red;
 }
 </style>

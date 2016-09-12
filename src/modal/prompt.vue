@@ -1,10 +1,10 @@
 <template>
   <modal :click-overlay-close="false" :show.sync="show" :title="title">
-    <div class="prompt-content" v-el:content>
-      <div class="prompt-text">{{msg}}</div>
-      <div class="prompt-text-field" :class="{'focus-state': focus, 'not-empty-state': input}">
+    <div class="vc-prompt-content" v-el:content>
+      <div class="vc-prompt-text">{{msg}}</div>
+      <div class="vc-prompt-text-field" :class="{'focus-state': focus, 'not-empty-state': input}">
         <input type="text" v-el:input @focus="this.focus = true" @blur="this.focus = false"
-          class="prompt-input" v-model="input">
+          class="vc-prompt-input" v-model="input">
       </div>
     </div>
     <button slot="footer" text="取消" @click="cancel"></button>
@@ -57,12 +57,12 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.prompt-content{
+.vc-prompt-content{
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.prompt-text-field{
+.vc-prompt-text-field{
   width: 100%;
   display: block;
   position: relative;
@@ -81,7 +81,7 @@ export default {
     transform: scaleY(2) !important;
   }
 }
-.prompt-input{
+.vc-prompt-input{
   appearance: none;
   outline: none;
   box-sizing: border-box;

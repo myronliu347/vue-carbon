@@ -1,5 +1,5 @@
 <template>
-  <div class="header-bar">
+  <div class="vc-header-bar">
     <div class="left">
       <slot name="left"></slot>
     </div>
@@ -15,7 +15,7 @@
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.header-bar {
+.vc-header-bar {
   display: flex;
   align-self: flex-start;
   justify-content: flex-start;
@@ -27,6 +27,8 @@
   width: 100%;
   padding: 0 8px;
   .flex-shrink(0);
+  .depth(1);
+  z-index: 100;
   > .left,
   > .right{
     .flex-shrink(0);
@@ -44,23 +46,23 @@
     white-space: nowrap;
   }
 
-  .button {
+  .vc-button {
     font-size: 18px;
     background: none;
     height: 48px;
     line-height: 48px;
     color: #FFF;
-    .ripple-ink{
+    .vc-ripple-ink{
       color: rgba(255, 255, 255, .3);
     }
   }
 
-  .icon-button {
+  .vc-icon-button {
     background: none;
     width: 48px;
     height: 48px;
     color: #FFF;
-    .ripple-ink{
+    .vc-ripple-ink{
       color: rgba(255, 255, 255, .3);
     }
   }

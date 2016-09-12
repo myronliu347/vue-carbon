@@ -1,5 +1,5 @@
 <template>
-  <div class="refresh-control" :style="refreshStyle" :class="{'refresh-control-refreshing': refreshing}">
+  <div class="vc-refresh-control" :style="refreshStyle" :class="{'vc-refresh-control-refreshing': refreshing}">
     <icon v-show="!refreshing && draging" value="refresh" :style="circularStyle"></icon>
     <circular v-show="refreshing" :size="20" :border-width="2"></circular>
   </div>
@@ -56,13 +56,13 @@ export default {
   },
   attached () {
     const drager = this.drager = new Drag(this.trigger)
-    classList.remove(this.$el, 'refresh-control-noshow')
+    classList.remove(this.$el, 'vc-refresh-control-noshow')
     const initTop = domUtil.getOffset(this.$el).top + INITY  // 初始化位置
-    classList.add(this.$el, 'refresh-control-noshow')
+    classList.add(this.$el, 'vc-refresh-control-noshow')
     drager.start(() => {
       if (this.refreshing) return
-      classList.add(this.$el, 'refresh-control-hide')
-      classList.remove(this.$el, 'refresh-control-noshow')
+      classList.add(this.$el, 'vc-refresh-control-hide')
+      classList.remove(this.$el, 'vc-refresh-control-noshow')
 
       let top = domUtil.getOffset(this.$el).top
       if (top === initTop) this.draging = true
@@ -93,7 +93,7 @@ export default {
         return // 消除误差
       }
       let canRefresh = pos.y + INITY > 0 && this.draging
-      classList.add(this.$el, 'refresh-control-animate')
+      classList.add(this.$el, 'vc-refresh-control-animate')
       if (canRefresh) {
         this.draging = false
         this.$emit('refresh')
@@ -109,9 +109,9 @@ export default {
   },
   methods: {
     clearState () {
-      classList.remove(this.$el, 'refresh-control-animate')
-      classList.remove(this.$el, 'refresh-control-hide')
-      classList.add(this.$el, 'refresh-control-noshow')
+      classList.remove(this.$el, 'vc-refresh-control-animate')
+      classList.remove(this.$el, 'vc-refresh-control-hide')
+      classList.add(this.$el, 'vc-refresh-control-noshow')
       this.draging = false
       this.y = 0
     }
@@ -121,9 +121,9 @@ export default {
       if (!val) {
         domUtil.transitionEnd(this.$el, this.clearState.bind(this))
       } else {
-        classList.add(this.$el, 'refresh-control-animate')
-        classList.remove(this.$el, 'refresh-control-hide')
-        classList.add(this.$el, 'refresh-control-noshow')
+        classList.add(this.$el, 'vc-refresh-control-animate')
+        classList.remove(this.$el, 'vc-refresh-control-hide')
+        classList.add(this.$el, 'vc-refresh-control-noshow')
       }
     }
   },
@@ -137,7 +137,7 @@ export default {
 <style lang="less">
 @import "./utils/_mixins.less";
 @import "./utils/_vars.less";
-.refresh-control{
+.vc-refresh-control{
   display: flex;
   margin: 0 auto;
   width: 36px;
@@ -159,21 +159,21 @@ export default {
   }
 }
 
-.refresh-control-animate{
+.vc-refresh-control-animate{
    transition: all 0.3s ease;
 }
 
-.refresh-control-hide{
+.vc-refresh-control-hide{
   opacity: 1;
   transform: translate3d(0, -63px, 0);
 }
 
-.refresh-control-noshow{
+.vc-refresh-control-noshow{
   opacity: 0;
   transform: scale(0.01);
 }
 
-.refresh-control-refreshing {
+.vc-refresh-control-refreshing {
   transform: scale(1);
   opacity: 1;
 }

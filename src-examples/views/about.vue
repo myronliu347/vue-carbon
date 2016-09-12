@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<div class="vc-page">
   <header-bar>
     <icon-button slot="left" icon="arrow_back" @click="back()"></icon-button>
     <span>关于</span>

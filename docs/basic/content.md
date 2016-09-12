@@ -6,10 +6,10 @@
 
 ## 用法
 
-每一个页面顶层用需要有一个 class 为 page 的容器
+每一个页面顶层用需要有一个 class 为 vc-page 的容器
 
 ```html
-<div class="page">
+<div class="vc-page">
   在content上部的内容会固定在上面
 
   <content>

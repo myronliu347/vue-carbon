@@ -1,8 +1,8 @@
 <template>
-  <div class="item-divider"><slot></slot></div>
+  <div class="vc-item-divider"><slot></slot></div>
 </template>
 <style lang="css">
-.item-divider{
+.vc-item-divider{
   background: #f4f4f4;
   padding: 0px 15px;
   white-space: nowrap;

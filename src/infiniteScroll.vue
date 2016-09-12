@@ -1,7 +1,7 @@
 <template>
-  <div class="infinite-scroll">
+  <div class="vc-infinite-scroll">
     <circular v-show="loading" :size="24" color="carbon"></circular>
-    <span v-show="loading" class="infinite-scroll-text">正在加载。。。</span>
+    <span v-show="loading" class="vc-infinite-scroll-text">正在加载。。。</span>
   </div>
 </template>
 
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="css">
-.infinite-scroll{
+.vc-infinite-scroll{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ export default {
   line-height: 36px;
   width: 100%;
 }
-.infinite-scroll-text{
+.vc-infinite-scroll-text{
   margin-left: 16px;
   font-size: 16px;
 }

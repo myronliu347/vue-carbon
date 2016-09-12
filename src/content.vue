@@ -1,10 +1,11 @@
 <template>
-  <div class="page-content">
+  <div class="vc-page-content">
     <slot></slot>
   </div>
 </template>
 
 <style lang="less">
+@import "./utils/_mixins.less";
 @import "./utils/normalize.css";
 *,
 *::before,
@@ -41,7 +42,7 @@ a{
   user-select: none;
   -webkit-user-select: none;
 }
-.page{
+.vc-page{
   position: absolute;
   left: 0;
   right: 0;
@@ -53,11 +54,12 @@ a{
   justify-content: center;
   align-items: flex-start;
 }
-.page-content{
+.vc-page-content{
   width: 100%;
   flex: 1;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   position: relative;
+  .no-scrollbar();
 }
 </style>

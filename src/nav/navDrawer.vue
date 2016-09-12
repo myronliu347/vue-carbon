@@ -1,9 +1,9 @@
 <template>
-<div class="nav-drawer" v-show="show" transition="slider-left">
-  <div class="nav-drawer-header">
+<div class="vc-nav-drawer" v-show="show" transition="slider-left">
+  <div class="vc-nav-drawer-header">
     <slot name="header"></slot>
   </div>
-  <div class="nav-drawer-content">
+  <div class="vc-nav-drawer-content">
     <slot></slot>
   </div>
 </div>
@@ -25,7 +25,7 @@ export default {
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
 
-.nav-drawer{
+.vc-nav-drawer{
   position: fixed;
   left: 0;
   top: 0;
@@ -38,7 +38,7 @@ export default {
   background-color: #FFF;
   -webkit-overflow-scrolling: touch;
 }
-.nav-drawer-header{
+.vc-nav-drawer-header{
   background-color: @body_color;
   color: #FFF;
   width: 100%;
@@ -49,7 +49,7 @@ export default {
   flex-direction: column;
 }
 
-.nav-drawer-content{
+.vc-nav-drawer-content{
   width: 100%;
   flex: 1;
   background-color: #FFF;

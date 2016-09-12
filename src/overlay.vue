@@ -1,5 +1,5 @@
 <template>
-  <div class="overlay" @click="handlerClick" @touchmove="prevent" :style="style" transition="overlay-fade"></div>
+  <div class="vc-overlay" @click="handlerClick" @touchmove="prevent" :style="style" transition="vc-overlay-fade"></div>
 </template>
 <script>
 import {getZIndex} from './utils'
@@ -50,7 +50,7 @@ export default {
 }
 </script>
 <style lang="less">
-.overlay {
+.vc-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -62,10 +62,10 @@ export default {
 }
 
 
-.overlay-fade-transition {
+.vc-overlay-fade-transition {
   transition: all .3s linear;
-  &.overlay-fade-enter,
-  &.overlay-fade-leave {
+  &.vc-overlay-fade-enter,
+  &.vc-overlay-fade-leave {
     opacity: 0 !important;
   }
 }

@@ -1,9 +1,9 @@
 <template>
-<label class="switch" :class="{'label-left': labelLeft}">
+<label class="vc-switch" :class="{'label-left': labelLeft}">
   <input type="checkbox" v-model="value" />
-  <div class="switch-label" v-if="label && labelLeft">{{label}}</div>
-  <div class="switch-checkbox"></div>
-  <div class="switch-label" v-if="label && !labelLeft">{{label}}</div>
+  <div class="vc-switch-label" v-if="label && labelLeft">{{label}}</div>
+  <div class="vc-switch-checkbox"></div>
+  <div class="vc-switch-label" v-if="label && !labelLeft">{{label}}</div>
 </label>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.switch{
+.vc-switch{
   position: relative;
   display: inline-block;
   height: 36px;
@@ -44,8 +44,8 @@ export default {
   input[type="checkbox"] {
     display: none;
     &:checked {
-      +.switch-checkbox,
-      +.switch-label+.switch-checkbox{
+      +.vc-switch-checkbox,
+      +.vc-switch-label+.vc-switch-checkbox{
         background: rgba(red(@red), green(@red), blue(@red), 0.5);
         &:after {
           transform: translate3d(16px, 0, 0);
@@ -58,7 +58,7 @@ export default {
     pointer-events: none;
   }
   &.label-left{
-    .switch-label {
+    .vc-switch-label {
       margin-left: 0;
       margin-right: 8px;
     }
@@ -68,13 +68,13 @@ export default {
     margin-right: 0;
   }
 }
-.switch-label{
+.vc-switch-label{
   font-size: 16px;
   color: @color;
   margin-left: 8px;
   margin-right: auto;
 }
-.switch-checkbox {
+.vc-switch-checkbox {
   width: 36px;
   border-radius: 36px;
   height: 14px;
@@ -105,8 +105,8 @@ export default {
     backface-visibility: hidden;
   }
 }
-.switch-label,
-.switch-checkbox{
+.vc-switch-label,
+.vc-switch-checkbox{
   display: inline-block;
   vertical-align: middle;
 }

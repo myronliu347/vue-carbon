@@ -1,9 +1,9 @@
 <template>
-  <label class="checkbox" :class="{'label-left': labelLeft}">
+  <label class="vc-checkbox" :class="{'label-left': labelLeft}">
     <input type="checkbox" :name="name" :value="value" v-model="model">
-    <div class="checkbox-label"  v-if="label && labelLeft">{{label}}</div>
-    <div class="checkbox-icon"></div>
-    <div class="checkbox-label"  v-if="label && !labelLeft">{{label}}</div>
+    <div class="vc-checkbox-label"  v-if="label && labelLeft">{{label}}</div>
+    <div class="vc-checkbox-icon"></div>
+    <div class="vc-checkbox-label"  v-if="label && !labelLeft">{{label}}</div>
   </label>
 </template>
 
@@ -46,7 +46,7 @@ export default {
 <style lang="less">
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
-.checkbox {
+.vc-checkbox {
   position: relative;
   display: inline-block;
   height: 36px;
@@ -55,8 +55,8 @@ export default {
   input[type="checkbox"] {
     display: none;
     &:checked {
-      + .checkbox-icon,
-      + .checkbox-label + .checkbox-icon{
+      + .vc-checkbox-icon,
+      + .vc-checkbox-label + .vc-checkbox-icon{
         border-color: @red;
         background-color: @red;
         &:after{
@@ -69,7 +69,7 @@ export default {
     pointer-events: none;
   }
   &.label-left{
-    .checkbox-label {
+    .vc-checkbox-label {
       margin-left: 0;
       margin-right: 8px;
     }
@@ -80,7 +80,7 @@ export default {
   }
 }
 
-.checkbox-icon {
+.vc-checkbox-icon {
   position: relative;
   width: 18px;
   height: 18px;
@@ -110,15 +110,15 @@ export default {
   }
 }
 
-.checkbox-label{
+.vc-checkbox-label{
   color: @color;
   font-size: 16px;
   margin-left: 8px;
   margin-right: auto;
 }
 
-.checkbox-icon,
-.checkbox-label {
+.vc-checkbox-icon,
+.vc-checkbox-label {
   display: inline-block;
   vertical-align: middle;
 }

@@ -1,12 +1,12 @@
 <template>
-  <div class="content-block">
+  <div class="vc-content-block">
     <slot></slot>
   </div>
 </template>
 
 <style lang="less">
 @import "./utils/_vars.less";
-.content-block{
+.vc-content-block{
   margin: 16px 0;
   padding: 10px 16px;
   width: 100%;
