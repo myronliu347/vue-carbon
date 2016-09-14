@@ -116,7 +116,7 @@ export default {
   font-size: 16px;
   color: @color;
   .active-highlight(@tap-color);
-  .ripple-ink {
+  .vc-ripple-ink {
     color: @tap-color;
   }
   &.color-red{

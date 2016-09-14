@@ -5,7 +5,7 @@
     <span>Circular</span>
   </header-bar>
   <content>
-    <div class="content-block">
+    <div class="vc-content-block">
       <circular style="margin-left: 16px;"></circular>
       <circular style="margin-left: 16px;" color="green" :size="36"></circular>
       <circular style="margin-left: 16px;" color="amber" :size="48"></circular>

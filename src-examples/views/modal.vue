@@ -156,10 +156,10 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.login-modal .item-form{
+.login-modal .vc-item-form{
   padding: 0;
 }
-.login-modal .item-form-content{
+.login-modal .vc-item-form-content{
   padding: 0;
   padding-top: 10px;
 }
