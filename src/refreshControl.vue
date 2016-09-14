@@ -55,57 +55,13 @@ export default {
     }
   },
   attached () {
-    const drager = this.drager = new Drag(this.trigger)
-    classList.remove(this.$el, 'vc-refresh-control-noshow')
-    const initTop = domUtil.getOffset(this.$el).top + INITY  // 初始化位置
-    classList.add(this.$el, 'vc-refresh-control-noshow')
-    drager.start(() => {
-      if (this.refreshing) return
-      classList.add(this.$el, 'vc-refresh-control-hide')
-      classList.remove(this.$el, 'vc-refresh-control-noshow')
-
-      let top = domUtil.getOffset(this.$el).top
-      if (top === initTop) this.draging = true
-    }).drag((pos, event) => {
-      if (pos.y < 5) return // 消除误差
-      let top = domUtil.getOffset(this.$el).top
-      if (this.refreshing || !initTop || top < initTop) {
-        this.draging = false
-        return
-      }
-
-      if (top === initTop && !this.draging) {
-        this.draging = true
-        drager.reset(event)
-      }
-
-      if (this.draging && pos.y > 0) {
-        event.preventDefault()
-        event.stopPropagation()
-      }
-
-      this.y = pos.y
-      if (this.y < 0) this.y = 1
-      if (this.y > LENGTH) this.y = LENGTH
-    }).end((pos, event) => {
-      if (!pos.y || pos.y < 5) {
-        this.clearState()
-        return // 消除误差
-      }
-      let canRefresh = pos.y + INITY > 0 && this.draging
-      classList.add(this.$el, 'vc-refresh-control-animate')
-      if (canRefresh) {
-        this.draging = false
-        this.$emit('refresh')
-      } else {
-        this.y = 0
-        domUtil.transitionEnd(this.$el, this.clearState.bind(this))
-      }
-    })
+    this.initDrag()
   },
   detached () {
-    this.drager.destory()
-    this.drager = null
+    this.destroyDrag()
+  },
+  beforeDestroy () {
+    this.destroyDrag()
   },
   methods: {
     clearState () {
@@ -114,6 +70,60 @@ export default {
       classList.add(this.$el, 'vc-refresh-control-noshow')
       this.draging = false
       this.y = 0
+    },
+    initDrag () {
+      const drager = this.drager = new Drag(this.trigger)
+      classList.remove(this.$el, 'vc-refresh-control-noshow')
+      const initTop = domUtil.getOffset(this.$el).top + INITY  // 初始化位置
+      classList.add(this.$el, 'vc-refresh-control-noshow')
+      drager.start(() => {
+        if (this.refreshing) return
+        classList.add(this.$el, 'vc-refresh-control-hide')
+        classList.remove(this.$el, 'vc-refresh-control-noshow')
+
+        let top = domUtil.getOffset(this.$el).top
+        if (top === initTop) this.draging = true
+      }).drag((pos, event) => {
+        if (pos.y < 5) return // 消除误差
+        let top = domUtil.getOffset(this.$el).top
+        if (this.refreshing || !initTop || top < initTop) {
+          this.draging = false
+          return
+        }
+
+        if (top === initTop && !this.draging) {
+          this.draging = true
+          drager.reset(event)
+        }
+
+        if (this.draging && pos.y > 0) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        this.y = pos.y
+        if (this.y < 0) this.y = 1
+        if (this.y > LENGTH) this.y = LENGTH
+      }).end((pos, event) => {
+        if (!pos.y || pos.y < 5) {
+          this.clearState()
+          return // 消除误差
+        }
+        let canRefresh = pos.y + INITY > 0 && this.draging
+        classList.add(this.$el, 'vc-refresh-control-animate')
+        if (canRefresh) {
+          this.draging = false
+          this.$emit('refresh')
+        } else {
+          this.y = 0
+          domUtil.transitionEnd(this.$el, this.clearState.bind(this))
+        }
+      })
+    },
+    destroyDrag () {
+      if (!this.drager) return
+      this.drager.destory()
+      this.drager = null
     }
   },
   watch: {

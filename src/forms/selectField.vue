@@ -75,15 +75,13 @@ export default {
     }
   },
   attached () {
-    this.windowListener = (e) => {
-      if (!this.$els.select.contains(e.target)) {
-        this.hideSelect()
-      }
-    }
-    window.addEventListener('click', this.windowListener, false)
+    this.addListener()
   },
   detached () {
-    window.removeEventListener('click', this.windowListener, false)
+    this.removeListener()
+  },
+  beforeDestroy () {
+    this.removeListener()
   },
   methods: {
     isSelect (val) {
@@ -109,6 +107,20 @@ export default {
     },
     hideSelect () {
       this.focus = false
+    },
+    addListener () {
+      this.windowListener = (e) => {
+        if (!this.$els.select.contains(e.target)) {
+          this.hideSelect()
+        }
+      }
+      window.addEventListener('click', this.windowListener, false)
+    },
+    removeListener () {
+      if (this.windowListener) {
+        window.removeEventListener('click', this.windowListener, false)
+        this.windowListener = null
+      }
     }
   },
   watch: {

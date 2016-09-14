@@ -30,16 +30,27 @@ export default {
         this.loading = true
         this.$emit('load')
       }
+    },
+    addScrollListener () {
+      this.handlerScroll = () => {
+        this.onscroll()
+      }
+      this.trigger.addEventListener('scroll', this.handlerScroll, false)
+    },
+    removeScrollListener () {
+      if (!this.handlerScroll) return
+      this.trigger.removeEventListener('scroll', this.handlerScroll, false)
+      this.handlerScroll = null
     }
   },
   attached () {
-    this.handlerScroll = () => {
-      this.onscroll()
-    }
-    this.trigger.addEventListener('scroll', this.handlerScroll, false)
+    this.addScrollListener()
   },
   detached () {
-    this.trigger.removeEventListener('scroll', this.handlerScroll, false)
+    this.removeScrollListener()
+  },
+  beforeDestroy () {
+    this.removeScrollListener()
   },
   components: {
     circular
