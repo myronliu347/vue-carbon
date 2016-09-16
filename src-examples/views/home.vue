@@ -4,7 +4,7 @@
         <icon-button slot="left" @click="showNav" icon="menu"></icon-button>
         <span>Vue Carbon</span>
       </header-bar>
-      <content>
+      <content v-ref:scroller>
         <content-block>
           Vue Carbon 是基于 vue 开发的material design ui 库。
         </content-block>
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+import Vue from 'vue'
+let scrollTop = 0
 export default {
   data () {
     return {
@@ -129,6 +131,18 @@ export default {
           link: '/picker'
         }]
       }]
+    }
+  },
+  route: {
+    activate (transition) {
+      transition.next()
+      Vue.nextTick(() => {
+        this.$refs.scroller.$el.scrollTop = scrollTop
+      })
+    },
+    deactivate (transition) {
+      scrollTop = this.$refs.scroller.$el.scrollTop
+      transition.next()
     }
   },
   methods: {
