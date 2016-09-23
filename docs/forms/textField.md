@@ -10,9 +10,9 @@
 <content-title>输入框</content-title>
 <!--普通文本输入框-->
 <form-list>
-  <text-field label="用户名" placeholder="请输入你的姓名" icon="account_box"></text-field>
-  <text-field label="电话" type="number" placeholder="请输入你的电话" icon="phone"></text-field>
-  <text-field label="简介" type="textarea" :rows="3" icon="markunread" placeholder="info_outline"></text-field>
+  <text-field label="用户名" placeholder="请输入你的姓名" icon="account_box" :value.sync="user.name"></text-field>
+  <text-field label="电话" type="number" placeholder="请输入你的电话" icon="phone" :value.sync="user.phone"></text-field>
+  <text-field label="简介" type="textarea" :rows="3" icon="markunread" placeholder="info_outline" :value.sync="user.introduction"></text-field>
 </form-list>
 <content-title>浮动 label 的输入框</content-title>
 <form-list>
@@ -28,6 +28,20 @@
 </form-list>
 ```
 
+```javascript
+{
+  data () {
+    return {
+      user: {
+        name: "",
+        phone: "",
+        introduction: ""
+      }
+    }
+  }
+}
+```
+
 ## API
 
 | 参数 | 说明 |	类型 | 可选值 | 默认值 |
@@ -39,7 +53,7 @@
 | focus | 是否获取焦点 | Boolean | true/false | false |
 | placeholder | input标签的placehodler | String | | |
 | rows | type设为 textarea 时，启用，设置默认显示的行数 | Number |  | 0 |
-| value | 输入框的值 | String |  |  |
+| value | 输入框的值，input / textarea 的model，相当于绑定在 input[type=text] / textarea 上的 v-model | String |  |  |
 
 ## 事件
 
