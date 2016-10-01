@@ -5,7 +5,7 @@
     <span>Refresh Control</span>
     <icon-button slot="right" @click="refresh()" icon="refresh"></icon-button>
   </header-bar>
-  <content v-el:trigger>
+  <scroll-view v-el:trigger>
     <refresh-control @refresh="refresh" :trigger="$els.trigger" :refreshing="refreshing"></refresh-control>
     <content-block>
       <p class="refresh-desc">
@@ -19,7 +19,7 @@
         </item-title>
       </item-cell>
     </list>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

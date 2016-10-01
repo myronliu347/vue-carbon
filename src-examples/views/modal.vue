@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Modal</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-block>
         <div>
           这里有许多的常用的弹出框，
@@ -42,7 +42,7 @@
           <button text="Login Modal" raised @click="showLoginModal()"></button>
         </button-row>
       </content-block>
-  </content>
+  </scroll-view>
   <modal title="标题" :show.sync="modal">
     这里是内容区域，点击关闭按钮，或者遮盖层关闭
   </modal>

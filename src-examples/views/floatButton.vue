@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Float Button</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-block class="demo-float-button">
       <float-button icon="delete_forever" color="carbon"></float-button>
       <float-button icon="mode_edit"></float-button>
@@ -13,7 +13,7 @@
       <float-button icon="filter_drama" color="blue"></float-button>
       <float-button fixed></float-button>
     </content-block>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

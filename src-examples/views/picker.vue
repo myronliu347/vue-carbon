@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Picker</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-block>
       <picker :slots="years" @picker-change="yearChange" :values="[yearValues]" ></picker>
       出生年份: <span style="color:#000;">{{yearValues.text}}</span>
@@ -17,7 +17,7 @@
       <picker :slots="addressSlots" :visible-item-count="5" @picker-change="addressChange" :values="address" ></picker>
       地址: <span style="color:#000;"> {{ addressProvince }} {{ addressCity }}</span>
     </content-block>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

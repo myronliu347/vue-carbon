@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Badge</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-title>不同颜色的徽章</content-title>
       <list>
         <item>
@@ -78,7 +78,7 @@
           <badge value="12" color="green"></badge>
         </icon>
       </content-block>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

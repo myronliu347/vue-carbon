@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Card</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-title>最简单的Card</content-title>
       <card>
         <card-content>
@@ -113,7 +113,7 @@
           <icon-button icon="share"></icon-button>
         </card-footer>
       </card>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

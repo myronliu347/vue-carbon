@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Text Field</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-title>输入框</content-title>
     <form-list>
       <text-field label="用户名" placeholder="请输入你的姓名" icon="account_box"></text-field>
@@ -23,7 +23,7 @@
       <text-field label="电话" type="number"></text-field>
       <text-field label="简介" type="textarea" :rows="3"></text-field>
     </form-list>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

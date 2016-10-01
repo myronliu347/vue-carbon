@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>List View</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-block>
         <p>
           Vue Carbon 是基于 flexbox 的布局，可以组织完成各种灵活的列表项，而且可以跟icon， image 等元素完美结合。
@@ -181,7 +181,7 @@
           </item-content>
         </item>
       </list>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

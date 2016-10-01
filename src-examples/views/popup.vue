@@ -4,14 +4,14 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Popup</span>
   </header-bar>
-  <content class="center-block">
+  <scroll-view class="center-block">
     <button-area>
       <button text="上面弹出" @click="topPopup = true" raised></button>
       <button text="下面弹出" @click="bottomPopup = true" raised></button>
       <button text="左边弹出" @click="leftPopup = true" raised></button>
       <button text="右边弹出" @click="rightPopup = true" raised></button>
     </button-area>
-  </content>
+  </scroll-view>
   <popup position="bottom" class="demo-popup-bottom" :show.sync="bottomPopup">
     <div class="demo-bar">
       <span>弹出</span>

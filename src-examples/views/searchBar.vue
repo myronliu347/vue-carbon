@@ -5,9 +5,9 @@
       <span>Search Bar</span>
     </header-bar>
     <search-bar :focus.sync="focus"></search-bar>
-    <content>
+    <scroll-view>
       <overlay v-if="focus"></overlay>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

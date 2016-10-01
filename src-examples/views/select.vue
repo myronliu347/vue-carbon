@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Select Field</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-title>
       选择框
     </content-title>
@@ -19,7 +19,7 @@
       <select-field icon="favorite" label="单选框" :options="games" placeholder="选择一个你喜欢的"></select-field>
       <select-field icon="star" label="多选框" multi :options="games" placeholder="选择一个你喜欢的"></select-field>
     </form-list>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

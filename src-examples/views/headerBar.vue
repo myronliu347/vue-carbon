@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Header Bar</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <header-bar class="header-bar-demo">
         <span>默认</span>
       </header-bar>
@@ -20,7 +20,7 @@
         <icon-button slot="right" icon="search"></icon-button>
         <icon-button slot="right" icon="share"></icon-button>
       </header-bar>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

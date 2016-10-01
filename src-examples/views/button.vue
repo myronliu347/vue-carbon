@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Button</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-title>flat buttons</content-title>
       <content-block>
         <button-row>
@@ -67,7 +67,7 @@
         <icon-button icon="search" color="red" fill></icon-button>
         <icon-button icon="add" color="green" fill></icon-button>
       </content-block>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

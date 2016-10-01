@@ -4,7 +4,7 @@
         <icon-button slot="left" @click="showNav" icon="menu"></icon-button>
         <span>Vue Carbon</span>
       </header-bar>
-      <content v-ref:scroller>
+      <scroll-view v-ref:scroller>
         <content-block>
           Vue Carbon 是基于 vue 开发的material design ui 库。
         </content-block>
@@ -23,7 +23,7 @@
             </item-cell>
           </list>
         </template>
-      </content>
+      </scroll-view>
   </div>
 </template>
 

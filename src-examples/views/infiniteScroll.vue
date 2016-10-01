@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Infinite Scroll</span>
     </header-bar>
-    <content v-el:scroller>
+    <scroll-view v-el:scroller>
       <content-block>
         <p class="refresh-desc">
            向下滑动可以加载更多的数据
@@ -18,7 +18,7 @@
         </item-cell>
       </list>
       <infinite-scroll :trigger="$els.scroller" @load="loadMore" :loading="loading"></infinite-scroll>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

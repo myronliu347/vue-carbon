@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Content block</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-title>Vue Carbon content-block</content-title>
       <content-block>
         <p>
@@ -15,7 +15,7 @@
           这是第二段文字，哈哈哈哈哈！！！
         </p>
       </content-block>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

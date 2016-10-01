@@ -15,7 +15,7 @@
       tab3
     </tab-bar-item>
   </tab-bar>
-  <content>
+  <scroll-view>
     <list>
       <item-cell>
         <item-title>当前选中</item-title>
@@ -84,7 +84,7 @@
         <item-title>选项6</item-title>
       </item-cell>
     </list>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Grid</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-block>
         <p>引进 Framework7 的 flexbox 的栅格系统</p>
       </content-block>
@@ -132,7 +132,7 @@
           </grid-row>
         </content-block>
       </div>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

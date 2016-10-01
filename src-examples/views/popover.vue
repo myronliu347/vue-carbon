@@ -5,12 +5,12 @@
     <span>Popover</span>
     <icon-button slot="right" v-el:menu icon="menu"></icon-button>
   </header-bar>
-  <content class="center-block">
+  <scroll-view class="center-block">
 
       <button-area>
         <button text="点这里出现" raised v-el:button></button>
       </button-area>
-  </content>
+  </scroll-view>
   <div class="demo-tool">
     <button text="点这里" raised v-el:bottom></button>
   </div>

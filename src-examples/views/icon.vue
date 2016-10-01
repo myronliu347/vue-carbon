@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Icons</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-block style="color: #ff5252">
       <icon :size="size" value="account_box"></icon>
       <icon :size="size" value="add"></icon>
@@ -50,7 +50,7 @@
       <icon :size="size" value="share"></icon>
       <icon :size="size" value="star_border"></icon>
     </content-block>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

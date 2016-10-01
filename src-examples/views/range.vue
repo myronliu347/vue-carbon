@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Range</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <form-list>
         <item-form label="默认的">
           <range :value.sync="range1"></range>
@@ -27,7 +27,7 @@
           <div>{{range5}}</div>
         </item-form>
       </form-list>
-    </content>
+    </scroll-view>
   <div>
 </template>
 

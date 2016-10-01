@@ -4,7 +4,7 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Checkbox And Radio</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <content-title>
       checkbox
     </content-title>
@@ -56,7 +56,7 @@
         </div>
       </item-form>
     </form-list>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

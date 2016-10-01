@@ -4,13 +4,13 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Indicator</span>
     </header-bar>
-    <content class="center-block">
+    <scroll-view class="center-block">
       <button-area>
         <button text="点击弹出 indicator" @click="showIndicator()" raised></button>
         <button text="弹出 modal indicator" @click="showModalIndicator()" raised></button>
         <button text="控制透明度" @click="showOpactiyIndicator()" raised></button>
       </button-area>
-    </content>
+    </scroll-view>
     <indicator :show="indicator.show" :type="indicator.type" :text="indicator.text"  :overlay-opacity="indicator.opactiy"></indicator>
   </div>
 </template>

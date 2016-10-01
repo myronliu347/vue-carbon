@@ -4,13 +4,13 @@
     <icon-button slot="left" icon="arrow_back" @click="back()"></icon-button>
     <span>关于</span>
   </header-bar>
-  <content class="about-block">
+  <scroll-view class="about-block">
     <img src="http://www.myronliu.com/img/uicon.jpg" class="my-icon"/>
     <div class="my-name">Myron</div>
     <a class="my-link" target="_blank" href="http://www.myronliu.com/">博客地址</a>
     <a class="my-link" target="_blank" href="https://github.com/myronliu347/vue-carbon">项目地址</a>
     <button raised fill @click="go" text="(✪ω✪)赏个star吧" color="red"></button>
-  </content>
+  </scroll-view>
 </div>
 </template>
 

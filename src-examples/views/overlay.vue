@@ -4,13 +4,13 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>overlay</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <button-area>
       <button fill raised color="red" text="显示 overlay" @click="toggleOverlay()"></button>
       <button fill raised color="red" text="显示白色的 overlay" @click="toggleWhiteOverlay()"></button>
     </button-area>
     <overlay v-if="showWhite" :opacity="0.8" color="#FFF"  @click="toggleWhiteOverlay()"></overlay>
-  </content>
+  </scroll-view>
   <overlay v-if="show" @click="toggleOverlay()"></overlay>
 </div>
 </template>

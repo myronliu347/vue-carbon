@@ -4,12 +4,12 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Action Sheet</span>
   </header-bar>
-  <content class="center-block">
+  <scroll-view class="center-block">
     <button-area>
       <button text="点击弹出 Action Sheet" @click="showActionSheet()" raised></button>
       <button text="不带 cancel 按钮的" @click="showActionSheet(true)" raised></button>
     </button-area>
-  </content>
+  </scroll-view>
   <action-sheet :actions="actionSheet.actions" :show.sync="actionSheet.show" :show-cancel="actionSheet.showCancel"></action-sheet>
   <modal :show.sync="modal.show" :title="modal.title" :msg="modal.msg"></modal>
 </div>

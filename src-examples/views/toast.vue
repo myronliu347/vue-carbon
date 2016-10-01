@@ -4,13 +4,13 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Toast</span>
   </header-bar>
-  <content>
+  <scroll-view>
     <button-area>
       <button fill raised color="red" text="显示 toast" @click="show('default')"></button>
       <button fill raised color="red" text="在中间的 toast" @click="show('center')"></button>
       <button fill raised color="red" text="带icon的 toast" @click="show('ok')"></button>
     </button-area>
-  </content>
+  </scroll-view>
   <toast v-for="toast in toasts" :text="toast.text" :loading="toast.loading" :icon="toast.icon" :center="toast.center"></toast>
 </div>
 </template>

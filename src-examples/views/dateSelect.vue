@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Date Select</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-title>
         日期 / 时间选择
       </content-title>
@@ -20,7 +20,7 @@
         <date-select label="只能选择工作日" :limit="[{type: 'weekday',available: ['1', '2', '3', '4', '5']}]" placeholder="选择日期"></date-select>
         <date-select label="仅选择七月" :limit="[{type:'fromto',from:'2016-07-01',to:'2016-07-31'}]"  placeholder="选择日期"></date-select>
       </form-list>
-    </content>
+    </scroll-view>
   </div>
 </template>
 

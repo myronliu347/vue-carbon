@@ -1,4 +1,5 @@
-import content from './content'
+// import content from './content'
+import scrollView from './scrollView'
 import ripple from './ripple'
 import overlay from './overlay'
 import icon from './icon/icon'
@@ -80,7 +81,7 @@ import navMenu from './nav/navMenu'
 import navDivider from './nav/navDivider'
 import navMenuHeader from './nav/navMenuHeader'
 var components = {
-  content,
+  'scroll-view': scrollView,
   overlay,
   icon,
   ripple,

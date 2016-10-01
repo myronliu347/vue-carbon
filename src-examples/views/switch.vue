@@ -4,7 +4,7 @@
       <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
       <span>Switch</span>
     </header-bar>
-    <content>
+    <scroll-view>
       <content-title>
         默认
       </content-title>
@@ -52,7 +52,7 @@
           <switch :value="true"></switch>
         </item-form>
       </form-list>
-    </content>
+    </scroll-view>
   </div>
 </template>
 
