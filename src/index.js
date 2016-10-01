@@ -19,7 +19,7 @@ import headerBar from './bars/headerBar'
 import tabBar from './bars/tabBar'
 import tabBarItem from './bars/tabBarItem'
 import searchBar from './bars/searchBar'
-
+import snackBar from './bars/snackBar'
 // bottomNav
 import bottomNav from './bottomNav/bottomNav'
 import bottomNavItem from './bottomNav/bottomNavItem'
@@ -102,6 +102,7 @@ var components = {
   'tab-bar': tabBar,
   'tab-bar-item': tabBarItem,
   'search-bar': searchBar,
+  'snack-bar': snackBar,
   'bottom-nav': bottomNav,
   'bottom-nav-item': bottomNavItem,
   toast,
