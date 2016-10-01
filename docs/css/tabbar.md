@@ -1,20 +1,20 @@
 # TabBar
 
-顶部选项卡组件, 需要 tab-bar 和 tab-item 组件的配合
+顶部选项卡组件, 需要 tab-bar 和 tab-item 组件的配合  [demo](https://myronliu347.github.io/vue-carbon/#!/tabBar)
 
 -----
 
 ## 用法
 
 ```html
-<tab-bar :active="tabActive">
-  <tab-bar-item @tabbar-click="tabBarClick">
+<tab-bar :active="tabActive"  @tab-change="tabBarClick">
+  <tab-bar-item>
     tab1
   </tab-bar-item>
-  <tab-bar-item @tabbar-click="tabBarClick">
+  <tab-bar-item>
     tab2
   </tab-bar-item>
-  <tab-bar-item @tabbar-click="tabBarClick">
+  <tab-bar-item>
     tab3
   </tab-bar-item>
 </tab-bar>

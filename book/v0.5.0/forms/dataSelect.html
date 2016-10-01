@@ -1,0 +1,823 @@
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>DateSelect | Vue Carbon 使用文档</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        <meta name="identifier" content="978-3-16-148410-0" scheme="ISBN">
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../forms/switch.html" />
+    
+    
+    <link rel="prev" href="../forms/selectField.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="3.5"
+        data-chapter-title="DateSelect"
+        data-filepath="forms/dataSelect.md"
+        data-basepath=".."
+        data-revision="Sat Oct 01 2016 20:51:59 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        介绍
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Basic</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="basic/badge.html">
+            
+                
+                    <a href="../basic/badge.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Badge
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic/icon.html">
+            
+                
+                    <a href="../basic/icon.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Icon
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic/circular.html">
+            
+                
+                    <a href="../basic/circular.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Circular
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="basic/ripple.html">
+            
+                
+                    <a href="../basic/ripple.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Ripple
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="basic/content.html">
+            
+                
+                    <a href="../basic/content.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Content
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="basic/infiniteScroll.html">
+            
+                
+                    <a href="../basic/infiniteScroll.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.6.</b>
+                        
+                        InfineScroll
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="basic/refreshControl.html">
+            
+                
+                    <a href="../basic/refreshControl.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.7.</b>
+                        
+                        RefreshControl
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="basic/button.html">
+            
+                
+                    <a href="../basic/button.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.8.</b>
+                        
+                        Button
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="basic/iconButton.html">
+            
+                
+                    <a href="../basic/iconButton.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.9.</b>
+                        
+                        IconButton
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="basic/floatButton.html">
+            
+                
+                    <a href="../basic/floatButton.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.10.</b>
+                        
+                        FloatButton
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Css</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="css/headerbar.html">
+            
+                
+                    <a href="../css/headerbar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        HeaderBar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="css/tabbar.html">
+            
+                
+                    <a href="../css/tabbar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        TabBar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="css/searchBar.html">
+            
+                
+                    <a href="../css/searchBar.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        SearchBar
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="css/grid.html">
+            
+                
+                    <a href="../css/grid.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Grid
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="css/list.html">
+            
+                
+                    <a href="../css/list.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        ListView
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="css/card.html">
+            
+                
+                    <a href="../css/card.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Card
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="css/contentBlock.html">
+            
+                
+                    <a href="../css/contentBlock.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        ContentBlock
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" >
+            
+            <span><b>3.</b> Forms</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="forms/formList.html">
+            
+                
+                    <a href="../forms/formList.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        FormList
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="forms/itemForm.html">
+            
+                
+                    <a href="../forms/itemForm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        ItemForm
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="forms/textField.html">
+            
+                
+                    <a href="../forms/textField.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        TextField
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="forms/selectField.html">
+            
+                
+                    <a href="../forms/selectField.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        SelectField
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.5" data-path="forms/dataSelect.html">
+            
+                
+                    <a href="../forms/dataSelect.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        DateSelect
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="forms/switch.html">
+            
+                
+                    <a href="../forms/switch.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Switch
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="forms/checkbox.html">
+            
+                
+                    <a href="../forms/checkbox.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.7.</b>
+                        
+                        Checkbox
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="forms/radio.html">
+            
+                
+                    <a href="../forms/radio.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.8.</b>
+                        
+                        Radio
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.9" data-path="forms/range.html">
+            
+                
+                    <a href="../forms/range.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.9.</b>
+                        
+                        Range
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" >
+            
+            <span><b>4.</b> Popups</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="popups/overlay.html">
+            
+                
+                    <a href="../popups/overlay.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Overlay
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="popups/toast.html">
+            
+                
+                    <a href="../popups/toast.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Toast
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="popups/modal.html">
+            
+                
+                    <a href="../popups/modal.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        Modal
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="popups/indicator.html">
+            
+                
+                    <a href="../popups/indicator.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Indicator
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="popups/popup.html">
+            
+                
+                    <a href="../popups/popup.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        popup
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="popups/actionSheet.html">
+            
+                
+                    <a href="../popups/actionSheet.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        ActionSheet
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="popups/popover.html">
+            
+                
+                    <a href="../popups/popover.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Popover
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="popups/picker.html">
+            
+                
+                    <a href="../popups/picker.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Picker
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="popups/drawer.html">
+            
+                
+                    <a href="../popups/drawer.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        NavDrawer
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    本书使用 GitBook 发布
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Vue Carbon 使用文档</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="dateselect">DateSelect</h1>
+<p>&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x7EC4;&#x4EF6;&#xFF0C; <a href="https://myronliu347.github.io/vue-carbon/#!/dateSelect" target="_blank">demo</a></p>
+<p>&#x4F9D;&#x8D56; <a href="http://momentjs.cn/" target="_blank">moment</a></p>
+<p>&#x57FA;&#x4E8E; <a href="https://github.com/hilongjw" target="_blank">hilongjw</a> &#x5927;&#x795E;&#x7684; <a href="https://github.com/hilongjw/vue-datepicker" target="_blank">vue-datepicker</a> &#x505A;&#x7684;&#x6539;&#x9020;</p>
+<h2 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h2>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!--&#x9009;&#x62E9;&#x65E5;&#x671F;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">date-select</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x65E5;&#x671F;&#x9009;&#x62E9;&quot;</span>  <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x65E5;&#x671F;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">date-select</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x683C;&#x5F0F;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">date-select</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x4FEE;&#x6539;&#x683C;&#x5F0F;&quot;</span> <span class="hljs-attr">format</span>=<span class="hljs-string">&quot;YYYY&#x5E74;MM&#x6708;DD&#x65E5;&quot;</span>  <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x65E5;&#x671F;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">date-select</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&#x9009;&#x62E9;&#x65F6;&#x95F4;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">date-select</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x65F6;&#x95F4;&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;min&quot;</span> <span class="hljs-attr">format</span>=<span class="hljs-string">&quot;YYYY&#x5E74;MM&#x6708;DD&#x65E5; HH&#x5206;mm&#x79D2;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x65F6;&#x95F4;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">date-select</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&#x9650;&#x5236;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x5DE5;&#x4F5C;&#x65E5;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">date-select</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x53EA;&#x80FD;&#x9009;&#x62E9;&#x5DE5;&#x4F5C;&#x65E5;&quot;</span> <span class="hljs-attr">:limit</span>=<span class="hljs-string">&quot;[{type: &apos;weekday&apos;,available: [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;]}]&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x65E5;&#x671F;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">date-select</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!--&#x9650;&#x5236;&#x9009;&#x62E9;&#x65F6;&#x95F4;&#x6BB5;--&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">date-select</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;&#x4EC5;&#x9009;&#x62E9;&#x4E03;&#x6708;&quot;</span> <span class="hljs-attr">:limit</span>=<span class="hljs-string">&quot;[{type:&apos;fromto&apos;,from:&apos;2016-07-01&apos;,to:&apos;2016-07-31&apos;}]&quot;</span>  <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&#x9009;&#x62E9;&#x65E5;&#x671F;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">date-select</span>&gt;</span>
+</code></pre>
+<h2 id="api">API</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x53C2;&#x6570;</th>
+<th style="text-align:left">&#x8BF4;&#x660E;</th>
+<th style="text-align:left">&#x7C7B;&#x578B;</th>
+<th style="text-align:left">&#x53EF;&#x9009;&#x503C;</th>
+<th style="text-align:left">&#x9ED8;&#x8BA4;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">label</td>
+<td style="text-align:left">&#x6807;&#x7B7E;</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">placeholder</td>
+<td style="text-align:left">&#x63D0;&#x793A;&#x6587;&#x5B57;</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">value</td>
+<td style="text-align:left">&#x503C;</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">type</td>
+<td style="text-align:left">&#x9009;&#x62E9;&#x7684;&#x7C7B;&#x578B; day &#x9009;&#x62E9;&#x65E5;&#x671F; min &#x9009;&#x62E9;&#x65F6;&#x95F4;</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">day / min</td>
+<td style="text-align:left">day</td>
+</tr>
+<tr>
+<td style="text-align:left">format</td>
+<td style="text-align:left">&#x65F6;&#x95F4;&#x663E;&#x793A;&#x683C;&#x5F0F;</td>
+<td style="text-align:left">String</td>
+<td style="text-align:left">moment &#x7684;&#x683C;&#x5F0F;&#x5316;&#x65F6;&#x95F4;&#x7C7B;&#x578B;</td>
+<td style="text-align:left">YYYY-MM-DD</td>
+</tr>
+<tr>
+<td style="text-align:left">limit</td>
+<td style="text-align:left">&#x65F6;&#x95F4;&#x9009;&#x62E9;&#x9650;&#x5236;</td>
+<td style="text-align:left">Array</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">[]</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#x9009;&#x62E9;&#x9650;&#x5236;&#x8BF4;&#x660E;">&#x9009;&#x62E9;&#x9650;&#x5236;&#x8BF4;&#x660E;</h4>
+<ul>
+<li>type &#x9650;&#x5236;&#x7C7B;&#x578B; weekday &#x5DE5;&#x4F5C;&#x65E5; fromto &#x65F6;&#x95F4;&#x6BB5;</li>
+</ul>
+<p>weekday</p>
+<ul>
+<li>available &#x53EF;&#x9009;&#x62E9;&#x7684;&#x661F;&#x671F;</li>
+</ul>
+<p>formto</p>
+<ul>
+<li>form &#x53EF;&#x9009;&#x62E9;&#x5F00;&#x59CB;&#x65F6;&#x95F4;</li>
+<li>to   &#x53EF;&#x9009;&#x62E9;&#x7ED3;&#x675F;&#x65F6;&#x95F4;</li>
+</ul>
+<h2 id="&#x4E8B;&#x4EF6;">&#x4E8B;&#x4EF6;</h2>
+<h3 id="inputchange">input-change</h3>
+<p>&#x5F53; value &#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#x51FA;&#x53D1; input-change &#x4E8B;&#x4EF6;&#xFF0C; &#x65B0;&#x7684;value&#x4F1A;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;
+&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x662F;&#x4E3A;&#x4E86;&#x914D;&#x5408; vuex &#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE; vuex &#x6539;&#x53D8; value</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../forms/selectField.html" class="navigation navigation-prev " aria-label="Previous page: SelectField"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../forms/switch.html" class="navigation navigation-next " aria-label="Next page: Switch"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/fontsettings.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
