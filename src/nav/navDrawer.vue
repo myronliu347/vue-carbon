@@ -62,7 +62,7 @@ export default {
   backface-visibility: hidden;
   &.slider-left-enter,
   &.slider-left-leave{
-    transform: translate3d(-100%; 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 </style>

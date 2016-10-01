@@ -1,9 +1,9 @@
 <template>
-  <div class="vc-snack-bar">
+  <div class="vc-snack-bar" transition="vc-snack">
     <div class="vc-snack-message">
       {{message}}
     </div>
-    <vc-button text="action" @click="actionClick" :color="actionColor"></vc-button>
+    <vc-button v-if="action" :text="action" @click="actionClick" :color="actionColor"></vc-button>
   </div>
 </template>
 
@@ -62,6 +62,15 @@ export default {
     .vc-ripple-ink{
       color: rgba(255, 255, 255, .3);
     }
+  }
+}
+
+.vc-snack-transition{
+  transition: transform .3s;
+  backface-visibility: hidden;
+  &.vc-snack-enter,
+  &.vc-snack-leave{
+    transform: translate3d(0, 100%, 0);
   }
 }
 </style>

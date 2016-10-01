@@ -73,6 +73,9 @@ export default {
           title: 'Bottom Nav',
           link: '/bottomNav'
         }, {
+          title: 'SnackBar',
+          link: '/snackBar'
+        }, {
           title: 'List View',
           link: '/listView'
         }, {
