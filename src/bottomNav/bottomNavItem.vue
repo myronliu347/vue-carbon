@@ -1,6 +1,9 @@
 <template>
-<a href="javascript:;" class="vc-tab-link" v-el:tablink :class="{'active': show}" @click="tabClick()">
-  <slot></slot>
+<a href="javascript:;" class="vc-bottom-nav-item" v-el:tablink :class="{'active': show}" @click="onClick()">
+  <slot>
+    <icon :value="icon"></icon>
+    <div class="vc-bottom-nav-item-text">{{title}}</div>
+  </slot>
   <ripple :trigger="$els.tablink"></ripple>
 </a>
 </template>
@@ -8,6 +11,16 @@
 <script>
 import ripple from '../ripple'
 export default {
+  props: {
+    icon: {
+      type: String,
+      default: ''
+    },
+    title: {
+      type: String,
+      default: ''
+    }
+  },
   data () {
     return {
       index: -1,
@@ -20,7 +33,7 @@ export default {
     }
   },
   methods: {
-    tabClick () {
+    onClick () {
       this.$parent.handlerClick(this.index)
     }
   },
@@ -47,21 +60,33 @@ export default {
 
 <style lang="less">
 @import "../utils/_mixins.less";
-.vc-tab-link{
+@import "../utils/_vars.less";
+.vc-bottom-nav-item{
   flex: 1;
   width: 100%;
   height: 100%;
-  color: #FFF;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  color: inherit;
   .active-highlight();
   .vc-ripple-ink{
-    color: rgba(255, 255, 255, .3);
+    color: @tap-color;
+  }
+  &.active {
+    color: @red;
+    .vc-bottom-nav-item-text{
+      font-size: 14px;
+    }
+  }
+  .vc-bottom-nav-item-text{
+    font-size: 12px;
+    transition: color 0.3s, font-size 0.3s;
+  }
+  .icon {
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
   }
 }
 </style>

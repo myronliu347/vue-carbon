@@ -27,6 +27,11 @@ export default {
         transform: 'translate3d(' + x + '%, 0, 0)'
       }
     }
+  },
+  methods: {
+    handlerClick (index) {
+      this.$emit('tab-change', index)
+    }
   }
 }
 </script>
@@ -35,15 +40,14 @@ export default {
 @import "../utils/_vars.less";
 @import "../utils/_mixins.less";
 .vc-tab-bar{
-  height: 48px;
-  line-height: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: @barcolor;
   color: #FFF;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 24px;
   position: relative;
   width: 100%;
   z-index: 100;

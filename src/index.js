@@ -20,6 +20,10 @@ import tabBar from './bars/tabBar'
 import tabBarItem from './bars/tabBarItem'
 import searchBar from './bars/searchBar'
 
+// bottomNav
+import bottomNav from './bottomNav/bottomNav'
+import bottomNavItem from './bottomNav/bottomNavItem'
+
 // tips
 import toast from './toast'
 
@@ -98,6 +102,8 @@ var components = {
   'tab-bar': tabBar,
   'tab-bar-item': tabBarItem,
   'search-bar': searchBar,
+  'bottom-nav': bottomNav,
+  'bottom-nav-item': bottomNavItem,
   toast,
   list,
   item,

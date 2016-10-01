@@ -4,14 +4,14 @@
     <icon-button slot="left" @click="back()" icon="arrow_back"></icon-button>
     <span>Tab Bar</span>
   </header-bar>
-  <tab-bar :active="tabActive">
-    <tab-bar-item @tabbar-click="tabBarClick">
+  <tab-bar :active="tabActive" @tab-change="tabBarClick">
+    <tab-bar-item>
       tab1
     </tab-bar-item>
-    <tab-bar-item @tabbar-click="tabBarClick">
+    <tab-bar-item>
       tab2
     </tab-bar-item>
-    <tab-bar-item @tabbar-click="tabBarClick">
+    <tab-bar-item>
       tab3
     </tab-bar-item>
   </tab-bar>

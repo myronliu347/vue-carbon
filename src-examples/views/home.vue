@@ -70,6 +70,9 @@ export default {
           title: 'Search Bar',
           link: '/searchBar'
         }, {
+          title: 'Bottom Nav',
+          link: '/bottomNav'
+        }, {
           title: 'List View',
           link: '/listView'
         }, {

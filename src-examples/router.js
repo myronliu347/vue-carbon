@@ -14,6 +14,7 @@ import infiniteScroll from './views/infiniteScroll'
 import headerBar from './views/headerBar'
 import searchBar from './views/searchBar'
 import tabBar from './views/tabbar'
+import bottomNav from './views/bottomNav'
 import grid from './views/grid'
 import contentBlock from './views/contentBlock'
 import listView from './views/listView'
@@ -101,6 +102,10 @@ export default function (router) {
     '/searchBar': {
       name: 'searchBar',
       component: searchBar
+    },
+    '/bottomNav': {
+      name: 'bottomNav',
+      component: bottomNav
     },
     '/infiniteScroll': {
       name: 'infiniteScroll',
