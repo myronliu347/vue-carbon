@@ -25,7 +25,7 @@ Vue.use(VueCarbon)
 
 ## 文档
 
-[Vue Carbon 使用文档](https://myronliu347.github.io/vue-carbon/book/)
+[Vue Carbon 使用文档 v0.4.2](https://myronliu347.github.io/vue-carbon/book/v0.4.2)
 
 ## 简单使用
 

@@ -11,7 +11,7 @@
       <form-list>
         <date-select label="日期选择"  placeholder="选择日期"></date-select>
         <date-select label="修改格式" format="YYYY年MM月DD日"  placeholder="选择日期"></date-select>
-        <date-select label="选择时间" type="min" format="YYYY年MM月DD日 HH分mm秒" placeholder="选择时间"></date-select>
+        <date-select label="选择时间" type="min" format="YYYY年MM月DD日 HH时mm分" placeholder="选择时间"></date-select>
       </form-list>
       <content-title>
         限制时间
