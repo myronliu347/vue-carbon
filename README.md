@@ -1,12 +1,18 @@
 # vue-carbon
 
-基于 vue 开发 material design 风格的移动端 WEB UI 库, 设计资源参考 [CARBON](http://materialmockups.com/) [FrameWork7](https://github.com/nolimits4web/Framework7)
+基于 vuejs 1.0 开发 material design 风格的移动端 WEB UI 库, 设计资源参考 [CARBON](http://materialmockups.com/) [FrameWork7](https://github.com/nolimits4web/Framework7)
 
 在线访问地址 [vue-carbon demos](https://myronliu347.github.io/vue-carbon/)
 
 也可以扫描二维码
 
 ![](res/website.png)
+
+## 链接
+
+[Vue Carbon 使用文档 v0.4.2](https://myronliu347.github.io/vue-carbon/book/v0.4.2)
+
+[Muse UI](https://museui.github.io) 基于 Vue 2.0 开发 material design ui
 
 ## 安装
 
@@ -23,9 +29,6 @@ import 'vue-carbon/dist/vue-carbon.css' // 加载文件
 Vue.use(VueCarbon)
 ```
 
-## 文档
-
-[Vue Carbon 使用文档 v0.4.2](https://myronliu347.github.io/vue-carbon/book/v0.4.2)
 
 ## 简单使用
 
