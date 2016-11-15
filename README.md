@@ -10,7 +10,7 @@
 
 ## 链接
 
-[Vue Carbon 使用文档 v0.4.2](https://myronliu347.github.io/vue-carbon/book/v0.4.2)
+[Vue Carbon 使用文档](https://myronliu347.github.io/vue-carbon/book/v0.5.0/)
 
 [Muse UI](https://museui.github.io) 基于 Vue 2.0 开发 material design ui
 

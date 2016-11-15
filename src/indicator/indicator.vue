@@ -31,7 +31,7 @@ export default {
       default: 'toast'
     },
     overlayOpacity: {
-      default: 0.0000001
+      default: 0.01
     }
   },
   components: {

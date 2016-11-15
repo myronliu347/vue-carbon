@@ -1,6 +1,6 @@
 <template>
   <div class="vc-picker-slot" :class="{'vc-picker-slot-divider': divider}" :style="{'width': width}">
-    <div v-if="!divider" class="vc-picker-slot-wrapper" :style="{'height': contentHeight + 'px'}" v-el:wrapper>
+    <div v-if="!divider" class="vc-picker-slot-wrapper" :class="{'animate': animate}" :style="{'height': contentHeight + 'px'}" v-el:wrapper>
       <div class="vc-picker-item" :style="{'text-align': textAlign}" :class="{'selected': item === value}"
       v-for="item in values">{{item.text || item}}</div>
     </div>
@@ -12,6 +12,7 @@
 import Vue from 'vue'
 import Drag from '../utils/drag'
 import translateUtil from '../utils/translate'
+import * as domUtil from '../utils/domUtil'
 const ITEM_HEIGHT = 36
 export default {
   props: {
@@ -45,7 +46,7 @@ export default {
   },
   data () {
     return {
-      dragging: false
+      animate: false
     }
   },
   computed: {
@@ -115,6 +116,10 @@ export default {
           momentumTranslate = currentTranslate + velocityTranslate * momentumRatio
         }
         let dragRange = this.dragRange
+        this.animate = true
+        domUtil.transitionEnd(el, () => {
+          this.animate = false
+        })
         Vue.nextTick(() => {
           let translate
           if (momentumTranslate) {
@@ -162,7 +167,7 @@ export default {
     line-height: 36px;
   }
 }
-.vc-picker-slot-wrapper{
+.vc-picker-slot-wrapper.animate{
   transition-duration: .3s;
   transition-timing-function: ease-out;
   backface-visibility: hidden;

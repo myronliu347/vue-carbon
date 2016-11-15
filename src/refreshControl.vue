@@ -13,7 +13,7 @@ import * as domUtil from './utils/domUtil'
 import classList from './utils/classList'
 
 const LENGTH = 130 // 下拉最大长度
-const INITY = -63  // 初始化Y轴位置
+const INITY = -68  // 初始化Y轴位置
 export default {
   props: {
     refreshing: {
@@ -67,6 +67,7 @@ export default {
     clearState () {
       classList.remove(this.$el, 'vc-refresh-control-animate')
       classList.remove(this.$el, 'vc-refresh-control-hide')
+      classList.remove(this.$el, 'vc-refresh-control-draging')
       classList.add(this.$el, 'vc-refresh-control-noshow')
       this.draging = false
       this.y = 0
@@ -85,6 +86,7 @@ export default {
         if (top === initTop) this.draging = true
       }).drag((pos, event) => {
         if (pos.y < 5) return // 消除误差
+        classList.add(this.$el, 'vc-refresh-control-draging')
         let top = domUtil.getOffset(this.$el).top
         if (this.refreshing || !initTop || top < initTop) {
           this.draging = false
@@ -172,15 +174,18 @@ export default {
 .vc-refresh-control-animate{
    transition: all 0.3s ease;
 }
-
 .vc-refresh-control-hide{
-  opacity: 1;
-  transform: translate3d(0, -63px, 0);
+  opacity: 0;
+  transform: translate3d(0, -68px, 0);
 }
 
 .vc-refresh-control-noshow{
   opacity: 0;
   transform: scale(0.01);
+}
+
+.vc-refresh-control-draging{
+  opacity: 1;
 }
 
 .vc-refresh-control-refreshing {
